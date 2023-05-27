@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className=" Clash Display text-blue-800 font-bold text-4xl">
+    <div className="font-clash text-black bg-[#caf0f8] m-3 text-4xl">
       <Header />
       <section id="hero">
         <Hero />
