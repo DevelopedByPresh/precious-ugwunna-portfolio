@@ -6,10 +6,28 @@ import { motion } from "framer-motion";
 type Props = {};
 const Header = ({}: Props) => {
   return (
-    <header className="flex items-start justify-between sticky top-0 max-w-5xl mx-auto z-20 lg:items-center p-4">
+    <header className="flex items-start bg-white  justify-between sticky top-0 max-w-5xl  z-20 lg:items-center p-4">
       <motion.div
         initial={{
           x: -500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="flex flex-row items-center cursor-pointer"
+      >
+        <SocialIcon network="email" bgColor="transparent" fgColor="gray" />
+      </motion.div>
+      <motion.div
+        initial={{
+          x: 500,
           opacity: 0,
           scale: 0.5,
         }}
@@ -45,28 +63,7 @@ const Header = ({}: Props) => {
           className="h-2 w-2"
         />
       </motion.div>
-      <motion.div>AA</motion.div>
-      <motion.div
-        initial={{
-          x: 500,
-          opacity: 0,
-          scale: 0.5,
-        }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          duration: 1.5,
-        }}
-        className="flex flex-row items-center cursor-pointer"
-      >
-        <SocialIcon network="email" bgColor="transparent" fgColor="gray" />
-        <p className="uppercase hidden md:inline-flex text-sm font-normal text-black">
-          Hit me up ;)
-        </p>
-      </motion.div>
+      
     </header>
   );
 };
