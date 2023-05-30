@@ -7,10 +7,10 @@ export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
 
     return (
-        <nav className="w-full bg-white shadow fixed z-20 top-0 font-clash">
+        <nav className="w-full bg-white  shadow fixed z-20 top-0 font-clash ">
             <div className="justify-between px-4 mx-auto md:max-w-7xl md:items-center lg:flex md:px-8">
                 <div>
-                    <div className="flex items-center justify-between py-3 md:py-5 ">
+                    <div className="flex items-center justify-between py-3 md:py-5 lg:py-2 ">
                         <h1>AA</h1>
                         <div className="lg:hidden">
                             <button
@@ -52,20 +52,20 @@ export default function NavBar() {
                 </div>
                 <div>
                     <div
-                        className={`flex-1 justify-self-center pb-3 mb-4 mt-8 lg:block lg:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}>
+                        className={`flex-1 justify-self-center pb-3 mb-4 mt-8 lg:block lg:pb-0 md:mt-3 ${navbar ? "block" : "hidden"}`}>
                         <ul
                             className="items-center justify-center  md:text-sm space-y-8 md:ml-[32rem] md:flex
                             lg:flex-row md:flex-col lg:space-x-6 lg:mr-14 lg:space-y-0 md:space-x-10 md:space-y-8">
-                            <li className="text-black  md:min-w-fit hover:text-[#068353] hover:underline underline-offset-4  ">
-                                <Link href="#hero">About</Link>
+                            <li className="text-black  md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4  ">
+                                <Link href="#about">About</Link>
                             </li>
-                            <li className="text-black md:min-w-fit hover:text-[#068353] hover:underline underline-offset-4 ">
-                            <Link href="#hero">Expereince</Link>
+                            <li className="text-black md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
+                            <Link href="#experience"><button>Work Experince</button></Link>
                             </li>
-                            <li className="text-black md:min-w-fit hover:text-[#068353] hover:underline underline-offset-4 ">
+                            <li className="text-black md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
                             <Link href="#hero">Projects</Link>
                             </li>
-                            <li className="text-black md:min-w-fit hover:text-[#068353] hover:underline underline-offset-4 ">
+                            <li className="text-black md:min-w-fithover:text-[#1d1d1d] hover:underline underline-offset-4 ">
                             <Link href="#hero">Contact</Link>
                             </li>
                         </ul>
