@@ -12,7 +12,7 @@ const Skills = (props: Props) => {
   className="relative flex text-center flex-col md:text-left xl:flex-row max-w-[2000px]
   xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center">
           <h3 className="absolute top-24 lg:top-0 text-3xl mb-5  md:text-5xl md:mb-[6rem] font-semibold uppercase tracking-[10px]">
-        Skills
+          Tech Stack
       </h3>
       <h3 className="absolute top-36 text-sm uppercase tracking-[10px]">Hover over skill to view profiency</h3>
       <div className="grid grid-cols-4 gap-5">
