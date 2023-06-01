@@ -14,7 +14,7 @@ const About = ({}: Props) => {
     transition={{duration: 1.5}}
       className=" flex flex-col px-8 md:px-20 pt-20 max-w-7xl "
     >
-      <h1 className="text-3xl mb-10 text-center md:text-5xl md:mb-[6rem] font-semibold">Persona Blurb</h1>
+      <h1 className="text-3xl mb-10 text-center md:text-5xl md:mb-[6rem] font-semibold uppercase tracking-[10px]">Persona Blurb</h1>
       <div className="flex flex-col space-y-10 items-center lg:items-start lg:flex-row lg:space-x-20">
         <Image
           src={profile}
@@ -24,7 +24,7 @@ const About = ({}: Props) => {
           className="border-dashed border-2 border-indigo-600 "
         />
         <div className="text-base lg:text-xl">
-        <div className="flex flex-col space-y-2 lg:items-start ">
+        <div className="flex flex-col space-y-2 lg:items-start tracking-widest ">
           <p className=" mb-4">
             Hey there! I'm <span className="underline">Ayodeji</span>, a passionate web developer with a knack for
             creating visually stunning designs that captivate audiences. I
@@ -49,7 +49,7 @@ const About = ({}: Props) => {
           </p>
         </div>
 
-        <div className="">
+        <div className="tracking-widest">
           <p>Here are a few technologies i work with:</p>
           <ul className="grid grid-cols-2 list-disc px-5 mt-5">
             <li>Javascript</li>

@@ -11,7 +11,8 @@ export default function NavBar() {
             <div className="justify-between px-4 mx-auto md:max-w-7xl md:items-center lg:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 lg:py-2 ">
-                        <h1>AA</h1>
+                       <Link href={"/"}><h1>AA</h1></Link>
+                        
                         <div className="lg:hidden">
                             <button
                                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -63,7 +64,10 @@ export default function NavBar() {
                             <Link href="#experience"><button>Work Experince</button></Link>
                             </li>
                             <li className="text-black md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
-                            <Link href="#hero">Projects</Link>
+                            <Link href="#skills"><button>Tech Stack</button></Link>
+                            </li>
+                            <li className="text-black md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
+                            <Link href="#projects">Projects</Link>
                             </li>
                             <li className="text-black md:min-w-fithover:text-[#1d1d1d] hover:underline underline-offset-4 ">
                             <Link href="#hero">Contact</Link>
