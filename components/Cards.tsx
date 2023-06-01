@@ -10,7 +10,7 @@ type Props = {};
 const Cards = ({}: Props) => {
   return (
     <article className="flex flex-col rounded-lg items-center space-y-7  flex-shrink-0 w-[500px] md:w-[600px] 
-    xl:w-[800px] snap-center bg-slate-300 p-10 opacity-60 hover:opacity-100 cursor-pointer transition-opacity
+    xl:w-[800px] snap-center bg-slate-300 p-5 opacity-60 hover:opacity-100 cursor-pointer transition-opacity
     duration-200 overflow-hidden overflow-y-scroll">
       <motion.img
         initial={{
@@ -20,12 +20,12 @@ const Cards = ({}: Props) => {
         transition={{ duration: 1.5 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="w-14 h-14 xl:w-[200px] xl:h-[200px] object-cover object-center rounded-full"
+        className="w-14 h-14 xl:w-[70px] xl:h-[70px] object-cover object-center rounded-full"
         alt="logo"
         src={logo.src}
       />
       <div className="px-0 md:px-10">
-        <h4 className="text-xl lg:text-4xl font-light">Frontend Developer</h4>
+        <h4 className="text-xl lg:text-3xl font-light">Frontend Developer</h4>
         <p className="font-bold mt-1 text-xl">Sabiroad</p>
         <div className="flex space-x-2 my-2">
             <img className="h-7 w-7 rounded-full" alt="img" src={logo.src}/>

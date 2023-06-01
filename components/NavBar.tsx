@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 export default function NavBar() {
-    const [navbar, setNavbar] = useState(false);
+    const [navbar, setNavbar] = useState<boolean>(false);
 
     return (
         <nav className="w-full bg-white  shadow fixed z-20 top-0 font-clash ">
@@ -58,19 +58,19 @@ export default function NavBar() {
                             className="items-center justify-center  md:text-sm space-y-8 md:ml-[32rem] md:flex
                             lg:flex-row md:flex-col lg:space-x-6 lg:mr-14 lg:space-y-0 md:space-x-10 md:space-y-8">
                             <li className="text-black  md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4  ">
-                                <Link href="#about">About</Link>
+                                <Link href="#about" onClick={() => setNavbar(!navbar)}>About</Link>
                             </li>
                             <li className="text-black md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
-                            <Link href="#experience"><button>Work Experince</button></Link>
+                            <Link href="#experience"><button onClick={() => setNavbar(!navbar)}>Work Experince</button></Link>
                             </li>
                             <li className="text-black md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
-                            <Link href="#skills"><button>Tech Stack</button></Link>
+                            <Link href="#skills"><button onClick={() => setNavbar(!navbar)}>Tech Stack</button></Link>
                             </li>
                             <li className="text-black md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
-                            <Link href="#projects">Projects</Link>
+                            <Link href="#projects"><button onClick={() => setNavbar(!navbar)}>Projects</button></Link>
                             </li>
                             <li className="text-black md:min-w-fithover:text-[#1d1d1d] hover:underline underline-offset-4 ">
-                            <Link href="#hero">Contact</Link>
+                            <Link href="#contact"><button onClick={() => setNavbar(!navbar)}>Contact</button></Link>
                             </li>
                         </ul>
                         {/* <div className="mt-5 space-y-2 space-x-2 flex items-center lg:hidden">
