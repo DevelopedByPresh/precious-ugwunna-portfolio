@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import { motion } from "framer-motion";
 import logo from "Assets/react-js-icon.png";
 
 type Props = {};
@@ -6,11 +7,18 @@ type Props = {};
 const Projects = (props: Props) => {
   const projects = [1, 2, 3, 4, 5];
   return (
-    <div
+    <motion.div
+    initial={{opacity: 0, y:-200}}
+    transition={{duration:1.2}}
+    whileInView={{opacity:1 , y: 0}}
+    viewport={{once:true}}
+
       className="relative flex text-center flex-col md:text-left xl:flex-row max-w-full
-  xl:px-10 h-screen justify-evenly overflow-hidden z-10  mx-auto items-center space-y-10 " //just added space in y axis
-    >
-      <h3 className="absolute top-20 lg:top-16 text-3xl mb-5  md:text-4xl md:mb-[6rem] font-semibold uppercase tracking-[10px]">
+  xl:px-2 h-screen justify-evenly overflow-x-scroll overflow-y-hidden z-10  mx-auto items-center space-y-10 xl:space-y-5
+  scrollbar-track-black scrollbar-thumb-pink-700 scrollbar-thin" //just added space in y axis
+   
+   >
+      <h3 className=" text-gray-500 absolute top-20 lg:top-16 text-3xl mb-5  md:text-4xl md:mb-[6rem] font-semibold uppercase tracking-[10px]">
         Projects
       </h3>
       <div className="w-full relative flex overflow-x-scroll items-center justify-center overflow-y-hidden snap-x snap-mandatory z-10">
@@ -40,7 +48,7 @@ const Projects = (props: Props) => {
         ))}
       </div>
       <div className="w-full absolute top-[30%] bg-slate-400/20 left-0 h-[500px] -skew-y-12" />
-    </div>
+    </motion.div>
   );
 };
 

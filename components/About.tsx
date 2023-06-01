@@ -20,7 +20,7 @@ const About = ({}: Props) => {
         <Image
           src={profile}
           alt="Ayodeji Atanda's portrait"
-          height={300}
+          height={300{}
           width={300}  
           className="border-dashed border-2 border-indigo-600 "
         />
