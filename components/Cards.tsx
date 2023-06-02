@@ -10,7 +10,7 @@ type Props = {};
 const Cards = ({}: Props) => {
   return (
     <article className="flex flex-col rounded-lg items-center space-y-7  flex-shrink-0 w-[500px] md:w-[600px] 
-    xl:w-[800px] snap-center bg-slate-300 p-5 opacity-60 hover:opacity-100 cursor-pointer transition-opacity
+    xl:w-[800px] snap-center  p-5 opacity-60 hover:opacity-100 cursor-pointer transition-opacity
     duration-200 overflow-hidden overflow-y-scroll">
       <motion.img
         initial={{

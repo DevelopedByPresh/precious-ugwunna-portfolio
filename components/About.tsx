@@ -14,13 +14,13 @@ const About = ({}: Props) => {
     transition={{duration: 1.5}}
       className=" flex flex-col px-8 md:px-20 pt-20 max-w-7xl "
     >
-      <h1 className="text-3xl mb-10 text-center md:text-5xl md:mb-[6rem] 
+      <h1 className="text-3xl mb-10 text-center md:text-5xl xl:text-3xl md:mb-[6rem] 
       font-semibold uppercase tracking-[10px] text-gray-500">Persona Blurb</h1>
       <div className="flex flex-col space-y-10 items-center lg:items-start lg:flex-row lg:space-x-20">
         <Image
           src={profile}
           alt="Ayodeji Atanda's portrait"
-          height={300{}
+          height={300}
           width={300}  
           className="border-dashed border-2 border-indigo-600 "
         />

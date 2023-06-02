@@ -14,12 +14,12 @@ const Skill = ({ directionLeft }: Props) => {
         // whileInView={{ opacity: 1, x: 0 }}
         // transition={{ duration: 1.5 }}
         // viewport={{once:true}}
-        className="h-16 w-16 xl:w-32 xl:h-32 md:h-28 md:w-28 object-cover border border-black rounded-full filter 
+        className="h-16 w-16 xl:w-full xl:h-28  md:h-28 md:w-28 object-cover filter 
       group-hover:grayscale transition duration-300 ease-in-out"
         src={logo.src}
       />
       <div
-        className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white 
+        className="absolute  opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white 
     h-16 w-16 md:h-28 md:w-28 xl:w-32 xl:h-32 rounded-full z-10
     "
       >
