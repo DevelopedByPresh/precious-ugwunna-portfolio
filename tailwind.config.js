@@ -10,12 +10,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+    
+        // backgroundImage: {
+        //   'hero': "url('/Assets/stacked-peaks-haikei(3).png')",
+        // },
+    
       fontFamily: {
         clash: ["Clash Display", "sans-serif"],
       },
     },
   },
 
-  plugins: [
-    require('tailwind-scrollbar'),],
+
 };

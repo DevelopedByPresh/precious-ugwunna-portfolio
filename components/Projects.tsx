@@ -22,7 +22,7 @@ const Projects = (props: Props) => {
       <h3 className=" text-gray-500 absolute top-20 lg:top-16 text-3xl mb-5  md:text-4xl xl:text-3xl md:mb-[6rem] font-semibold uppercase tracking-[10px]">
         Projects
       </h3>
-      <div className="w-full relative flex overflow-x-scroll items-center justify-center overflow-y-hidden snap-x snap-mandatory z-10">
+      <div className="w-full relative flex xl:top-16 overflow-x-scroll items-center justify-center overflow-y-hidden snap-x snap-mandatory z-10">
         {projects.map((project, i) => (
           <div
             key={project}

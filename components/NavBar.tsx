@@ -61,7 +61,7 @@ export default function NavBar() {
                                 <Link href="#about" onClick={() => setNavbar(!navbar)}>About</Link>
                             </li>
                             <li className="text-black md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
-                            <Link href="#experience"><button onClick={() => setNavbar(!navbar)}>Work Experince</button></Link>
+                            <Link href="#experience"><button onClick={() => setNavbar(!navbar)}>Experince</button></Link>
                             </li>
                             <li className="text-black md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
                             <Link href="#skills"><button onClick={() => setNavbar(!navbar)}>Tech Stack</button></Link>

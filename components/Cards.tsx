@@ -9,10 +9,10 @@ type Props = {};
 
 const Cards = ({}: Props) => {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7  flex-shrink-0 w-[500px] md:w-[600px] 
-    xl:w-[800px] snap-center  p-5 opacity-60 hover:opacity-100 cursor-pointer transition-opacity
+    <article id="card" className="flex flex-col rounded-lg items-center space-y-7  flex-shrink-0 w-[500px] md:w-[600px] 
+    xl:w-[650px] snap-center no-scrollbar  p-5 opacity-60 focus:opacity-100 hover:opacity-100 cursor-pointer transition-opacity
     duration-200 overflow-hidden overflow-y-scroll">
-      <motion.img
+      {/* <motion.img
         initial={{
           y: -100,
           opacity: 0,
@@ -23,7 +23,8 @@ const Cards = ({}: Props) => {
         className="w-14 h-14 xl:w-[70px] xl:h-[70px] object-cover object-center rounded-full"
         alt="logo"
         src={logo.src}
-      />
+      /> 
+      */}
       <div className="px-0 md:px-10">
         <h4 className="text-xl lg:text-3xl font-light">Frontend Developer</h4>
         <p className="font-bold mt-1 text-xl">Sabiroad</p>
@@ -34,7 +35,7 @@ const Cards = ({}: Props) => {
             <img className="h-7 w-7 rounded-full" alt="img" src={logo.src}/>
 
         </div>
-        <p className="py-5 text-sm">started - ended</p>
+        <p className="py-5 text-sm font-semibold xl:text-xs">04/2022 - 04/2023</p>
         <ul className="space-y-4 w-52 md:w-full ml-5 list-disc text-sm">
             <li>Lorem ipsum dolor sit amet, consectetur
              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
