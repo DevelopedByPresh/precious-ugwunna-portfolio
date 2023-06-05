@@ -9,8 +9,8 @@ type Props = {};
 
 const Cards = ({}: Props) => {
   return (
-    <article id="card" className="flex flex-col rounded-lg items-center space-y-7  flex-shrink-0 w-[500px] md:w-[600px] 
-    xl:w-[650px] snap-center no-scrollbar  p-5 opacity-60 focus:opacity-100 hover:opacity-100 cursor-pointer transition-opacity
+    <article className="flex flex-col rounded-lg items-center space-y-4  border-x-neutral-700 border-2  flex-shrink-0 w-[270px] md:w-[600px] 
+    xl:w-[650px] snap-center no-scrollbar  p-2 focus:opacity-100 hover:opacity-100 cursor-pointer transition-opacity
     duration-200 overflow-hidden overflow-y-scroll">
       {/* <motion.img
         initial={{
@@ -25,10 +25,10 @@ const Cards = ({}: Props) => {
         src={logo.src}
       /> 
       */}
-      <div className="px-0 md:px-10">
+      <div className="px-0 md:px-1">
         <h4 className="text-xl lg:text-3xl font-light">Frontend Developer</h4>
-        <p className="font-bold mt-1 text-xl">Sabiroad</p>
-        <div className="flex space-x-2 my-2">
+        <p className="font-bold  text-xl">Sabiroad</p>
+        <div className="flex space-x-1 my-1">
             <img className="h-7 w-7 rounded-full" alt="img" src={logo.src}/>
             <img className="h-7 w-7 rounded-full" alt="img" src={logo.src}/>
             <img className="h-7 w-7 rounded-full" alt="img" src={logo.src}/>
