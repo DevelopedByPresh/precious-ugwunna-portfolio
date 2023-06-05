@@ -14,8 +14,6 @@ const WorkExperience = ({}: Props) => {
       </h3>
       <div className="w-full flex space-x-5 m-5 overflow-x-scroll p-10 snap-x snap-mandatory ">
         <Cards />
-        <Cards />
-        <Cards />
       </div>
     </div>
   );
