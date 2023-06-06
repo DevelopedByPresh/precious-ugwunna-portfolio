@@ -1,4 +1,8 @@
 "use client"
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
 import logo from "Assets/Untitled-2-Recovered.png";
 
 import React from "react";
@@ -25,7 +29,7 @@ const Cards = ({}: Props) => {
         src={logo.src}
       /> 
       */}
-      <div className="px-0 md:px-1">
+      <div className="px-0 md:px-10">
         <h4 className="text-xl lg:text-3xl font-light">Frontend Developer</h4>
         <p className="font-bold  text-xl">Sabiroad</p>
         <div className="flex space-x-1 my-1">
