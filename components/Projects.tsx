@@ -1,11 +1,12 @@
 "use client"
 import { motion } from "framer-motion";
 import logo from "Assets/Screenshot (392).png"
+import { projects } from "@/data/mockData";
 
 type Props = {};
 
 const Projects = (props: Props) => {
-  const projects = [1, 2, 3, 4, 5];
+
   return (
     <motion.div
     initial={{opacity: 0, y:-200}}
@@ -25,7 +26,7 @@ const Projects = (props: Props) => {
       <div className="w-full relative flex xl:top-16 overflow-x-scroll items-center justify-center overflow-y-hidden snap-x snap-mandatory z-10">
         {projects.map((project, i) => (
           <div
-            key={project}
+            key={project.projectName}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-16 items-center justify-center p-20
           md:p-44 h-screen"
           >
@@ -35,14 +36,10 @@ const Projects = (props: Props) => {
                 <span className="underline decoration-black underline-offset-4">
                   Case study {i + 1} of {projects.length}:
                 </span>
-                {"  "}ChatGPT Clone
+                {"  "}{project.projectName}
               </h4>
               <p className="text-xs lg:text-lg text-center lg:text-left">
-                Lorem ipsum is a placeholder text commonly used in the design
-                and typesetting industry. It does not have any specific meaning
-                or content. The purpose of using Lorem ipsum is to fill space
-                temporarily when designing or demonstrating the visual elements
-                of a document or website layout.
+                {project.projectDescription}
               </p>
             </div>
           </div>
