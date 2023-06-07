@@ -7,7 +7,9 @@ import Image from "next/image";
 type Props = {};
 
 const Skills = (props: Props) => {
-  return <motion.div 
+
+  return (
+    <motion.div 
   initial={{opacity:0}}
   whileInView={{opacity:1}}
   transition={{duration:1.5}}
@@ -46,7 +48,8 @@ const Skills = (props: Props) => {
         </>
       ))}
       </div>
-  </motion.div>;
+  </motion.div>
+  )
 };
 
 export default Skills;
