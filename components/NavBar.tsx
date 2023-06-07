@@ -11,7 +11,7 @@ export default function NavBar() {
             <div className="justify-between px-4 mx-auto md:max-w-7xl md:items-center lg:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 lg:py-2 ">
-                       <Link href={"/"}><h1>AA</h1></Link>
+                       <Link href={"/"}><h1 className="md:text-2xl">AA</h1></Link>
                         
                         <div className="lg:hidden">
                             <button
