@@ -17,7 +17,7 @@ const Cards = ({}: Props) => {
   };
   return (
     <article className="flex flex-col md:m-5 md:p-10 md:items-center snap-x snap-mandatory absolute top-[12rem] md:top-[9rem] lg:top-[5rem] xl:top-[6rem] w-full">
-    <ul className="flex  whitespace-nowrap  overflow-x-scroll mx-2 mb-5">
+    <ul className="flex  whitespace-nowrap  overflow-x-auto mx-2 mb-5 max-w-xs">
       {experiences.map((experience) => (
         <li
         className={`inline-block px-4 py-2 text-sm  md:text-xl text-center items-center justify-center hover:bg-gray-200 transition duration-500 ease-in-out ${
