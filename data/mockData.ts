@@ -1,3 +1,9 @@
+import africash from "Assets/Screenshot (392).png";
+import chatgpt from "../Assets/Screenshot (409).png";
+import blog from "../Assets/Screenshot (407).png";
+import { NextImageType } from 'next/image';
+
+
 interface ImageData {
     alt: string;
     src: string;
@@ -15,44 +21,50 @@ type JobExperience = {
 type Project = {
     id: number
     projectName: string;
-    projectImage: string;
+    projectImage: NextImageType;
     projectDescription: string;
     demoLink: string;
     githubLink: string;
+    tools: string[]
+    
   };
   
-  export const projects: Project[] = [
+  export const projectss: Project[] = [
     {
         id: 1,
       projectName: "ChatGPT Clone",
-      projectImage: "image1.jpg",
+      projectImage: chatgpt,
       projectDescription: "Missing Tailwind CSS: Make sure you have properly included the Tailwind CSS library in your project. Check if you have imported it correctly in your main CSS file or added the CDN link in your HTML file. Without Tailwind CSS, the list styles may not be applied.",
-      demoLink: "https://www.example.com/project1-demo",
-      githubLink: "https://github.com/user/project1",
+      demoLink: "https://chat-gpt-vlone.vercel.app/",
+      githubLink: "https://github.com/deji-ice/chat-gpt",
+      tools:["Javascript", "Typescript", "NextJS","Tailwind CSS","React" ,"Tailwind CSS","React"]
     },
     {
         id: 2,
         projectName: " Clone",
-        projectImage: "image1.jpg",
+        projectImage: chatgpt,
         projectDescription: "Missing Tailwind CSS: Make sure you have properly included the Tailwind CSS library in your project. Check if you have imported it correctly in your main CSS file or added the CDN link in your HTML file. Without Tailwind CSS, the list styles may not be applied.",
         demoLink: "https://www.example.com/project1-demo",
         githubLink: "https://github.com/user/project1",
+        tools:["Javascript", "Typescript", "NextJS",]
       },
     {
         id: 3,
-      projectName: "Blog",
-      projectImage: "image2.jpg",
+      projectName: "Blog with Embedded Sanity CMS",
+      projectImage: blog,
       projectDescription: "Missing Tailwind CSS: Make sure you have properly included the Tailwind CSS library in your project. Check if you have imported it correctly in your main CSS file or added the CDN link in your HTML file. Without Tailwind CSS, the list styles may not be applied.",
-      demoLink: "https://www.example.com/project2-demo",
-      githubLink: "https://github.com/user/project2",
+      demoLink: "https://curiositychronicles.vercel.app/",
+      githubLink: "https://github.com/deji-ice/nextjs-blog",
+      tools:["JavaScript", "Typescript", "NextJS","TailwindCSS","React"]
     },
     {
         id: 4,
       projectName: "Aricash",
-      projectImage: "image3.jpg",
+      projectImage: africash,
       projectDescription: "Missing Tailwind CSS: Make sure you have properly included the Tailwind CSS library in your project. Check if you have imported it correctly in your main CSS file or added the CDN link in your HTML file. Without Tailwind CSS, the list styles may not be applied.",
-      demoLink: "https://www.example.com/project3-demo",
-      githubLink: "https://github.com/user/project3",
+      demoLink: "https://africash.netlify.app/",
+      githubLink: "https://github.com/deji-ice/Africash",
+      tools:["JavaScript", "Typescript", "NextJS","TailwindCSS","React"]
     },
   ];
   
