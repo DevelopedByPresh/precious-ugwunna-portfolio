@@ -12,20 +12,20 @@ const About = ({}: Props) => {
     whileInView={{ opacity:1}}
     viewport={{ once: true }}
     transition={{duration: 1.5}}
-      className=" flex flex-col px-8 md:px-20 pt-20 max-w-7xl "
+      className=" flex flex-col px-8 md:px-20 pt-20 max-w-7xl xl:mx-10 "
     >
       <h1 className="text-3xl mb-10 text-center md:text-5xl xl:text-3xl md:mb-[6rem] 
-      font-semibold uppercase tracking-[10px] text-gray-500">Persona Blurb</h1>
+      font-semibold uppercase text-gray-500 font-programme">Persona Blurb</h1>
       <div className="flex flex-col space-y-10 items-center lg:items-start lg:flex-row lg:space-x-20">
         <Image
           src={profile}
           alt="Ayodeji Atanda's portrait"
           height={300}
           width={300}  
-          className="border-dashed border-2 border-indigo-600 "
+          className="border-dashed border-2 border-gray-400 "
         />
         <div className="text-base lg:text-xl">
-        <div className="flex flex-col space-y-2 lg:items-start tracking-widest ">
+        <div className="flex flex-col space-y-2 lg:items-start ">
           <p className=" mb-4">
             Hey there! I'm <span className="underline">Ayodeji</span>, a passionate web developer with a knack for
             creating visually stunning designs that captivate audiences. I

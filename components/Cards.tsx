@@ -16,12 +16,12 @@ const Cards = ({}: Props) => {
     setSelectedCompany(companyName);
   };
   return (
-    <article className="flex flex-col md:m-5 md:p-10 md:items-center snap-x snap-mandatory absolute top-[12rem] md:top-[9rem] lg:top-[5rem] xl:top-[6rem] w-full">
+    <article className="flex flex-col md:m-5 md:p-10 md:items-center snap-x snap-mandatory absolute top-[12rem] md:top-[9rem] lg:top-[5rem] xl:top-[6rem] w-full border-slate-600 ">
     <ul className="flex  whitespace-nowrap  overflow-x-auto mx-2 mb-5 max-w-xs">
       {experiences.map((experience) => (
         <li
-        className={`inline-block px-4 py-2 text-sm  md:text-xl text-center items-center justify-center hover:bg-gray-200 transition duration-500 ease-in-out ${
-          selectedCompany === experience.companyName ? "border-b-2 border-[black] bg-gray-200" : ""
+        className={`inline-block px-4 py-2 text-sm border-b-2  md:text-xl text-center items-center justify-center hover:bg-gray-200 transition duration-500 ease-in-out ${
+          selectedCompany === experience.companyName ? "border-b-2 border-[black] text-white bg-slate-600" : ""
         }`}
           key={experience.companyName}
           onClick={() => handleCompanyClick(experience.companyName)}
@@ -53,7 +53,7 @@ const Cards = ({}: Props) => {
             }
           </p>
 
-          <ul className="text-sm md:text-xl m-2 list-disc space-y-2 pl-5">
+          <ul className="text-sm md:text-xl m-2 list-disc space-y-2 pl-5 lg:max-w-3xl xl:text-lg">
             {experiences
               .find((exp) => exp.companyName === selectedCompany)
               ?.responsibilities.map((responsibility, index) => (
