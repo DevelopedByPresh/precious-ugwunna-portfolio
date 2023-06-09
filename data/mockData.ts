@@ -1,7 +1,8 @@
 import africash from "Assets/Screenshot (392).png";
 import chatgpt from "../Assets/Screenshot (409).png";
 import blog from "../Assets/Screenshot (407).png";
-import { NextImageType } from 'next/image';
+import { StaticImageData } from "next/image";
+
 
 
 interface ImageData {
@@ -21,7 +22,7 @@ type JobExperience = {
 type Project = {
     id: number
     projectName: string;
-    projectImage: NextImageType;
+    projectImage: StaticImageData;
     projectDescription: string;
     demoLink: string;
     githubLink: string;
@@ -34,38 +35,38 @@ type Project = {
         id: 1,
       projectName: "ChatGPT Clone",
       projectImage: chatgpt,
-      projectDescription: "Missing Tailwind CSS: Make sure you have properly included the Tailwind CSS library in your project. Check if you have imported it correctly in your main CSS file or added the CDN link in your HTML file. Without Tailwind CSS, the list styles may not be applied.",
+      projectDescription: "A web application built with TypeScript, Next.js 13, and Tailwind CSS that allows users to chat with an AI language model. Implemented Next.js server-side rendering and utilized Firebase for real-time communication. Implemented NextAuth for user authentication. Developed form validation with Yup. This project showcases my skills in building modern, scalable web applications using the latest technologies.",
       demoLink: "https://chat-gpt-vlone.vercel.app/",
       githubLink: "https://github.com/deji-ice/chat-gpt",
-      tools:["Javascript", "Typescript", "NextJS","Tailwind CSS","React" ,"Tailwind CSS","React"]
+      tools:["Typescript", "NextJS","Tailwind CSS","Next Auth", "Open AI"]
     },
     {
         id: 2,
-        projectName: " Clone",
-        projectImage: chatgpt,
-        projectDescription: "Missing Tailwind CSS: Make sure you have properly included the Tailwind CSS library in your project. Check if you have imported it correctly in your main CSS file or added the CDN link in your HTML file. Without Tailwind CSS, the list styles may not be applied.",
-        demoLink: "https://www.example.com/project1-demo",
-        githubLink: "https://github.com/user/project1",
-        tools:["Javascript", "Typescript", "NextJS",]
-      },
+      projectName: "Africash Fintech Landing Page",
+      projectImage: africash,
+      projectDescription: "Africash is a fintech landing page built with React, Tailwind CSS, and Framer Motion. The landing page is designed to promote the Africash financial platform with a modern and responsive user interface. Features include easy navigation, smooth animations, and informative sections highlighting the platform's key benefits.",
+      demoLink: "https://africash.netlify.app/",
+      githubLink: "https://github.com/deji-ice/Africash",
+      tools:["TailwindCSS","React", "Framer Motion"]
+    },
     {
         id: 3,
       projectName: "Blog with Embedded Sanity CMS",
       projectImage: blog,
-      projectDescription: "Missing Tailwind CSS: Make sure you have properly included the Tailwind CSS library in your project. Check if you have imported it correctly in your main CSS file or added the CDN link in your HTML file. Without Tailwind CSS, the list styles may not be applied.",
+      projectDescription: "A personal blog website using Next.js 13 and TypeScript, with an embedded content management system from Sanity. Leveraged Tailwind CSS for responsive design and utilized Next.js SSG and revalidation for optimal performance. Implemented dynamic routing to generate pages for each blog post and used server-side rendering to enhance SEO. Ensured a seamless user experience with lazy loading and image optimization.",
       demoLink: "https://curiositychronicles.vercel.app/",
       githubLink: "https://github.com/deji-ice/nextjs-blog",
-      tools:["JavaScript", "Typescript", "NextJS","TailwindCSS","React"]
+      tools:["Sanity", "Typescript", "NextJS","TailwindCSS",]
     },
     {
         id: 4,
-      projectName: "Aricash",
-      projectImage: africash,
-      projectDescription: "Missing Tailwind CSS: Make sure you have properly included the Tailwind CSS library in your project. Check if you have imported it correctly in your main CSS file or added the CDN link in your HTML file. Without Tailwind CSS, the list styles may not be applied.",
-      demoLink: "https://africash.netlify.app/",
-      githubLink: "https://github.com/deji-ice/Africash",
-      tools:["JavaScript", "Typescript", "NextJS","TailwindCSS","React"]
-    },
+        projectName: " Clone",
+        projectImage: chatgpt,
+        projectDescription:"",
+        demoLink: "https://www.example.com/project1-demo",
+        githubLink: "https://github.com/user/project1",
+        tools:["Javascript", "Typescript", "NextJS",]
+      },
   ];
   
 
@@ -107,19 +108,21 @@ export const experiences: JobExperience[] = [
     {
         occupation: "Frontend Developer",
         companyName: "Sabrioad",
-        dateStart: "2022-01-01",
-        dateEnd: "2023-01-01",
+        dateStart: "04/2022",
+        dateEnd: "04/2023",
         responsibilities: [
-            "Developed user interfaces using React.js",
-            "Implemented responsive designs with CSS and media queries",
-            "Collaborated with the design team to bring concepts to life",
+            "I collaborated with a team of three to successfully build an admin dashboard for the operations team with role-based protected routes, resulting in a 20% increase in operational efficiency.",
+
+            "I collaborated closely with UI/UX designers to enhance the visual appeal and user-friendliness of the website, resulting in a notable 15% improvement in user satisfaction and an impressive 25% reduction in bounce rate.",
+            
+            "I collaborated closely with the backend team to seamlessly integrate APIs and services, ensuring smooth data flow and efficient communication between the frontend and backend, resulting in a 30% reduction in data retrieval time.",
         ],
     },
     {
-        occupation: "software Intern",
-        companyName: "First Bank",
-        dateStart: "2020-06-01",
-        dateEnd: "2020-12-31",
+        occupation: "Software Intern",
+        companyName: "First Bank PLC",
+        dateStart: "01/2020",
+        dateEnd: "06/2020",
         responsibilities: [
             "Created wireframes and prototypes for web applications",
             "Designed visually appealing user interfaces with Adobe XD",

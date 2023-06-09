@@ -15,21 +15,20 @@ const Skills = (props: Props) => {
   transition={{duration:1.5}}
   className="relative flex text-center flex-col md:text-left xl:flex-row  max-w-[2000px]
   min-h-screen justify-center xl:space-y-10 mx-auto items-center">
-          <h3 className="absolute text-gray-500 top-24 lg:top-0 xl:top-16 text-3xl mb-5 xl:text-3xl md:text-5xl md:mb-[6rem] xl:mb-0 font-semibold uppercase tracking-[10px]">
+          <h3 className="absolute font-programme text-gray-500 top-24 lg:top-0 xl:top-16 text-3xl mb-5 xl:text-3xl md:text-5xl md:mb-[6rem] xl:mb-0 font-semibold uppercase">
           Tech Stack
       </h3>
-      <h3 className="absolute top-36 xl:top-16 xl:text-xs text-sm uppercase tracking-[5px]">Hover over skill to view profiency</h3>
       <div className="grid  grid-cols-3 gap-5 justify-center absolute top-[35%] xl:top-[25%]">
         {/* <Skill/> */}
         {images.map((image, index) => (
-        <>
+        <div     key={index}>
         <Image
-          key={index}
+      
           // initial={{ x: directionLeft ? -200 : 200, opacity: 0 }}
           // whileInView={{ opacity: 1, x: 0 }}
           // transition={{ duration: 1.5 }}
           // viewport={{once:true}}
-          className="object-cover filter h-16 w-16 xl:w-fit xl:h-24  md:h-28 md:w-28  
+          className="object-cover filter h-16 w-16 xl:w-fit xl:h-16  md:h-28 md:w-28  
       hover:grayscale transition duration-300 ease-in-out p-0 rounded-full"
           src={image.src}
           alt={image.alt}
@@ -45,7 +44,7 @@ const Skills = (props: Props) => {
             <p className="font-bold text-black opacity-100 text-xl">{image.progress}</p>
           </div>
         </div> */}
-        </>
+        </div>
       ))}
       </div>
   </motion.div>

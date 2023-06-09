@@ -16,12 +16,12 @@ const Cards = ({}: Props) => {
     setSelectedCompany(companyName);
   };
   return (
-    <article className="flex flex-col md:m-5 md:p-10 md:items-center snap-x snap-mandatory absolute top-[12rem] md:top-[9rem] lg:top-[5rem] xl:top-[6rem] w-full">
-    <ul className="flex  whitespace-nowrap  overflow-x-auto mx-2 mb-5 max-w-xs">
+    <article className="flex flex-col xl:flex-row xl:justify-center xl:items-baseline xl:space-x-5 md:m-5 md:p-10 md:items-center snap-x snap-mandatory absolute top-[12rem] md:top-[9rem] lg:top-[5rem] xl:top-[6rem] w-full border-slate-600 ">
+    <ul className="flex  whitespace-nowrap  xl:flex-col xl:justify-start overflow-x-auto mx-2 mb-5 max-w-xs">
       {experiences.map((experience) => (
         <li
-        className={`inline-block px-4 py-2 text-sm  md:text-xl text-center items-center justify-center hover:bg-gray-200 transition duration-500 ease-in-out ${
-          selectedCompany === experience.companyName ? "border-b-2 border-[black] bg-gray-200" : ""
+        className={`inline-block px-4 py-2 text-sm xl:text-sm border-b-2 xl:border-b-0 xl:border-l-2 text-slate-800   md:text-xl text-center items-center justify-center hover:bg-gray-200 transition duration-500 ease-in-out ${
+          selectedCompany === experience.companyName ? "border-b-2 xl:border-l-2 xl:border-b-0 border-[black] text-white bg-slate-600 xl:bg-transparent xl:text-slate-800 xl:font-semibold"  : ""
         }`}
           key={experience.companyName}
           onClick={() => handleCompanyClick(experience.companyName)}
@@ -30,15 +30,15 @@ const Cards = ({}: Props) => {
         </li>
       ))}
     </ul>
-    <div>
+    <div className="xl:max-w-xl">
       {selectedCompany && (
         <>
-          <h3 className="text-xl md:text-2xl m-2 font-semibold">
+          <h3 className="text-xl md:text-2xl m-2 ">
             {
               experiences.find((exp) => exp.companyName === selectedCompany)
                 ?.occupation
             }{"  "}
-            <span >@{"  "}{selectedCompany}</span>
+            <span className="font-semibold text-slate-900" >@{"  "}{selectedCompany}</span>
           </h3>
 
           <p className="text-xs m-2">
@@ -53,7 +53,7 @@ const Cards = ({}: Props) => {
             }
           </p>
 
-          <ul className="text-sm md:text-xl m-2 list-disc space-y-2 pl-5">
+          <ul className="text-sm md:text-xl m-2 list-disc space-y-2 pl-5 lg:max-w-3xl xl:text-lg">
             {experiences
               .find((exp) => exp.companyName === selectedCompany)
               ?.responsibilities.map((responsibility, index) => (
