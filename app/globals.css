@@ -23,6 +23,8 @@ body{
     background-image: url("../Assets/stacked-peaks-haikei (3).png");
 } */
 
+
+
 body::-webkit-scrollbar {
         width: 16px;
       }
@@ -34,7 +36,7 @@ body::-webkit-scrollbar {
       
       body::-webkit-scrollbar-thumb {
         background-color: black;
-        border-radius: 100px;
+        border-radius: 50px;
       }
 #card{
     background: rgba( 89, 109, 244, 0.35 );
