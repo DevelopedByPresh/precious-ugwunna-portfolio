@@ -25,15 +25,6 @@ const Skill = ({ directionLeft }: Props) => {
           src={image.src}
           alt={image.alt}
         />
-
-        {/* <div
-          className="absolute  opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white 
-         h-16 w-16 md:h-28 md:w-28 xl:w-32 xl:h-32 rounded-full z-10"
-        >
-          <div className="flex items-center justify-center h-full">
-            <p className="font-bold text-black opacity-100 text-xl">{image.progress}</p>
-          </div>
-        </div> */}
         
       ))}
     </div>
