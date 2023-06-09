@@ -1,27 +1,29 @@
 "use client"
 import Link from "next/link";
 import { useState } from "react";
+import logo from "Assets/imgbin_computer-icons-ice-cube-png.png"
+import Image from "next/image";
 
 
 export default function NavBar() {
     const [navbar, setNavbar] = useState<boolean>(false);
 
     return (
-        <nav className="w-full bg-white  shadow fixed z-20 top-0 font-clash ">
+        <nav className="w-full bg-slate-800 text-white  shadow fixed z-20 top-0 font-programme ">
             <div className="justify-between px-4 mx-auto md:max-w-7xl md:items-center lg:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 lg:py-2 ">
-                       <Link href={"/"}><h1 className="md:text-2xl">AA</h1></Link>
+                       <Link href={"/"}><Image src={logo} alt="logo ice" className="invert" height={40} width={40}/></Link>
                         
                         <div className="lg:hidden">
                             <button
-                                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                                className="p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border"
                                 onClick={() => setNavbar(!navbar)}
                             >
                                 {navbar ? (
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6 text-black"
+                                        className="w-6 h-6 text-white"
                                         viewBox="0 0 20 20"
                                         fill="currentColor"
                                     >
@@ -34,7 +36,7 @@ export default function NavBar() {
                                 ) : (
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6 text-black"
+                                        className="w-6 h-6 text-white"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
@@ -55,21 +57,21 @@ export default function NavBar() {
                     <div
                         className={`flex-1 justify-self-center pb-3 mb-4 mt-8 lg:block lg:pb-0 md:mt-3 ${navbar ? "block" : "hidden"}`}>
                         <ul
-                            className="items-center justify-center  md:text-sm space-y-8 md:ml-[32rem] md:flex
+                            className="items-center justify-center md:text-sm space-y-8 md:ml-[32rem] md:flex
                             lg:flex-row md:flex-col lg:space-x-6 lg:mr-14 lg:space-y-0 md:space-x-10 md:space-y-8">
-                            <li className="text-black  md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4  ">
+                            <li className="text-white  md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4  ">
                                 <Link href="#about" onClick={() => setNavbar(!navbar)}>About</Link>
                             </li>
-                            <li className="text-black md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
-                            <Link href="#experience"><button onClick={() => setNavbar(!navbar)}>Experince</button></Link>
+                            <li className="text-white md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
+                            <Link href="#experience"><button onClick={() => setNavbar(!navbar)}>Experience</button></Link>
                             </li>
-                            <li className="text-black md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
+                            <li className="text-white md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
                             <Link href="#skills"><button onClick={() => setNavbar(!navbar)}>Tech Stack</button></Link>
                             </li>
-                            <li className="text-black md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
+                            <li className="text-white md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
                             <Link href="#projects"><button onClick={() => setNavbar(!navbar)}>Projects</button></Link>
                             </li>
-                            <li className="text-black md:min-w-fithover:text-[#1d1d1d] hover:underline underline-offset-4 ">
+                            <li className="text-white md:min-w-fithover:text-[#1d1d1d] hover:underline underline-offset-4 ">
                             <Link href="#contact"><button onClick={() => setNavbar(!navbar)}>Contact</button></Link>
                             </li>
                         </ul>
