@@ -1,7 +1,8 @@
 import africash from "Assets/Screenshot (392).png";
 import chatgpt from "../Assets/Screenshot (409).png";
 import blog from "../Assets/Screenshot (407).png";
-import { NextImageType } from 'next/image';
+import { StaticImageData } from "next/image";
+
 
 
 interface ImageData {
@@ -21,7 +22,7 @@ type JobExperience = {
 type Project = {
     id: number
     projectName: string;
-    projectImage: NextImageType;
+    projectImage: StaticImageData;
     projectDescription: string;
     demoLink: string;
     githubLink: string;
@@ -107,19 +108,21 @@ export const experiences: JobExperience[] = [
     {
         occupation: "Frontend Developer",
         companyName: "Sabrioad",
-        dateStart: "2022-01-01",
-        dateEnd: "2023-01-01",
+        dateStart: "04/2022",
+        dateEnd: "04/2023",
         responsibilities: [
-            "Developed user interfaces using React.js",
-            "Implemented responsive designs with CSS and media queries",
-            "Collaborated with the design team to bring concepts to life",
+            "I collaborated with a team of three to successfully build an admin dashboard for the operations team with role-based protected routes, resulting in a 20% increase in operational efficiency.",
+
+            "I collaborated closely with UI/UX designers to enhance the visual appeal and user-friendliness of the website, resulting in a notable 15% improvement in user satisfaction and an impressive 25% reduction in bounce rate.",
+            
+            "I collaborated closely with the backend team to seamlessly integrate APIs and services, ensuring smooth data flow and efficient communication between the frontend and backend, resulting in a 30% reduction in data retrieval time.",
         ],
     },
     {
-        occupation: "software Intern",
-        companyName: "First Bank",
-        dateStart: "2020-06-01",
-        dateEnd: "2020-12-31",
+        occupation: "Software Intern",
+        companyName: "First Bank PLC",
+        dateStart: "01/2020",
+        dateEnd: "06/2020",
         responsibilities: [
             "Created wireframes and prototypes for web applications",
             "Designed visually appealing user interfaces with Adobe XD",
