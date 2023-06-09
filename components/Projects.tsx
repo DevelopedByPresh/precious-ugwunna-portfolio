@@ -26,7 +26,7 @@ const Projects = (props: Props) => {
       </h3>
 
 
-      <div className="w-full h-full relative flex xl:top-16 md:top-[5rem] top-28 overflow-x-scroll items-center  overflow-y-hidden snap-x snap-mandatory z-10">
+      <div className="w-full h-full relative flex xl:top-16 md:top-[5rem] top-16 overflow-x-scroll items-center  overflow-y-hidden snap-x snap-mandatory z-10">
         {projectss.map((project, i) => (
           <div
             key={project.projectName}
@@ -67,7 +67,7 @@ const Projects = (props: Props) => {
                 </button>
               </Link>
             </div>
-            <div className="space-y-4 md:px-10 max-w-8xl p-7 xl:px-0 ">
+            <div className="space-y-4 md:px-10 max-w-8xl px-7 xl:px-0 ">
               <h4 className="text-xl md:text-2xl xl:text-xl font-semibold text-center">
                 <span className="underline decoration-black underline-offset-4">
                   Case study {i + 1} of {projectss.length}:

@@ -26,7 +26,7 @@ const ContactMe = (props: Props) => {
       absolute md:top-[40%] md:bottom-[50%] xl:top-[40%] xl:bottom-[40%]
        font-normal xl:text m"
       >
-        <p className="text-sm xl:mb-16 xl:text-xl md:text-xl lg:text-3xl ">
+        <p className="text-sm xl:mb-16 xl:text-xl  p-5 text-start md:text-center md:text-xl lg:text-3xl ">
           Ready to take your web projects to the next{" "}
           <span className="underline decoration-black decoration-2">level</span>
           ? <br /> Let's collaborate and create exceptional user experiences

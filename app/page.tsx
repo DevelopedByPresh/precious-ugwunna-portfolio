@@ -1,3 +1,4 @@
+
 import "./globals.css";
 import bg from "../Assets/stacked-peaks-haikei (3).png";
 import Hero from "@/components/Hero";
@@ -6,10 +7,12 @@ import WorkExperience from "@/components/WorkExperience";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import ContactMe from "@/components/ContactMe";
+import SmoothScroll from '@/components/SmoothScroll';
 
 
 export default function Home() {
   return (
+    
     <div
       id="page"
       className="font-programme antialiased text-black snap-mandatory snap-y z-0 m-3 text-4xl
@@ -17,6 +20,7 @@ export default function Home() {
      bg-[white] bg-center bg-fixed"
       style={{ backgroundImage: `url(${bg})` }}
     >
+      
       <section id="hero" className="snap-start">
         <Hero />
       </section>
