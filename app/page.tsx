@@ -12,7 +12,7 @@ export default function Home() {
     <div
       id="page"
       className="font-programme antialiased text-black snap-mandatory snap-y z-0 m-3 text-4xl
-    overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-white scrollbar-thumb-black bg-no-repeat
+     overflow-x-hidden scrollbar scrollbar-track-white scrollbar-thumb-black bg-no-repeat
      bg-[white] bg-center bg-fixed"
       style={{ backgroundImage: `url(${bg})` }}
     >

@@ -9,7 +9,7 @@ export default function NavBar() {
     const [navbar, setNavbar] = useState<boolean>(false);
 
     return (
-        <nav className="w-full bg-slate-800 text-white  shadow fixed z-20 top-0 font-programme ">
+        <nav className="w-full bg-slate-800 text-white  shadow fixed z-30 top-0 font-programme ">
             <div className="justify-between px-4 mx-auto md:max-w-7xl md:items-center lg:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 lg:py-2 ">
@@ -59,19 +59,19 @@ export default function NavBar() {
                         <ul
                             className="items-center justify-center md:text-sm space-y-8 md:ml-[32rem] md:flex
                             lg:flex-row md:flex-col lg:space-x-6 lg:mr-14 lg:space-y-0 md:space-x-10 md:space-y-8">
-                            <li className="text-white  md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4  ">
+                            <li className="text-white  md:min-w-fit hover:text-[#ffffff] hover:underline underline-offset-4  ">
                                 <Link href="#about" onClick={() => setNavbar(!navbar)}>About</Link>
                             </li>
-                            <li className="text-white md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
+                            <li className="text-white md:min-w-fit hover:text-[#ffffff] hover:underline underline-offset-4 ">
                             <Link href="#experience"><button onClick={() => setNavbar(!navbar)}>Experience</button></Link>
                             </li>
-                            <li className="text-white md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
+                            <li className="text-white md:min-w-fit hover:text-[#ffffff] hover:underline underline-offset-4 ">
                             <Link href="#skills"><button onClick={() => setNavbar(!navbar)}>Tech Stack</button></Link>
                             </li>
-                            <li className="text-white md:min-w-fit hover:text-[#1d1d1d] hover:underline underline-offset-4 ">
+                            <li className="text-white md:min-w-fit hover:text-[#ffffff] hover:underline underline-offset-4 ">
                             <Link href="#projects"><button onClick={() => setNavbar(!navbar)}>Projects</button></Link>
                             </li>
-                            <li className="text-white md:min-w-fithover:text-[#1d1d1d] hover:underline underline-offset-4 ">
+                            <li className="text-white md:min-w-fit hover:text-[#ffffff] hover:underline underline-offset-4 ">
                             <Link href="#contact"><button onClick={() => setNavbar(!navbar)}>Contact</button></Link>
                             </li>
                         </ul>

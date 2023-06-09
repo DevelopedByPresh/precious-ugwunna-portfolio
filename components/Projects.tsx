@@ -16,7 +16,7 @@ const Projects = (props: Props) => {
       viewport={{ once: true }}
       className="relative flex text-center flex-col md:text-left xl:flex-row max-w-full
   xl:px-2 h-screen justify-evenly overflow-x-scroll overflow-y-hidden z-10  mx-auto items-center
-   space-y-10 xl:space-y-1  scrollbar-track-black scrollbar-thumb-pink-700 scrollbar-thin" //just added space in y axis
+   space-y-10 xl:space-y-1  " //just added space in y axis
     >
       <h3
         className=" font-programme text-gray-500 absolute top-20 lg:top-16 text-3xl  md:text-4xl
@@ -24,9 +24,7 @@ const Projects = (props: Props) => {
       >
         Projects
       </h3>
-      <p className="text-sm italic animate-pulse text-gray-500 font-semibold absolute top-24 lg:top-[13rem] xl:top-[7rem] xl:tracking-widest xl:text-sm lg:text-lg opacity-70">
-        Swipe &gt; &gt; &gt;
-      </p>
+
 
       <div className="w-full h-full relative flex xl:top-16 md:top-[5rem] top-28 overflow-x-scroll items-center  overflow-y-hidden snap-x snap-mandatory z-10">
         {projectss.map((project, i) => (
