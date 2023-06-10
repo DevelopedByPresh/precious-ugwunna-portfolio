@@ -13,9 +13,9 @@ export default function Home() {
     
     <div
       id="page"
-      className="font-programme antialiased text-black snap-mandatory snap-y z-0 m-3 text-4xl
-     overflow-x-hidden scrollbar scrollbar-track-white scrollbar-thumb-black bg-no-repeat
-     bg-[white] bg-center bg-fixed"
+      className="font-programme antialiased text-slate-900 snap-mandatory snap-y z-0  text-4xl
+     overflow-x-hidden
+     bg-yellow-100 "
       style={{ backgroundImage: `url(${bg})` }}
     >
       
