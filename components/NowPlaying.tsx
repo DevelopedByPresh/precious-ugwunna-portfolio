@@ -39,11 +39,11 @@ const NowPlaying = () => {
   }, [data]);
 
   return (
-    <div className='z-30 text-sm text-center font-programme space-x-2 text-white h-fit w-full flex justify-center items-center fixed bg-black'>
-      <SiSpotify size={12} color={'#1ED760'} />
-      <h1 className=''>Currently Listeng to</h1>
+    <div className='z-30 text-sm overflow-x-scroll justify-center font-programme  text-white h-fit w-full flex  flex-row space-x-1 items-center fixed bg-black'>
+      
+      <h1 className='flex flex-row items-center'> <SiSpotify size={12} color={'#26a552'} className='md:mr-2 mr-1' /> Currently Listeng to: </h1>
       {currentlyPlaying?.trackName ? (
-        <p>
+        <p className='flex flex-row items-center space-x-1'>
           <a
             className='hover:underline underline-offset-1 text-green-300'
             target='_blank'
@@ -51,7 +51,7 @@ const NowPlaying = () => {
           >
             {currentlyPlaying.trackName}
           </a>{' '}
-          by {currentlyPlaying.artistName} 🔥
+         <span className=''>by {currentlyPlaying.artistName} 🔥 </span> 
         </p>
       ) : (
         <p>Nothing 😴</p>
