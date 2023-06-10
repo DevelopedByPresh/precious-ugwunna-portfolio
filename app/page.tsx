@@ -1,4 +1,3 @@
-
 import "./globals.css";
 import bg from "../Assets/stacked-peaks-haikei (3).png";
 import Hero from "@/components/Hero";
@@ -7,7 +6,6 @@ import WorkExperience from "@/components/WorkExperience";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import ContactMe from "@/components/ContactMe";
-import SmoothScroll from '@/components/SmoothScroll';
 
 
 export default function Home() {
