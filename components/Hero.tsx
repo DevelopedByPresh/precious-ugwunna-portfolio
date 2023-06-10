@@ -16,7 +16,7 @@ const Hero = ({}: Props) => {
   return (
     <motion.div
       className="flex flex-col m-5 xl:ml-[10rem] lg:pb-[18rem] items-start mt-[8rem] md:mt-[15rem]
-    lg:mt-[20rem] xl:mt-[5rem] md:max-w-2xl md:p-20 lg:max-w-[1500px] lg:m-0 xl:pt-0 h-screen overflow-hidden"
+    lg:mt-[20rem] xl:mt-[7rem] md:max-w-2xl md:p-20 lg:max-w-[1500px] lg:m-0 xl:pt-0 h-screen overflow-hidden"
     >
       <h1 className="text-[14px] lg:text-xl   ml-1 mb-3 font-medium">
         Hi, the name is

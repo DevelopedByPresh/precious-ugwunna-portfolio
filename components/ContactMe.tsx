@@ -44,7 +44,7 @@ const ContactMe = (props: Props) => {
           fgColor="#464646"
           onClick={handleClick}
           target="_blank"
-          className="h-2 w-2 filter grayscale  hover:filter-none hover:animate-pulse transition duration-200 ease-in-out"
+          className="h-2 w-2 filter grayscale hover:cursor-pointer  hover:filter-none hover:animate-pulse transition duration-200 ease-in-out"
         />
         <SocialIcon
           network="github"

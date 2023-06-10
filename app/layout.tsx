@@ -1,9 +1,8 @@
-import Loading from "@/components/Loading";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import localFont from "@next/font/local";
 import Head from "app/head";
-import { Suspense } from "react";
+import NowPlaying from "@/components/NowPlaying";
 
 const programme = localFont({
   src: [
@@ -40,6 +39,7 @@ export default function RootLayout({
       */}
       <Head />
         <body>
+        <NowPlaying/>
           <NavBar />
           {children}
         </body>
