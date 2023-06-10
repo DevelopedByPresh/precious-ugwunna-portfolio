@@ -15,7 +15,7 @@ const Projects = (props: Props) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       className="relative flex text-center flex-col md:text-left xl:flex-row max-w-full
-  xl:px-2 h-screen justify-evenly overflow-x-scroll overflow-y-hidden z-10  mx-auto items-center
+  xl:px-2 md:h-screen h-full justify-evenly overflow-x-scroll overflow-y-hidden z-10  mx-auto items-center
    space-y-10 xl:space-y-1  " //just added space in y axis
     >
       <h3
