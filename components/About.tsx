@@ -50,7 +50,7 @@ const About = ({}: Props) => {
           </p>
         </div>
 
-        <div className="tracking-widest">
+        <div className="mt-1">
           <p>Here are a few technologies i work with:</p>
           <ul className="grid grid-cols-2 list-disc px-5 mt-5">
             <li>Javascript</li>
