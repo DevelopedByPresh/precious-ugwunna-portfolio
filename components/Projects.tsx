@@ -55,21 +55,21 @@ const Projects = (props: Props) => {
               </div>
             </div>
 
-            <div className="text-lg lg:text-2xl xl:text-sm xl:pt-4 space-x-3 flex  items-center">
+            <div className="text-sm md:text-lg lg:text-2xl xl:text-sm xl:pt-4 space-x-3 flex  items-center">
               <Link href={project.demoLink} target="_blank">
-                <button className="inline-flex items-center justify-center px-5 py-2  font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
-                  Demo
+                <button className="inline-flex items-center justify-center px-4 py-1.5  font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
+                  Live
                 </button>
               </Link>
               <Link href={project.githubLink} target="_blank">
-                <button className="inline-flex items-center justify-center px-5 py-2  font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
+                <button className="inline-flex items-center justify-center  px-4 py-1.5 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
                   Github
                 </button>
               </Link>
             </div>
             <div className="space-y-4 md:px-10 max-w-8xl px-7 xl:px-0 ">
               <h4 className="text-xl md:text-2xl xl:text-xl font-semibold text-center">
-                <span className="underline decoration-black underline-offset-4">
+              <span className="underline decoration-black underline-offset-4">
                   Case study {i + 1} of {projectss.length}:
                 </span>
                 {"  "}
