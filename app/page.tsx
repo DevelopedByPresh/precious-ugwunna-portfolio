@@ -15,7 +15,7 @@ export default function Home() {
       id="page"
       className="font-programme antialiased text-slate-900 snap-mandatory snap-y z-0  text-4xl
      overflow-x-hidden
-     bg-yellow-100 "
+     bg-[#FAF9F6] "
       style={{ backgroundImage: `url(${bg})` }}
     >
       
