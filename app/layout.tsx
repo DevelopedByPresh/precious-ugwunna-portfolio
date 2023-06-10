@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import localFont from '@next/font/local'
-import SmoothScroll from '@/components/SmoothScroll';
 
 const programme = localFont({
   src: [
@@ -36,12 +35,8 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        
-        <SmoothScroll>
         <NavBar />
-  {children}
-        </SmoothScroll>
-      
+        {children}
       </body>
     </html>
   );

@@ -29,7 +29,7 @@ const Hero = ({}: Props) => {
         <Cursor cursorColor="#0077b5" />
       </div>
 
-      <p className="text-lg text-left mt-5 lg:mt-0 md:max-w-[43rem] lg:mb-10  xl:mb-5 font-medium md:text-xl  lg:text-2xl xl:text-xl ml-1">
+      <p className="text-xl text-left mt-5 lg:mt-0 md:max-w-[43rem] lg:mb-10  xl:mb-5 font-medium md:text-xl  lg:text-2xl xl:text-xl ml-1">
       I'm a freelance software engineer with a passion for crafting exceptional digital experiences. 
       My expertise lies in building accessible and human-centered products. As a freelancer, I have the flexibility
        to work on various projects and I'm currently available for new opportunities. 
