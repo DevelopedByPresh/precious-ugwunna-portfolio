@@ -26,7 +26,7 @@ const Projects = (props: Props) => {
       </h3>
 
 
-      <div className="w-full h-full relative flex xl:top-16 md:top-[5rem] top-16 overflow-x-scroll items-center  overflow-y-hidden snap-x snap-mandatory z-10">
+      <div className="w-full h-full relative flex xl:top-16 md:top-[5rem] top-[-50px] overflow-x-scroll items-center  overflow-y-hidden snap-x snap-mandatory z-10">
         {projectss.map((project, i) => (
           <div
             key={project.projectName}

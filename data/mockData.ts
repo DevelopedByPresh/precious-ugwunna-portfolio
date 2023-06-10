@@ -1,6 +1,7 @@
 import africash from "Assets/Screenshot (392).png";
 import chatgpt from "../Assets/Screenshot (409).png";
 import blog from "../Assets/Screenshot (407).png";
+import multiselect from "../Assets/Screenshot (431).png"
 import { StaticImageData } from "next/image";
 
 
@@ -60,12 +61,12 @@ type Project = {
     },
     {
         id: 4,
-        projectName: " Clone",
-        projectImage: chatgpt,
-        projectDescription:"",
-        demoLink: "https://www.example.com/project1-demo",
-        githubLink: "https://github.com/user/project1",
-        tools:["Javascript", "Typescript", "NextJS",]
+        projectName: "Custom Multiselect Component",
+        projectImage: multiselect,
+        projectDescription:"A React and TypeScript-based multiselect component created from scratch with CSS modules. Allows users to select multiple options from a dropdown list. Highly customizable, performant, and integrates seamlessly with React applications. Demonstrates expertise in building reusable UI components with a focus on flexibility and maintainability",
+        demoLink: "https://multi-select-typescipt.netlify.app/",
+        githubLink: "https://github.com/deji-ice/multi-select-typescript",
+        tools:[ "Typescript", "React", "CSS Modules",]
       },
   ];
   
