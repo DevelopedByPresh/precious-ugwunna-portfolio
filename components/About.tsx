@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import profile from "Assets/download (2) (1) Cropped.jpg";
 import Image from "next/image";
+
 type Props = {};
 
 const About = ({}: Props) => {

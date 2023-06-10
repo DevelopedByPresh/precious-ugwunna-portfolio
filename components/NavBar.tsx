@@ -9,7 +9,8 @@ export default function NavBar() {
     const [navbar, setNavbar] = useState<boolean>(false);
 
     return (
-        <nav className="w-full bg-slate-800 text-white  shadow fixed z-30 top-0 font-programme ">
+        
+        <nav className="w-full bg-slate-800 text-white  shadow fixed z-30 top-5 font-programme ">
             <div className="justify-between px-4 mx-auto md:max-w-7xl md:items-center lg:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 lg:py-2 ">
