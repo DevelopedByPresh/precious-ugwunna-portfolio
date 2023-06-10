@@ -13,7 +13,7 @@ const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-pla
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
 interface SpotifyData {
-  is_playing: boolean;
+  is_playing: boolean ;
   item: {
     name: string;
     album: {
