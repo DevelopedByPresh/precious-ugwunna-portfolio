@@ -10,6 +10,7 @@ import ContactMe from "@/components/ContactMe";
 
 export default function Home() {
   return (
+    
     <div
       id="page"
       className="font-programme antialiased text-black snap-mandatory snap-y z-0 m-3 text-4xl
@@ -17,6 +18,7 @@ export default function Home() {
      bg-[white] bg-center bg-fixed"
       style={{ backgroundImage: `url(${bg})` }}
     >
+      
       <section id="hero" className="snap-start">
         <Hero />
       </section>

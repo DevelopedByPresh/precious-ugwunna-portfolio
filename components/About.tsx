@@ -34,7 +34,7 @@ const About = ({}: Props) => {
             lasting impression.
           </p>
           <p className="mb-4">
-            By day, I'm a dedicated full-stack web developer, leveraging my 1-2
+            By day, I'm a dedicated full-stack web developer, leveraging my 2
             years of experience in the field to bring innovative solutions to
             life. I enjoy the dynamic nature of my work, constantly pushing
             boundaries to deliver seamless experiences and optimize websites for

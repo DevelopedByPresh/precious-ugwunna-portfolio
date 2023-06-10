@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import localFont from '@next/font/local'
@@ -35,8 +34,12 @@ export default function RootLayout({
       */}
       <head />
       <body>
+        
+ 
         <NavBar />
-        {children}
+  {children}
+  
+      
       </body>
     </html>
   );
