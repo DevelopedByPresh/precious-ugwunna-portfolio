@@ -24,7 +24,7 @@ const Hero = ({}: Props) => {
       <h1 className="font-programme font-bold opacity-95 text-4xl md:text-7xl lg:text-6xl pb-1 md:pb-5 ">
         Ayodeji Atanda.
       </h1>
-      <div className="font-bold mt-1 text-5xl md:text-4xl text-gray-500 md:pb-7 lg:text-6xl ">
+      <div className="font-bold mt-1 text-4xl md:text-7xl text-gray-500 md:pb-7 lg:text-6xl ">
         <span>{text}</span>
         <Cursor cursorColor="#0077b5" />
       </div>
