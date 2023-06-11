@@ -41,7 +41,7 @@ const NowPlaying = () => {
   return (
     <div className='z-30 md:text-sm  text-xs overflow-x-scroll justify-center font-programme  text-white md:h-fit h-fit pb-10 pt-0.5 md:pt-0 w-full max-h-8xl flex  flex-row space-x-1 items-center fixed bg-black'>
       
-      <h1 className='flex flex-row items-center'> <SiSpotify size={12} color={'#26a552'} className='md:mr-2 mr-1' /> Currently Listeng to: </h1>
+      <h1 className='flex flex-row items-center'> <SiSpotify size={12} color={'#26a552'} className='md:mr-2 mr-1' /> Currently Listening to: </h1>
       {currentlyPlaying?.trackName ? (
         <p className='flex flex-row items-center space-x-1'>
           <a

@@ -18,13 +18,13 @@ const Hero = ({}: Props) => {
       className="flex flex-col m-5 xl:ml-[10rem] lg:pb-[18rem] items-start mt-[8rem] md:mt-[15rem]
     lg:mt-[20rem] xl:mt-[7rem] md:max-w-2xl md:p-20 lg:max-w-[1500px] lg:m-0 xl:pt-0 h-screen overflow-hidden"
     >
-      <h1 className="text-[14px] lg:text-xl   ml-1 mb-3 font-medium">
+      <h1 className="text-[14px]  lg:text-xl   ml-1 mb-3 font-medium">
         Hi, the name is
       </h1>
-      <h1 className="font-programme font-bold opacity-95 text-3xl md:text-7xl lg:text-6xl pb-1 md:pb-5 ">
+      <h1 className="font-programme font-bold opacity-95 text-4xl md:text-7xl lg:text-6xl pb-1 md:pb-5 ">
         Ayodeji Atanda.
       </h1>
-      <div className="font-bold mt-1 text-3xl md:text-7xl text-gray-500 md:pb-7 lg:text-6xl ">
+      <div className="font-bold mt-1 text-5xl md:text-4xl text-gray-500 md:pb-7 lg:text-6xl ">
         <span>{text}</span>
         <Cursor cursorColor="#0077b5" />
       </div>
