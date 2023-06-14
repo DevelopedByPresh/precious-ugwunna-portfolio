@@ -2,13 +2,19 @@ import africash from "Assets/Screenshot (392).png";
 import chatgpt from "../Assets/Screenshot (409).png";
 import blog from "../Assets/Screenshot (407).png";
 import multiselect from "../Assets/Screenshot (431).png"
+import NextJs from "../Assets/Next.js Logo Vector.png"
+import Framer from '../Assets/framer-motion-seeklogo.com.svg'
+import react from '../Assets/react-seeklogo.com.svg'
+import sanity from '../Assets/exghybvcvdmerns27fff.png'
+import nextAuth from '../Assets/logo-sm.png'
+import MongoDb from '../Assets/1_ty8m8Y3dzgD6P5Xc17gbYw.jpg'
 import { StaticImageData } from "next/image";
 
 
 
 interface ImageData {
     alt: string;
-    src: string;
+    src: string | StaticImageData;
     progress: string
 }
 
@@ -74,12 +80,17 @@ type Project = {
 export const images: ImageData[] = [
     {
         alt: "React",
-        src: "https://asset.brandfetch.io/idbkMiejO4/idee5k_Xjl.svg",
+        src: react,
         progress: "85%"
     },
     {
         alt: "typescript",
         src: "https://asset.brandfetch.io/idKX_Hb7va/id1t_VNpUn.svg",
+        progress: "85%"
+    },
+    {
+        alt: "nextjs",
+        src: NextJs,
         progress: "85%"
     },
     {
@@ -99,9 +110,28 @@ export const images: ImageData[] = [
     },
     {
         alt: "framer",
-        src: "https://asset.brandfetch.io/idCeIE9B96/id672ybz9X.svg",
+        src: Framer,
         progress: "85%"
     },
+
+    {
+        alt: "sanity",
+        src: sanity,
+        progress: "85%"
+    },
+    
+    {
+        alt: "mongodb",
+        src: MongoDb,
+        progress: "85%"
+    },
+    
+    {
+        alt: "nextAuth",
+        src: nextAuth,
+        progress: "85%"
+    },
+
 ];
 
 

@@ -28,12 +28,12 @@ const Skills = (props: Props) => {
           // whileInView={{ opacity: 1, x: 0 }}
           // transition={{ duration: 1.5 }}
           // viewport={{once:true}}
-          className="object-cover filter h-16 w-16 xl:w-fit xl:h-16  md:h-28 md:w-28  
-      hover:grayscale transition duration-300 ease-in-out p-0 rounded-full"
+          className="object-scale-down filter h-16 w-16 xl:w-fit xl:h-16  md:h-28 md:w-28  
+      hover:grayscale transition duration-300 ease-in-out p-0 rounded-full "
           src={image.src}
           alt={image.alt}
-          width={100}
-          height={100}
+          width={50}
+          height={50}
         />
 
         {/* <div
