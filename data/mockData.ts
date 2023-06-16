@@ -40,12 +40,12 @@ type Project = {
   export const projectss: Project[] = [
     {
         id: 1,
-      projectName: "ChatGPT Clone",
-      projectImage: chatgpt,
-      projectDescription: "A web application built with TypeScript, Next.js 13, and Tailwind CSS that allows users to chat with an AI language model. Implemented Next.js server-side rendering and utilized Firebase for real-time communication. Implemented NextAuth for user authentication. Developed form validation with Yup. This project showcases my skills in building modern, scalable web applications using the latest technologies.",
-      demoLink: "https://chat-gpt-vlone.vercel.app/",
-      githubLink: "https://github.com/deji-ice/chat-gpt",
-      tools:["Typescript", "NextJS","Tailwind CSS","Next Auth", "Open AI"]
+      projectName: "Blog with Embedded Sanity CMS",
+      projectImage: blog,
+      projectDescription: "A personal blog website using Next.js 13 and TypeScript, with an embedded content management system from Sanity. Leveraged Tailwind CSS for responsive design and utilized Next.js SSG and revalidation for optimal performance. Implemented dynamic routing to generate pages for each blog post and used server-side rendering to enhance SEO. Ensured a seamless user experience with lazy loading and image optimization.",
+      demoLink: "https://curiositychronicles.vercel.app/",
+      githubLink: "https://github.com/deji-ice/nextjs-blog",
+      tools:["Sanity", "Typescript", "NextJS","TailwindCSS",]
     },
     {
         id: 2,
@@ -58,13 +58,15 @@ type Project = {
     },
     {
         id: 3,
-      projectName: "Blog with Embedded Sanity CMS",
-      projectImage: blog,
-      projectDescription: "A personal blog website using Next.js 13 and TypeScript, with an embedded content management system from Sanity. Leveraged Tailwind CSS for responsive design and utilized Next.js SSG and revalidation for optimal performance. Implemented dynamic routing to generate pages for each blog post and used server-side rendering to enhance SEO. Ensured a seamless user experience with lazy loading and image optimization.",
-      demoLink: "https://curiositychronicles.vercel.app/",
-      githubLink: "https://github.com/deji-ice/nextjs-blog",
-      tools:["Sanity", "Typescript", "NextJS","TailwindCSS",]
+      projectName: "ChatGPT Clone",
+      projectImage: chatgpt,
+      projectDescription: "A web application built with TypeScript, Next.js 13, and Tailwind CSS that allows users to chat with an AI language model. Implemented Next.js server-side rendering and utilized Firebase for real-time communication. Implemented NextAuth for user authentication. Developed form validation with Yup. This project showcases my skills in building modern, scalable web applications using the latest technologies.",
+      demoLink: "https://chat-gpt-vlone.vercel.app/",
+      githubLink: "https://github.com/deji-ice/chat-gpt",
+      tools:["Typescript", "NextJS","Tailwind CSS","Next Auth", "Open AI"]
     },
+
+
     {
         id: 4,
         projectName: "Custom Multiselect Component",
