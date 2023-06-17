@@ -6,6 +6,9 @@ import NextJs from "../Assets/Next.js Logo Vector.png"
 import Framer from '../Assets/framer-motion-seeklogo.com.svg'
 import react from '../Assets/react-seeklogo.com.svg'
 import sanity from '../Assets/exghybvcvdmerns27fff.png'
+import html5 from '../Assets/kisspng-computer-icons-html5-scalable-vector-graphics-port-socialpack-chocolate-icon-5c4b3bbd2275a7.4033632815484343651412.png'
+import css from '../Assets/pngegg (19).png'
+import sass from '../Assets/pngfind.com-sass-logo-png-4521456.png'
 import nextAuth from '../Assets/logo-sm.png'
 import MongoDb from '../Assets/1_ty8m8Y3dzgD6P5Xc17gbYw.jpg'
 import { StaticImageData } from "next/image";
@@ -81,6 +84,11 @@ type Project = {
 
 export const images: ImageData[] = [
     {
+        alt: "HTML 5",
+        src: html5,
+        progress: "85%"
+    },
+    {
         alt: "React",
         src: react,
         progress: "85%"
@@ -113,6 +121,11 @@ export const images: ImageData[] = [
     {
         alt: "framer",
         src: Framer,
+        progress: "85%"
+    },
+    {
+        alt: "SASS",
+        src: sass,
         progress: "85%"
     },
 
