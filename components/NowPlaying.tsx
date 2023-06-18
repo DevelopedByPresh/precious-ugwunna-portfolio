@@ -40,7 +40,7 @@ const NowPlaying = () => {
 
   return (
     <>
-      <h1 className='w-full bg-slate-900 overflow-x-scroll text-white text-center text-xs space-x-1 fixed z-30 flex justify-center items-center  md:text-sm h-5'> 
+      <h1 className='w-full bg-slate-900 text-white text-center text-xs space-x-1 fixed z-30 flex justify-center items-center  md:text-sm h-5'> 
       <SiSpotify size={12} color={'#26a552'} className='mr-1' /> 
       Currently Listening to:{" "}
       {currentlyPlaying?.trackName ? (
