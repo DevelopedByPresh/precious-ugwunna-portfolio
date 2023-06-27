@@ -26,6 +26,9 @@ const montecatiniPro = localFont({
 export const metadata = {
   viewport: { width: "device-width", initialScale: 1 },
   title: "Ayodeji Atanda - Web Developer Portfolio",
+  verification: { 
+    google: "ltfOnPx-NMzt2vBROfh-jAQr5R-U7ynE-3t3kmMTJGo"
+  } ,
   alternates: {
     canonical: '/',
     languages: {
