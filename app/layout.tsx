@@ -26,8 +26,14 @@ const montecatiniPro = localFont({
 export const metadata = {
   viewport: { width: "device-width", initialScale: 1 },
   title: "Ayodeji Atanda - Web Developer Portfolio",
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+    },
+  },
   description:
-    "Discover my portfolio of web development projects for small businesses, focusing on creating professional, scalable, and user-friendly websites that help businesses establish an online presence.",
+    "Explore my web development portfolio for small businesses. Professional, scalable, and SEO-friendly websites that establish an online presence.",
   keywords: [
     "Ayodeji Atanda",
     "Deji ice",
