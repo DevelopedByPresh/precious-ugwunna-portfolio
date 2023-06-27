@@ -26,7 +26,12 @@ const montecatiniPro = localFont({
 export const metadata = {
   viewport: { width: "device-width", initialScale: 1 },
   title: "Ayodeji Atanda - Web Developer Portfolio",
-  
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+    },
+  },
   description:
     "Explore my web development portfolio for small businesses. Professional, scalable, and SEO-friendly websites that establish an online presence.",
   keywords: [
