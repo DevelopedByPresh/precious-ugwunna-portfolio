@@ -16,7 +16,7 @@ const Hero = ({}: Props) => {
   return (
     <motion.div
       className="flex flex-col m-5 xl:ml-[10rem] lg:pb-[18rem] items-start mt-[8rem] md:mt-[15rem]
-    lg:mt-[20rem] xl:mt-[7rem] md:max-w-2xl md:p-20 lg:max-w-[1500px] lg:m-0 xl:pt-0 h-screen overflow-hidden"
+    lg:mt-[20rem] xl:mt-[8rem] md:max-w-2xl md:p-20 lg:max-w-[1500px] lg:m-0 xl:pt-0 h-screen overflow-hidden"
     >
       <h4 className="text-[14px]  lg:text-xl   ml-1 mb-3 font-medium">
         Hi, the name is
@@ -25,15 +25,16 @@ const Hero = ({}: Props) => {
         Ayodeji Atanda.
       </h1>
       <div className="font-bold mt-1 text-4xl md:text-7xl text-gray-500 md:pb-7 lg:text-6xl ">
-        <span>{text}</span>
-        <Cursor cursorColor="#0077b5" />
+        <h2>{text}
+         <Cursor cursorColor="#0077b5" /></h2>
+       
       </div>
 
       <p className="text-lg text-left mt-5 lg:mt-0 md:max-w-[43rem] lg:mb-10  xl:mb-5 font-medium md:text-xl  lg:text-2xl xl:text-xl ml-1">
-      I'm a freelance software engineer with a passion for crafting exceptional digital experiences. 
-      My expertise lies in building accessible and human-centered products. As a freelancer, I have the flexibility
-       to work on various projects and I'm currently available for new opportunities. 
-      Let's collaborate to create outstanding solutions tailored to your needs.
+      I'm a freelance Fullstack Web Developer with a passion for crafting exceptional digital experiences.
+       My expertise lies in building accessible, human-centered, and SEO-friendly products. As a freelancer, 
+       I have the flexibility to work on various projects and I'm currently available for new opportunities.
+        Let's collaborate to create outstanding solutions tailored to your needs.
       </p>
       <Button title="Get In Touch" />
     </motion.div>

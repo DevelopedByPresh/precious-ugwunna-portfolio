@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import { motion } from "framer-motion";
-import profile from "Assets/download (2) (1) Cropped.jpg";
+import ayodejiatanda from "Assets/download (2) (1) Cropped.jpg";
 import Image from "next/image";
 
 type Props = {};
@@ -19,7 +19,7 @@ const About = ({}: Props) => {
       font-semibold uppercase text-gray-500 font-programme">Persona Blurb</h2>
       <div className="flex flex-col space-y-10 items-center lg:items-start lg:flex-row lg:space-x-20">
         <Image
-          src={profile}
+          src={ayodejiatanda}
           alt="Ayodeji Atanda's portrait"
           height={300}
           width={300}  
@@ -28,7 +28,7 @@ const About = ({}: Props) => {
         <div className="text-base lg:text-xl">
         <div className="flex flex-col space-y-2 lg:items-start ">
           <p className=" mb-4">
-            Hey there! I'm <span className="underline">Ayodeji</span>, a passionate web developer with a knack for
+            Hey there! I'm <strong className="underline">Ayodeji</strong>, a passionate web developer with a knack for
             creating visually stunning designs that captivate audiences. I
             believe that great design should be accessible to everyone, and
             that's what drives me to craft user-friendly websites that leave a

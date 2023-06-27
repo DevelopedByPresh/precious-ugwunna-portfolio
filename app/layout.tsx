@@ -33,7 +33,7 @@ export const metadata = {
     },
   },
   description:
-    "Explore my web development portfolio for small businesses. Professional, scalable, and SEO-friendly websites that establish an online presence.",
+    "Ayodeji Atanda - Web Developer Portfolio for small businesses. Professional, scalable, and SEO-friendly websites that establish an online presence.",
   keywords: [
     "Ayodeji Atanda",
     "Deji ice",
