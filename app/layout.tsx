@@ -72,7 +72,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Ayodeji Atanda - Web Developer Portfolio",
     description:
-      "Discover my portfolio of web development projects for small businesses, focusing on creating professional, scalable, and user-friendly websites that help businesses establish an online presence.",
+      "Ayodeji Atanda - Web Developer Portfolio for small businesses. Professional, scalable, and SEO-friendly websites that establish an online presence.",
     creator: "@DEJIxICE",
   },
 };
