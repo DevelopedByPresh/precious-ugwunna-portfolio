@@ -3,6 +3,7 @@ import NavBar from "@/components/NavBar";
 import localFont from "@next/font/local";
 import Head from "app/head";
 import NowPlaying from "@/components/NowPlaying";
+import Script from "next/script";
 
 const programme = localFont({
   src: [
@@ -37,6 +38,15 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-BLDSSJGKXF"/>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BLDSSJGKXF');
+        `}
+      </Script>
       <Head />
         <body>
         <NowPlaying/>
