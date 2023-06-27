@@ -38,6 +38,8 @@ export const metadata = {
     "Web development",
     "Frontend development",
     "Frontend developer",
+    "Fullstack developer",
+    "Graphic designer",
     "typescipt",
     "Next.js",
     "Web Development Portfolio",
