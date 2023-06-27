@@ -38,13 +38,13 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-BLDSSJGKXF"/>
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-2PKP3NR2VS"/>
       <Script id="google-analytics" strategy="afterInteractive">
         {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-BLDSSJGKXF');
+            gtag('config', 'G-2PKP3NR2VS');
         `}
       </Script>
       <Head />
