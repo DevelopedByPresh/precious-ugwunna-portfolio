@@ -39,8 +39,8 @@ const NowPlaying = () => {
   }, [data]);
 
   return (
-    <>
-      <h4 className='w-full bg-slate-900 text-white text-center text-xs space-x-1 fixed z-30 flex justify-center items-center  md:text-sm h-5'> 
+    <div className="w-full bg-slate-900 overflow-hidden z-30 flex fixed h-6 pb-1 justify-center items-center ">
+      <h4 className='text-white flex w-full text-xs space-x-1 text-center items-center marquee md:text-sm '> 
       <SiSpotify size={12} color={'#26a551'} className='mr-1' /> 
       Currently Listening to:{" "}
       {currentlyPlaying?.trackName ? (
@@ -58,7 +58,7 @@ const NowPlaying = () => {
         <span>nothing 😴</span>
       )}
       </h4>
-   </>
+   </div>
       
   );
 };
