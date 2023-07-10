@@ -46,7 +46,7 @@ type Project = {
       projectName: "Blog with Embedded Sanity CMS",
       projectImage: blog,
       projectDescription: "A personal blog website using Next.js 13 and TypeScript, with an embedded content management system from Sanity. Leveraged Tailwind CSS for responsive design and utilized Next.js SSG and revalidation for optimal performance. Implemented dynamic routing to generate pages for each blog post and used server-side rendering to enhance SEO. Ensured a seamless user experience with lazy loading and image optimization.",
-      demoLink: "https://curiositychronicles.vercel.app/",
+      demoLink: "https://codechronicles.com/",
       githubLink: "https://github.com/deji-ice/nextjs-blog",
       tools:["Sanity", "Typescript", "NextJS","TailwindCSS",]
     },
