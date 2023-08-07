@@ -4,6 +4,7 @@ import logo from "Assets/Screenshot (392).png";
 import { projectss } from "@/data/mockData";
 import Link from "next/link";
 import Image from "next/image";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 
 type Props = {};
 
@@ -24,15 +25,15 @@ const Projects = (props: Props) => {
       >
         Projects
       </h3>
-
-
       <div className="w-full h-full relative flex xl:top-16 md:top-[5rem] top-[-50px] overflow-x-scroll items-center  overflow-y-hidden snap-x snap-mandatory z-10">
         {projectss.map((project, i) => (
           <div
             key={project.projectName}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-8 md:space-y-8 xl:space-y-1 items-center 
+            className="relative w-screen flex-shrink-0 snap-center flex flex-col space-y-8 md:space-y-8 xl:space-y-1 items-center 
           md:p-20 xl:p-0 h-screen mt-[5em]"
           >
+            <AiOutlineArrowLeft className="absolute top-24 left-[20rem] hover:cursor-pointer rounded-full bg-blue-950 text-white p-2"/>
+            <AiOutlineArrowRight className="absolute top-24 right-[20rem]  hover:cursor-pointer rounded-full bg-blue-950 text-white p-2"/>
             <div className="flex flex-col items-center justify-center mx-2 snap-center snap-mandatory space-y-0  ">
               <Image
                 width={400}
@@ -55,7 +56,7 @@ const Projects = (props: Props) => {
               </div>
             </div>
 
-            <div className="text-sm md:text-lg lg:text-2xl xl:text-sm xl:pt-4 space-x-3 flex  items-center">
+            <div className="text-sm md:text-lg lg:text-2xl xl:text-sm xl:pt-4  space-x-3 flex  items-center">
               <Link href={project.demoLink} target="_blank">
                 <button className="inline-flex items-center justify-center px-4 py-1.5  font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
                   Live
@@ -69,7 +70,7 @@ const Projects = (props: Props) => {
             </div>
             <div className="space-y-4 md:px-10 max-w-8xl px-7 xl:px-0 ">
               <h4 className="text-xl md:text-2xl xl:text-xl font-semibold text-center">
-              <span className="underline decoration-black underline-offset-4">
+                <span className="underline decoration-black underline-offset-4">
                   Case study {i + 1} of {projectss.length}:
                 </span>
                 {"  "}
