@@ -59,6 +59,7 @@ const About = ({}: Props) => {
             <li>React</li>
             <li>Tailwind CSS</li>
             <li>NextJS </li>
+            <li>GSAP</li>
             <li>Firebase</li>
           </ul>
         </div>
