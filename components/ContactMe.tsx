@@ -16,7 +16,7 @@ const ContactMe = (props: Props) => {
        px-10 h-screen justify-evenly overflow-hidden   mx-auto items-center space-y-10 "
     >
       <h3
-        className="absolute top-40 lg:top-20 text-3xl mb-5 xl:text-3xl md:text-4xl md:mb-[6rem]  lg:mb-[0] font-semibold
+        className="absolute top-40 lg:top-[10rem] xl:top-20 text-3xl mb-5 xl:text-3xl md:text-4xl md:mb-[6rem]  lg:mb-[0] font-semibold
        uppercase font-programme text-gray-500"
       >
         Get In Touch
