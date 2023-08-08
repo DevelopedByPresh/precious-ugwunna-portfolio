@@ -41,11 +41,11 @@ const Projects = (props: Props) => {
       </h3>
       <AiOutlineArrowLeft
         onClick={handlePrevious}
-        className="absolute z-20 md:text-5xl lg:text-6xl top-[11rem] xl:top-[13rem] left-5 md:top-[22rem] md:left-[75px] xl:left-[20rem] hover:cursor-pointer rounded-full bg-blue-950 text-white p-2"
+        className="absolute z-20 md:text-5xl lg:text-6xl xl:text-5xl top-[11rem] xl:top-[13rem] left-5 md:top-[22rem] md:left-[75px] xl:left-[20rem] hover:cursor-pointer rounded-full bg-blue-950 text-white p-2"
       />
       <AiOutlineArrowRight
         onClick={handleNext}
-        className="absolute z-20 md:text-5xl lg:text-6xl top-[11rem] xl:top-[13rem] right-5 md:top-[22rem] md:right-[75px] xl:right-[20rem]  hover:cursor-pointer rounded-full bg-blue-950 text-white p-2"
+        className="absolute z-20 md:text-5xl lg:text-6xl xl:text-5xl top-[11rem] xl:top-[13rem] right-5 md:top-[22rem] md:right-[75px] xl:right-[20rem]  hover:cursor-pointer rounded-full bg-blue-950 text-white p-2"
       />
       <div className="w-full h-full relative flex xl:top-16 md:top-[5rem] top-[-50px] overflow-x-scroll items-center  overflow-y-hidden snap-x snap-mandatory z-10">
         <motion.div
