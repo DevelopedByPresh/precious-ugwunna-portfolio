@@ -52,7 +52,7 @@ export const projectss: Project[] = [
     },
     {
         id: 2,
-        projectName: "Photographer Portfolio Showcase",
+        projectName: "Software Developer Portfolio Showcase",
         projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1691494937/cartizn/Screenshot_2023-08-08_124122_hssdkd.png",
         projectDescription:"Crafted an SEO-optimized Developer Portfolio using Framer Motion, Next.js, TypeScript, and Tailwind CSS. Seamlessly integrated Spotify API and Cloudinary for enhanced user experience and image optimization. Explore my journey, tech expertise, and standout projects through this interactive showcase designed to leave a lasting digital impression.",
         demoLink: "https://ayodejiatanda.vercel.app/",
