@@ -1,10 +1,11 @@
 "use client"
 
 type Props = {
-    title: string
+    title: string,
+    numbes: number
 };
 
-const Button = ({title}: Props) => {
+const Button = ({title, numbes}: Props) => {
   const handleClick = () => {
     window.location.href = "mailto:ayodejiatanda1@gmail.com";
   };

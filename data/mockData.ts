@@ -54,10 +54,10 @@ export const projectss: Project[] = [
         id: 2,
         projectName: "Software Developer Portfolio Showcase",
         projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1691494937/cartizn/Screenshot_2023-08-08_124122_hssdkd.png",
-        projectDescription:"Crafted an SEO-optimized Developer Portfolio using Framer Motion, Next.js, TypeScript, and Tailwind CSS. Seamlessly integrated Spotify API and Cloudinary for enhanced user experience and image optimization. Explore my journey, tech expertise, and standout projects through this interactive showcase designed to leave a lasting digital impression.",
+        projectDescription: "Crafted an SEO-optimized Developer Portfolio using Framer Motion, Next.js, TypeScript, and Tailwind CSS. Seamlessly integrated Spotify API and Cloudinary for enhanced user experience and image optimization. Explore my journey, tech expertise, and standout projects through this interactive showcase designed to leave a lasting digital impression.",
         demoLink: "https://ayodejiatanda.vercel.app/",
         githubLink: "https://github.com/deji-ice/Mainportfoli0",
-        tools: ["Framer Motion", "NextJS", "Typescript", "TailwindCSS", "Spoitfy API","SEO", "Cloudinary", "Vercel"]
+        tools: ["Framer Motion", "NextJS", "Typescript", "TailwindCSS", "Spoitfy API", "SEO", "Cloudinary", "Vercel"]
     },
     {
         id: 3,
@@ -66,7 +66,7 @@ export const projectss: Project[] = [
         projectDescription: "A personal blog website using Next.js 13 and TypeScript, with an embedded content management system from Sanity. Leveraged Tailwind CSS for responsive design and utilized Next.js SSG and revalidation for optimal performance. Implemented dynamic routing to generate pages for each blog post and used server-side rendering to enhance SEO. Ensured a seamless user experience with lazy loading and image optimization.",
         demoLink: "https://thecodechronicles.vercel.app/",
         githubLink: "https://github.com/deji-ice/nextjs-blog",
-        tools: ["Sanity", "Typescript", "NextJS", "TailwindCSS","Heroicons","Vercel"]
+        tools: ["Sanity", "Typescript", "NextJS", "TailwindCSS", "Heroicons", "Vercel"]
     },
     {
         id: 4,
@@ -75,7 +75,7 @@ export const projectss: Project[] = [
         projectDescription: "Africash is a fintech landing page built with React, Tailwind CSS, and Framer Motion. The landing page is designed to promote the Africash financial platform with a modern and responsive user interface. Features include easy navigation, smooth animations, and informative sections highlighting the platform's key benefits.",
         demoLink: "https://africash.netlify.app/",
         githubLink: "https://github.com/deji-ice/Africash",
-        tools: ["TailwindCSS", "React", "Framer Motion","Netlify"]
+        tools: ["TailwindCSS", "React", "Framer Motion", "Netlify"]
     },
     {
         id: 5,
@@ -95,7 +95,7 @@ export const projectss: Project[] = [
         projectDescription: "A React and TypeScript-based multiselect component created from scratch with CSS modules. Allows users to select multiple options from a dropdown list. Highly customizable, performant, and integrates seamlessly with React applications. Demonstrates expertise in building reusable UI components with a focus on flexibility and maintainability",
         demoLink: "https://multi-select-typescipt.netlify.app/",
         githubLink: "https://github.com/deji-ice/multi-select-typescript",
-        tools: ["Typescript", "React", "CSS","Netlify"]
+        tools: ["Typescript", "React", "CSS", "Netlify"]
     },
 ];
 
@@ -169,6 +169,33 @@ export const images: ImageData[] = [
 
 
 export const experiences: JobExperience[] = [
+    {
+        occupation: "Fullstack Javascript Instructor",
+        companyName: "GOMYCODE",
+        dateStart: "09/2023",
+        dateEnd: "Till Date",
+        responsibilities: [
+            `Mentored and facilitated collaborative learning through group discussions,
+            peer code reviews, and team projects, fostering teamwork and enhancing
+            problem-solving skills.`,
+
+            `
+            Innovatively crafted engaging coding exercises, projects, and real-world
+scenarios in React, ES6, Node.js, Redux Toolkit, REST APIs, and database
+management to ensure hands-on learning experiences.
+            `,
+
+            `
+        Organized workshops, coding bootcamps, and guest speaker sessions,
+showcasing a strong sense of responsibility and innovation in students'
+education journey.
+        `    ,
+            `
+        Stayed current with industry trends, tools, and best practices, seamlessly
+integrating them into the curriculum to equip students with marketable skills.
+        `,
+        ],
+    },
     {
         occupation: "Frontend Developer",
         companyName: "Sabrioad",
