@@ -87,7 +87,11 @@ export default async function spotify(
       songUrl: response.data.item.external_urls.spotify,
     };
 
-     
+    res.setHeader(
+      'Cache-Control',
+      'public, s-maxage=180, stale-while-revalidate=90'
+    );
+
     return res.status(200).json(data);
   }
 }

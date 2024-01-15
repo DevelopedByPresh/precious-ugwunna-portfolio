@@ -2,10 +2,9 @@
 
 type Props = {
     title: string,
-    numbes: number
 };
 
-const Button = ({title, numbes}: Props) => {
+const Button = ({title}: Props) => {
   const handleClick = () => {
     window.location.href = "mailto:ayodejiatanda1@gmail.com";
   };
