@@ -183,7 +183,7 @@ export const images: ImageData[] = [
   },
   {
     alt: "typescript",
-    src: "https://asset.brandfetch.io/idKX_Hb7va/id1t_VNpUn.svg",
+    src: "https://abrudz.github.io/logos/TypeScript.svg",
     progress: "85%",
   },
   {
@@ -193,7 +193,7 @@ export const images: ImageData[] = [
   },
   {
     alt: "javascript",
-    src: "https://asset.brandfetch.io/idq5ck33b2/id8Fb4RR16.png",
+    src: "https://abrudz.github.io/logos/JS.svg",
     progress: "85%",
   },
   {
@@ -225,7 +225,7 @@ export const images: ImageData[] = [
 
   {
     alt: "gsap",
-    src: "https://greensock.com/uploads/monthly_2020_03/tweenmax.png.cf27916e926fbb328ff214f66b4c8429.png",
+    src: "https://pbs.twimg.com/profile_images/1713633504431394816/h28jJ1qM_400x400.jpg",
     progress: "85%",
   },
 
@@ -283,9 +283,16 @@ integrating them into the curriculum to equip students with marketable skills.
     dateStart: "01/2020",
     dateEnd: "06/2020",
     responsibilities: [
-      "Created wireframes and prototypes for web applications",
-      "Designed visually appealing user interfaces with Adobe XD",
-      "Worked closely with developers to ensure design implementation",
+      `Collaborated with a team of five developers to create an insurance online
+      application using ASP.NET, resulting in a 20% increase in customer
+      acquisition and a 15% improvement in overall application efficiency.`,
+      `Learned C# and the ASP.NET framework and applied them in two projects,
+      contributing to a 30% reduction in development time and a 25% increase in
+      code quality.`,
+      `Developed a Subscription Video App using ASP.NET as a self skill-building
+      project, enhancing my proficiency in C# and the ASP.NET framework while
+      gaining hands-on experience in application development and database
+      management.`,
     ],
   },
 ];
