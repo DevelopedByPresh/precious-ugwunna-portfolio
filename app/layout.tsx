@@ -25,7 +25,7 @@ const montecatiniPro = localFont({
 
 export const metadata = {
   viewport: { width: "device-width", initialScale: 1 },
-  title: "Ayodeji Atanda - Web Developer Portfolio",
+  title: "Ayodeji Atanda - Frontend Engineer Portfolio",
   verification: { 
     google: "ltfOnPx-NMzt2vBROfh-jAQr5R-U7ynE-3t3kmMTJGo"
   } ,
@@ -36,7 +36,7 @@ export const metadata = {
     },
   },
   description:
-    "Ayodeji Atanda - Web Developer Portfolio for small businesses. Professional, scalable, and SEO-friendly websites that establish an online presence.",
+    "Ayodeji Atanda - Frontend Engineer Portfolio for small businesses. Professional, scalable, and SEO-friendly websites that establish an online presence.",
   keywords: [
     "Ayodeji Atanda",
     "Deji ice",
@@ -44,6 +44,7 @@ export const metadata = {
     "Nigeria",
     "JavaScript",
     "React",
+    "Frontend Engineer",
     "Web development",
     "Frontend development",
     "Frontend developer",
