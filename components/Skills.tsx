@@ -18,7 +18,7 @@ const Skills = (props: Props) => {
           <h3 className="absolute font-programme text-gray-500 top-24 lg:top-0 xl:top-16 text-3xl mb-5 xl:text-3xl md:text-5xl md:mb-[6rem] xl:mb-0 font-semibold uppercase">
           Tech Stack
       </h3>
-      <div className="grid  grid-cols-3 gap-5 justify-center absolute top-[35%] xl:top-[25%]">
+      <div className="grid grid-cols-3  gap-5 justify-center absolute top-[35%] xl:top-[25%]">
         {/* <Skill/> */}
         {images.map((image, index) => (
         <div     key={index}>
@@ -29,7 +29,7 @@ const Skills = (props: Props) => {
           // transition={{ duration: 1.5 }}
           // viewport={{once:true}}
           className="object-scale-down filter h-16 w-16 xl:w-fit xl:h-16  md:h-28 md:w-28  
-      hover:grayscale transition duration-300 ease-in-out p-0 rounded-full "
+      hover:grayscale transition duration-300 ease-in-out p-0 rounded-2xl "
           src={image.src}
           alt={image.alt}
           width={50}

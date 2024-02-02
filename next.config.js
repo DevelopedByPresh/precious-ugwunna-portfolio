@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ["asset.brandfetch.io", "greensock.com", "res.cloudinary.com"],
+    domains: ["asset.brandfetch.io", "greensock.com", "res.cloudinary.com", "pbs.twimg.com"],
   },
 }
 
