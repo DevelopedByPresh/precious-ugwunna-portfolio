@@ -74,10 +74,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ayodeji Atanda - Web Developer Portfolio",
+    title: "Ayodeji Atanda - Frontend Engineer Portfolio",
     description:
-      "Ayodeji Atanda - Web Developer Portfolio for small businesses. Professional, scalable, and SEO-friendly websites that establish an online presence.",
-    creator: "@DEJIxICE",
+      "Ayodeji Atanda - Frontend Engineer Portfolio for small businesses. Professional, scalable, and SEO-friendly websites that establish an online presence.",
+    creator: "@dejiXice",
   },
 };
 export default function RootLayout({
