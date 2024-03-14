@@ -80,7 +80,7 @@ const ContactMe = (props: Props) => {
         />
       </div>
       <p className="text-xs absolute bottom-5 tracking-wide font-normal">
-        Created by twitter user{" "}
+        Created by X user
         <span className="font-semibold"> @dejixice</span> @2023
       </p>
     </div>
