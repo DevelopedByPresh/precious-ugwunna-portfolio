@@ -71,7 +71,7 @@ export default function NavBar() {
                             lg:flex-row md:flex-col lg:space-x-6 lg:mr-10 lg:space-y-0 md:space-x-10 md:space-y-8"
             >
               <li className="text-white  md:min-w-fit hover:text-[#ffffff] hover:underline underline-offset-4  ">
-                <Link href="https://drive.google.com/file/d/12kit9mREK-UVyqRvZR_UlAW8KvAfXiFj/view?usp=sharing" target="_blank" onClick={() => setNavbar(!navbar)}>
+                <Link href="https://drive.google.com/file/d/1vY7QCSYMphci2YNrXbfocydDgf7QMyMQ/view?usp=sharing" target="_blank" onClick={() => setNavbar(!navbar)}>
                   Resume
                 </Link>
               </li>
