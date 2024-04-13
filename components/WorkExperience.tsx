@@ -10,9 +10,9 @@ const WorkExperience = ({}: Props) => {
     experiences.length > 0 ? experiences[0].companyName : null
   );
 
-  const handleCompanyClick = (companyName: string) => {
-    setSelectedCompany(companyName);
-  };
+  // const handleCompanyClick = (companyName: string) => {
+  //   setSelectedCompany(companyName);
+  // };
 
   return (
     <div
