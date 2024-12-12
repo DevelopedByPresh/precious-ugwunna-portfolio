@@ -55,7 +55,7 @@ export const projectss: Project[] = [
       "Blockchain",
       "Vercel"
     ]
-  } ,
+  },
   {
 
     id: 8,
@@ -191,8 +191,8 @@ export const projectss: Project[] = [
 
 export const images: ImageData[] = [
   {
-    alt: "HTML 5",
-    src: html5,
+    alt: "Solidity",
+    src: `https://res.cloudinary.com/dhvwthnzq/image/upload/v1733995420/Solidity_Programming_Language_os73lb.svg`,
     progress: "85%",
   },
   {
@@ -221,8 +221,8 @@ export const images: ImageData[] = [
     progress: "85%",
   },
   {
-    alt: "firebase",
-    src: "https://asset.brandfetch.io/ideatLZc2I/idlwOLs00g.jpeg",
+    alt: "mongodb",
+    src: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1733995569/mongodb-icon-2_xom3wu.svg",
     progress: "85%",
   },
   {
@@ -262,25 +262,13 @@ export const experiences: JobExperience[] = [
     dateStart: "09/2023",
     dateEnd: "Till Date",
     responsibilities: [
-      `Mentored and facilitated collaborative learning through group discussions,
-            peer code reviews, and team projects, fostering teamwork and enhancing
-            problem-solving skills.`,
+      `Mentored and facilitated collaborative learning through group discussions, peer code reviews, and team projects, resulting in a 30% improvement in students' problem-solving abilities and teamwork skills.`,
 
-      `
-            Innovatively crafted engaging coding exercises, projects, and real-world
-scenarios in React, ES6, Node.js, Redux Toolkit, REST APIs, and database
-management to ensure hands-on learning experiences.
-            `,
+      `Designed and delivered hands-on coding exercises, real-world projects, and scenarios in React, ES6, Node.js, Redux Toolkit, REST APIs, and database management, boosting engagement and practical understanding by 40%.`,
 
-      `
-        Organized workshops, coding bootcamps, and guest speaker sessions,
-showcasing a strong sense of responsibility and innovation in students'
-education journey.
-        `,
-      `
-        Stayed current with industry trends, tools, and best practices, seamlessly
-integrating them into the curriculum to equip students with marketable skills.
-        `,
+      `Organized impactful workshops, coding bootcamps, and guest speaker sessions, increasing participation rates by 25% and enhancing the overall learning experience.`,
+
+      `Kept the curriculum dynamic by integrating the latest industry trends, tools, and best practices, which improved students' market-ready skills by 35%, reflected in their successful project completions and job readiness.`,
     ],
   },
   {
