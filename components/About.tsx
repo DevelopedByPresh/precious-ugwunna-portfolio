@@ -38,8 +38,8 @@ const About = ({}: Props) => {
               passionate software developer with expertise in both traditional
               front-end development and blockchain technologies. Whether it's
               building visually stunning and user-friendly websites or crafting
-              decentralized applications (dApps), I love creating solutions that
-              make a lasting impact.
+              decentralized applications (dApps) and smart contracts, I love
+              creating solutions that make a lasting impact.
             </p>
             <p className="mb-4">
               With over 3 years of experience, I specialize in React, Next.js,
@@ -57,9 +57,9 @@ const About = ({}: Props) => {
           </div>
 
           <div className="mt-1">
-            <p>Here are a few technologies i work with:</p>
+            <p>Here are a few technologies I work with:</p>
             <ul className="grid grid-cols-2 list-disc px-5 mt-5">
-              <li>Solidty</li>
+              <li>Solidity</li>
               <li>Ethers.js</li>
               <li>Hardhat</li>
               <li>Javascript</li>
