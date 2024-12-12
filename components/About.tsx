@@ -21,15 +21,15 @@ const About = ({}: Props) => {
       >
         Persona Blurb
       </h2>
-      <div className="flex flex-col space-y-10 items-center lg:items-start lg:flex-row lg:space-x-20">
+      <div className="flex flex-col space-y-10 items-center lg:items-center lg:flex-row lg:space-x-20">
         <Image
           src={
-            "https://res.cloudinary.com/dhvwthnzq/image/upload/v1733926011/IMG_0540_1_aoqbir.jpg"
+            "https://res.cloudinary.com/dhvwthnzq/image/upload/v1733997009/IMG_0540_1_s_xycclv.jpg"
           }
           alt="Ayodeji Atanda's mirror selfie"
           height={300}
           width={300}
-          className="border-dashed border-2 object-cover border-gray-400 "
+          className="border-dashed border-2 mb-10 object-cover border-gray-400 "
         />
         <div className="text-base lg:text-xl">
           <div className="flex flex-col space-y-2 lg:items-start">
