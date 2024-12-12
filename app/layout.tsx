@@ -25,18 +25,18 @@ const montecatiniPro = localFont({
 
 export const metadata = {
   viewport: { width: "device-width", initialScale: 1 },
-  title: "Ayodeji Atanda - Frontend Engineer Portfolio",
-  verification: { 
-    google: "ltfOnPx-NMzt2vBROfh-jAQr5R-U7ynE-3t3kmMTJGo"
-  } ,
+  title: "Ayodeji Atanda - Software Engineer Portfolio",
+  verification: {
+    google: "ltfOnPx-NMzt2vBROfh-jAQr5R-U7ynE-3t3kmMTJGo",
+  },
   alternates: {
-    canonical: '/',
+    canonical: "/",
     languages: {
-      'en-US': '/en-US',
+      "en-US": "/en-US",
     },
   },
   description:
-    "Ayodeji Atanda - Frontend Engineer Portfolio for small businesses. Professional, scalable, and SEO-friendly websites that establish an online presence.",
+    "Ayodeji Atanda - Software Engineer Portfolio: Creating professional, scalable, and SEO-friendly websites that establish a robust online presence for small businesses through innovative web and blockchain solutions.",
   keywords: [
     "Ayodeji Atanda",
     "Deji ice",
@@ -45,6 +45,13 @@ export const metadata = {
     "JavaScript",
     "React",
     "Frontend Engineer",
+    "Smart Contracts",
+    "blockchain",
+    "Web3",
+    "Solidity",
+    "Ethers.js",
+    "Hardhat",
+    "Tailwind CSS",
     "Web development",
     "Frontend development",
     "Frontend developer",
@@ -74,9 +81,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ayodeji Atanda - Frontend Engineer Portfolio",
+    title: "Ayodeji Atanda - Software Engineer Portfolio",
     description:
-      "Ayodeji Atanda - Frontend Engineer Portfolio for small businesses. Professional, scalable, and SEO-friendly websites that establish an online presence.",
+      "Ayodeji Atanda - Software Engineer Portfolio: Creating professional, scalable, and SEO-friendly websites that establish a robust online presence for small businesses through innovative web and blockchain solutions.",
     creator: "@dejiXice",
   },
 };
