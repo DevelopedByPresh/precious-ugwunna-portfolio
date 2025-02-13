@@ -17,8 +17,8 @@ const Skill = ({ Logo, alt }: Props) => {
         loading="lazy"
         className="transition-all duration-300 hover:scale-110"
       />
-      {/* This is the tooltip that appears when you hover over the skill logos */}
-      <span className="pointer-events-none absolute -top-10 w-max opacity-0 transition-opacity group-hover:opacity-100 bg-gray-800 text-white text-sm px-3 py-1 rounded-md">
+      {/* Tooltip */}
+      <span className="pointer-events-none absolute -top-10 w-max opacity-0 transition-opacity group-hover:opacity-100 bg-gray-800 text-white text-sm px-3 py-1 rounded-md shadow-lg">
         {alt}
       </span>
     </div>
