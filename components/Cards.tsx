@@ -1,79 +1,91 @@
-/* eslint-disable react/no-unescaped-entities */
-"use client"
-import { useState } from "react";
+"use client";
+import { useState, memo } from "react";
+import { motion } from "framer-motion";
 import { experiences } from "@/data/mockData";
 
-
-type Props = {};
-
-const Cards = ({}: Props) => {
-
-  const [selectedCompany, setSelectedCompany] = useState<string | null>(
-    experiences.length > 0 ? experiences[0].companyName : null
+const Cards = memo(() => {
+  const [selectedCompany, setSelectedCompany] = useState<string>(
+    experiences[0].companyName
   );
 
-  const handleCompanyClick = (companyName: string) => {
-    setSelectedCompany(companyName);
-  };
   return (
-    <article className="flex flex-col xl:flex-row xl:justify-center xl:items-baseline xl:space-x-5 md:m-5 md:p-10 md:items-center snap-x snap-mandatory absolute top-[12rem] md:top-[9rem] lg:top-[5rem] xl:top-[6rem] w-full border-slate-600 ">
-    <ul className="flex  whitespace-nowrap  xl:flex-col xl:justify-start overflow-x-auto mx-2 mb-5 max-w-xs">
-      {experiences.map((experience) => (
-        <li
-        className={`inline-block hover:cursor-pointer px-4 py-2 text-sm xl:text-sm border-b-2 xl:border-b-0 xl:border-l-2 text-slate-800   md:text-xl text-center items-center justify-center hover:bg-gray-200 transition duration-500 ease-in-out ${
-          selectedCompany === experience.companyName ? "border-b-2 xl:border-l-2 xl:border-b-0 border-[black] text-white bg-slate-600 xl:bg-transparent xl:text-slate-800 xl:font-semibold"  : ""
-        }`}
-          key={experience.companyName}
-          onClick={() => handleCompanyClick(experience.companyName)}
-        >
-          {experience.companyName}
-        </li>
-      ))}
-    </ul>
-    <div className="xl:max-w-xl">
-      {selectedCompany && (
-        <>
-          <h3 className="text-xl md:text-2xl m-2 ">
-            {
-              experiences.find((exp) => exp.companyName === selectedCompany)
-                ?.occupation
-            }{"  "}
-            <span className="font-semibold text-slate-900" >@{"  "}{selectedCompany}</span>
-          </h3>
+    <motion.article
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col xl:flex-row xl:justify-center xl:items-start 
+        gap-6 xl:gap-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
+    >
+      {/* Company tabs */}
+      <nav
+        className="flex xl:flex-col overflow-x-auto scrollbar-hide 
+        border-b xl:border-b-0 xl:border-l border-gray-200"
+      >
+        {experiences.map((experience) => (
+          <button
+            key={experience.companyName}
+            onClick={() => setSelectedCompany(experience.companyName)}
+            className={`px-4 py-2 text-sm md:text-base whitespace-nowrap 
+              transition-all duration-300 hover:bg-gray-100 
+              ${
+                selectedCompany === experience.companyName
+                  ? "text-slate-900 border-slate-900 bg-gray-100 font-medium xl:border-l-2 border-b-2 xl:border-b-0"
+                  : "text-gray-500 border-transparent"
+              }`}
+          >
+            {experience.companyName}
+          </button>
+        ))}
+      </nav>
 
-          <p className="text-xs m-2">
-            {
-              experiences.find((exp) => exp.companyName === selectedCompany)
-                ?.dateStart
-            }{" "}
-            -{" "}
-            {
-              experiences.find((exp) => exp.companyName === selectedCompany)
-                ?.dateEnd
-            }
-          </p>
+      {/* Experience details */}
+      <motion.div
+        key={selectedCompany}
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.3 }}
+        className="flex-1 space-y-4"
+      >
+        {experiences
+          .filter((exp) => exp.companyName === selectedCompany)
+          .map((experience) => (
+            <div key={experience.companyName} className="space-y-4">
+              <h3 className="text-lg md:text-xl lg:text-2xl font-medium">
+                {experience.occupation}{" "}
+                <span className="text-slate-900">
+                  @ {experience.companyName}
+                </span>
+              </h3>
 
-          <ul className="text-sm md:text-xl m-2 list-disc space-y-2 pl-5 lg:max-w-3xl xl:text-lg">
-            {experiences
-              .find((exp) => exp.companyName === selectedCompany)
-              ?.responsibilities.map((responsibility, index) => (
-                <li key={index}>{responsibility}</li>
-              ))}
-            {/* <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat risus id massa pulvinar
- condimentum. Donec eu tincidunt mauris. Mauris efficitur ex vel ex sollicitudin, nec euismod lorem 
- imperdiet.</li>
- <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat risus id massa pulvinar
- condimentum. Donec eu tincidunt mauris. Mauris efficitur ex vel ex sollicitudin, nec euismod lorem 
- imperdiet.</li>
- <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat risus id massa pulvinar
- condimentum. Donec eu tincidunt mauris. Mauris efficitur ex vel ex sollicitudin, nec euismod lorem 
- imperdiet.</li> */}
-          </ul>
-        </>
-      )}
-    </div>
-  </article>
+              <p className="text-sm text-gray-500">
+                {experience.dateStart} - {experience.dateEnd}
+              </p>
+
+              <ul className="space-y-4 text-sm md:text-base text-gray-600">
+                {experience.responsibilities.map((responsibility, idx) => (
+                  <motion.li
+                    key={idx}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: idx * 0.1 }}
+                    className="flex items-start space-x-2"
+                  >
+                    <span
+                      className="mt-2 h-1.5 w-1.5 flex-shrink-0 
+                      rounded-full bg-slate-500"
+                    />
+                    <span>{responsibility}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          ))}
+      </motion.div>
+    </motion.article>
   );
-};
+});
+
+Cards.displayName = "Cards";
 
 export default Cards;
