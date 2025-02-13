@@ -22,7 +22,6 @@ const montecatiniPro = localFont({
     {
       path: "../public/fonts/MontecatiniPro-StrettoUltra.woff2",
       weight: "700",
-      display: "swap",
     },
   ],
   variable: "--font-montecatiniPro",
