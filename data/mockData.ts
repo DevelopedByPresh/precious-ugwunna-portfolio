@@ -39,6 +39,23 @@ type Project = {
 
 export const projectss: Project[] = [
   {
+    id: 10,
+    projectName: "Transparent Governance Foundation",
+    projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1739445608/mines/38ffadab-3a96-4aa2-890c-5a0f0b8ac4e3.png",
+    projectDescription: "Transparent Governance Foundation is a web application built to promote transparency and accountability in governance. Utilizing modern web technologies to create an interactive and informative platform for civic engagement and governmental oversight.",
+    demoLink: "https://www.transparencegovfoundation.org/",
+    githubLink: "https://github.com/deji-ice/TransparentGovernanceFoundation",
+    tools: [
+      "NextJS",
+      "TypeScript",
+      "TailwindCSS",
+      "Framer Motion",
+      "Cloudinary",
+      "Vercel",
+      "Paystack"
+    ]
+  },
+  {
     "id": 9,
     "projectName": "MetaSecure-web3.0",
     "projectImage": "https://res.cloudinary.com/dhvwthnzq/image/upload/v1733925350/file_2024-12-11_13.55.28_zxavof.png",
