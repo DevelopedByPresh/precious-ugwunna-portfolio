@@ -1,41 +1,41 @@
-import "./globals.css";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import WorkExperience from "@/components/WorkExperience";
-import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
-import ContactMe from "@/components/ContactMe";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
 
+// Dynamic imports for better code splitting
+const Hero = dynamic(() => import("@/components/Hero"));
+const About = dynamic(() => import("@/components/About"));
+const WorkExperience = dynamic(() => import("@/components/WorkExperience"));
+const Skills = dynamic(() => import("@/components/Skills"));
+const Projects = dynamic(() => import("@/components/Projects"));
+const ContactMe = dynamic(() => import("@/components/ContactMe"));
+
+// Custom loading component
+const LoadingFallback = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="w-8 h-8 border-4 border-slate-900/20 border-t-slate-900 rounded-full animate-spin" />
+  </div>
+);
 
 export default function Home() {
   return (
-    
     <div
-      id="page"
-      className="font-programme antialiased text-slate-900 snap-mandatory snap-y z-0  text-4xl
-     overflow-x-hidden
-     bg-[#FAF9F6] "
+      className="font-programme text-slate-900 snap-mandatory snap-y z-0
+     overflow-x-hidden bg-[#FAF9F6] scroll-smooth"
     >
-      
-      <section id="hero" className="snap-start">
-        <Hero />
-      </section>
-      <section id="about" className="snap-center">
-        <About />
-      </section>
-      <section id="experience" className="snap-center">
-        <WorkExperience />
-      </section>
-      <section id="skills" className="snap-start">
-        <Skills />
-      </section>
-      <section id="projects" className="snap-start">
-        <Projects />
-      </section>
-      <section id="contact" className="snap-start">
-        <ContactMe />
-      </section>
-      <section></section>
+      {[
+        { id: "hero", Component: Hero, snap: "start" }, // Keep start for hero section
+        { id: "about", Component: About, snap: "start" }, // Changed from center
+        { id: "experience", Component: WorkExperience, snap: "start" }, // Changed from center
+        { id: "skills", Component: Skills, snap: "start" }, // Already start
+        { id: "projects", Component: Projects, snap: "start" }, // Already start
+        { id: "contact", Component: ContactMe, snap: "start" }, // Already start
+      ].map(({ id, Component, snap }) => (
+        <Suspense key={id} fallback={<LoadingFallback />}>
+          <section id={id} className={`snap-${snap} min-h-screen relative`}>
+            <Component />
+          </section>
+        </Suspense>
+      ))}
     </div>
   );
 }
