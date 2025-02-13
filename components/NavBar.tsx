@@ -1,21 +1,57 @@
 "use client";
-import Link from "next/link";
 import { useState, useCallback, useEffect } from "react";
-import logo from "Assets/imgbin_computer-icons-ice-cube-png.png";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import Image from "next/image";
+import logo from "Assets/imgbin_computer-icons-ice-cube-png.png";
+
+const menuVariants = {
+  closed: {
+    opacity: 0,
+    y: -20,
+    transition: {
+      duration: 0.3,
+      staggerChildren: 0.05,
+      staggerDirection: -1,
+    },
+  },
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      staggerChildren: 0.07,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  closed: { opacity: 0, x: -20 },
+  open: { opacity: 1, x: 0 },
+};
 
 export default function NavBar() {
   const [navbar, setNavbar] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
 
-  // Handle scroll effect
+  // Handle scroll effect with debounce
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (timeoutId) clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(() => {
+        setScrolled(window.scrollY > 20);
+      }, 100);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (timeoutId) clearTimeout(timeoutId);
+    };
   }, []);
 
   // Memoized toggle function
@@ -23,55 +59,76 @@ export default function NavBar() {
     setNavbar((prev) => !prev);
   }, []);
 
+  // Close mobile menu when screen size changes
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024 && navbar) {
+        setNavbar(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [navbar]);
+
   const navItems = [
-    {
-      href: "https://drive.google.com/file/d/1vY7QCSYMphci2YNrXbfocydDgf7QMyMQ/view?usp=sharing",
-      label: "Resume",
-      external: true,
-    },
     { href: "#about", label: "About" },
     { href: "#experience", label: "Experience" },
     { href: "#skills", label: "Tech Stack" },
     { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
+    {
+      href: "https://drive.google.com/file/d/1vY7QCSYMphci2YNrXbfocydDgf7QMyMQ/view?usp=sharing",
+      label: "Resume",
+      external: true,
+    },
   ];
 
   return (
-    <nav
+    <motion.nav
+      initial={false}
+      animate={navbar ? "open" : "closed"}
       className={`w-full fixed z-40 top-6 transition-all duration-300 font-programme
-      ${
-        scrolled
-          ? "bg-slate-800/90 backdrop-blur-sm shadow-lg mt-0"
-          : "bg-slate-800"
-      }
-      ${navbar ? "h-screen md:h-auto" : ""}`}
+        ${
+          scrolled
+            ? "bg-slate-800/90 backdrop-blur-sm shadow-lg mt-0"
+            : "bg-slate-800"
+        }
+        ${navbar ? "h-screen md:h-auto" : ""}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex-shrink-0 transition-transform hover:scale-105"
-          >
-            <Image
-              src={logo}
-              alt="logo ice"
-              className="invert w-8 h-8 md:w-10 md:h-10"
-              width={40}
-              height={40}
-              priority
-            />
-          </Link>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Link href="/" className="flex-shrink-0">
+              <Image
+                src={logo}
+                alt="logo ice"
+                className="invert w-8 h-8 md:w-10 md:h-10"
+                width={40}
+                height={40}
+                priority
+              />
+            </Link>
+          </motion.div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={toggleNavbar}
-              className="inline-flex items-center justify-center p-2 rounded-md 
-              text-white hover:bg-slate-700 transition-colors duration-200"
-              aria-expanded="false"
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            onClick={toggleNavbar}
+            className="lg:hidden inline-flex items-center justify-center p-2 rounded-md 
+            text-white hover:bg-slate-700 transition-colors duration-200"
+            aria-expanded={navbar}
+          >
+            <span className="sr-only">Open main menu</span>
+            <motion.div
+              animate={navbar ? "open" : "closed"}
+              variants={{
+                open: { rotate: 180 },
+                closed: { rotate: 0 },
+              }}
+              transition={{ duration: 0.2 }}
             >
-              <span className="sr-only">Open main menu</span>
               {navbar ? (
                 <svg
                   className="h-6 w-6"
@@ -101,51 +158,63 @@ export default function NavBar() {
                   />
                 </svg>
               )}
-            </button>
-          </div>
+            </motion.div>
+          </motion.button>
 
           {/* Desktop menu */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navItems.map((item) => (
-              <Link
+              <motion.div
                 key={item.label}
-                href={item.href}
-                target={item.external ? "_blank" : undefined}
-                className="text-white hover:text-gray-300 px-3 py-2 text-sm font-medium
-                hover:underline underline-offset-4 transition-all duration-200"
-                onClick={toggleNavbar}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                {item.label}
-              </Link>
+                <Link
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  className="text-white hover:text-gray-300 px-3 py-2 text-sm font-medium
+                  hover:underline underline-offset-4 transition-all duration-200"
+                >
+                  {item.label}
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
 
         {/* Mobile menu */}
-        <div
-          className={`lg:hidden transition-all duration-300 ease-in-out
-          ${
-            navbar
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 -translate-y-full hidden"
-          }`}
-        >
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                target={item.external ? "_blank" : undefined}
-                className="text-white hover:bg-slate-700 block px-3 py-2 rounded-md text-base
-                font-medium transition-all duration-200"
-                onClick={toggleNavbar}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </div>
+        <AnimatePresence>
+          {navbar && (
+            <motion.div
+              variants={menuVariants}
+              initial="closed"
+              animate="open"
+              exit="closed"
+              className="lg:hidden"
+            >
+              <motion.div className="px-2 pt-2 pb-3 space-y-1">
+                {navItems.map((item) => (
+                  <motion.div
+                    key={item.label}
+                    variants={itemVariants}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Link
+                      href={item.href}
+                      target={item.external ? "_blank" : undefined}
+                      className="text-white hover:bg-slate-700 block px-3 py-2 rounded-md text-base
+                      font-medium transition-all duration-200"
+                      onClick={toggleNavbar}
+                    >
+                      {item.label}
+                    </Link>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

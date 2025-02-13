@@ -42,7 +42,7 @@ const Header = ({}: Props) => {
         className="flex  flex-row items-center"
       >
         <SocialIcon
-          network="twitter"
+          network="x"
           bgColor="transparent"
           fgColor="#1DA1F2"
           url="https://twitter.com/DEJIxICE"
