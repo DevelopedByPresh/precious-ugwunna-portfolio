@@ -1,130 +1,150 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import logo from "Assets/imgbin_computer-icons-ice-cube-png.png";
 import Image from "next/image";
 
 export default function NavBar() {
   const [navbar, setNavbar] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Memoized toggle function
+  const toggleNavbar = useCallback(() => {
+    setNavbar((prev) => !prev);
+  }, []);
+
+  const navItems = [
+    {
+      href: "https://drive.google.com/file/d/1vY7QCSYMphci2YNrXbfocydDgf7QMyMQ/view?usp=sharing",
+      label: "Resume",
+      external: true,
+    },
+    { href: "#about", label: "About" },
+    { href: "#experience", label: "Experience" },
+    { href: "#skills", label: "Tech Stack" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
+  ];
 
   return (
-    <nav className="w-full bg-slate-800 text-white  shadow fixed z-30 top-5 font-programme ">
-      <div className="justify-between px-4 mx-auto md:max-w-7xl md:items-center lg:flex md:px-8">
-        <div>
-          <div className="flex items-center justify-between py-3 md:py-5 lg:py-2 ">
-            <Link href={"/"}>
-              <Image
-                src={logo}
-                alt="logo ice"
-                className="invert"
-                height={40}
-                width={40}
-              />
-            </Link>
-
-            <div className="lg:hidden">
-              <button
-                className="p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border"
-                onClick={() => setNavbar(!navbar)}
-              >
-                {navbar ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-white"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                )}
-              </button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            className={`flex-1 justify-self-center pb-3 mb-4 mt-8 lg:block lg:pb-0 md:mt-3 ${
-              navbar ? "block" : "hidden"
-            }`}
+    <nav
+      className={`w-full fixed z-40 top-6 transition-all duration-300 font-programme
+      ${
+        scrolled
+          ? "bg-slate-800/90 backdrop-blur-sm shadow-lg mt-0"
+          : "bg-slate-800"
+      }
+      ${navbar ? "h-screen md:h-auto" : ""}`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="flex-shrink-0 transition-transform hover:scale-105"
           >
-            <ul
-              className="items-center justify-center md:text-sm space-y-8 md:ml-[32rem] md:flex
-                            lg:flex-row md:flex-col lg:space-x-6 lg:mr-10 lg:space-y-0 md:space-x-10 md:space-y-8"
+            <Image
+              src={logo}
+              alt="logo ice"
+              className="invert w-8 h-8 md:w-10 md:h-10"
+              width={40}
+              height={40}
+              priority
+            />
+          </Link>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={toggleNavbar}
+              className="inline-flex items-center justify-center p-2 rounded-md 
+              text-white hover:bg-slate-700 transition-colors duration-200"
+              aria-expanded="false"
             >
-              <li className="text-white  md:min-w-fit hover:text-[#ffffff] hover:underline underline-offset-4  ">
-                <Link href="https://drive.google.com/file/d/1vY7QCSYMphci2YNrXbfocydDgf7QMyMQ/view?usp=sharing" target="_blank" onClick={() => setNavbar(!navbar)}>
-                  Resume
-                </Link>
-              </li>
-              <li className="text-white  md:min-w-fit hover:text-[#ffffff] hover:underline underline-offset-4  ">
-                <Link href="#about" onClick={() => setNavbar(!navbar)}>
-                  About
-                </Link>
-              </li>
-              <li className="text-white md:min-w-fit hover:text-[#ffffff] hover:underline underline-offset-4 ">
-                <Link href="#experience">
-                  <button onClick={() => setNavbar(!navbar)}>Experience</button>
-                </Link>
-              </li>
-              <li className="text-white md:min-w-fit hover:text-[#ffffff] hover:underline underline-offset-4 ">
-                <Link href="#skills">
-                  <button onClick={() => setNavbar(!navbar)}>Tech Stack</button>
-                </Link>
-              </li>
-              <li className="text-white md:min-w-fit hover:text-[#ffffff] hover:underline underline-offset-4 ">
-                <Link href="#projects">
-                  <button onClick={() => setNavbar(!navbar)}>Projects</button>
-                </Link>
-              </li>
-              <li className="text-white md:min-w-fit hover:text-[#ffffff] hover:underline underline-offset-4 ">
-                <Link href="#contact">
-                  <button onClick={() => setNavbar(!navbar)}>Contact</button>
-                </Link>
-              </li>
-            </ul>
-            {/* <div className="mt-5 space-y-2 space-x-2 flex items-center lg:hidden">
-                            <button className="w-1/2 px-4 py-2 text-center text-[#068353]
-                            bg-white rounded-3xl  border-[#068353] border-[0.3px] mx-10 pl-3 p-1 items-center shadow hover:bg-[#068353] hover:text-white ">
-                                Sign in
-                            </button>
+              <span className="sr-only">Open main menu</span>
+              {navbar ? (
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
 
-                            <button className="w-1/2 px-4 py-2 text-center text-white 
-                            bg-[#068353] mx-10 pl-3 p-1 items-center  rounded-3xl shadow hover:bg-green-600" >
-                                Sign up
-                            </button>
-
-                        </div> */}
+          {/* Desktop menu */}
+          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                target={item.external ? "_blank" : undefined}
+                className="text-white hover:text-gray-300 px-3 py-2 text-sm font-medium
+                hover:underline underline-offset-4 transition-all duration-200"
+                onClick={toggleNavbar}
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
-        {/* <div className="hidden space-x-2  lg:flex md:hidden ">
-                    <button className="inline-block w-[6rem] py-2 text-center text-[#068353] border-[#068353] border-[0.3px]
-                     bg-white rounded-3xl md:text-sm shadow hover:bg-[#068353] hover:text-white">
-                        Sign in
-                    </button>
 
-                    <button className="inline-block py-2 text-sm  w-[6rem] text-center text-white bg-[#068353] rounded-3xl shadow hover:bg-green-600" >
-                        Sign up
-                    </button>
-                </div> */}
+        {/* Mobile menu */}
+        <div
+          className={`lg:hidden transition-all duration-300 ease-in-out
+          ${
+            navbar
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-full hidden"
+          }`}
+        >
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                target={item.external ? "_blank" : undefined}
+                className="text-white hover:bg-slate-700 block px-3 py-2 rounded-md text-base
+                font-medium transition-all duration-200"
+                onClick={toggleNavbar}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </nav>
   );
