@@ -28,7 +28,70 @@ const montecatiniPro = localFont({
   preload: true,
 });
 
-// ...existing metadata...
+export const metadata = {
+  viewport: { width: "device-width", initialScale: 1 },
+  title: "Ayodeji Atanda - Software Engineer Portfolio",
+  verification: {
+    google: "ltfOnPx-NMzt2vBROfh-jAQr5R-U7ynE-3t3kmMTJGo",
+  },
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en-US",
+    },
+  },
+  description:
+    "Ayodeji Atanda - Software Engineer Portfolio: Creating professional, scalable, and SEO-friendly websites that establish a robust online presence for small businesses through innovative web and blockchain solutions.",
+  keywords: [
+    "Ayodeji Atanda",
+    "Deji ice",
+    "Lagos",
+    "Nigeria",
+    "JavaScript",
+    "React",
+    "Frontend Engineer",
+    "Smart Contracts",
+    "blockchain",
+    "Web3",
+    "Solidity",
+    "Ethers.js",
+    "Hardhat",
+    "Tailwind CSS",
+    "Web development",
+    "Frontend development",
+    "Frontend developer",
+    "Fullstack developer",
+    "Graphic designer",
+    "typescipt",
+    "Next.js",
+    "Web Development Portfolio",
+    "Web Performance Optimization",
+    "Portfolio Showcase",
+    "SEO-Friendly Websites",
+    "Software developer",
+    "Freelance",
+    "Portfolio website",
+    "HTML/CSS",
+    "Technical Skills",
+    "SEO Optimization",
+    "Web Developer",
+  ],
+  robots: {
+    googleBot: {
+      index: true,
+    },
+  },
+  icons: {
+    icon: "/favicon-32x32.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ayodeji Atanda - Software Engineer Portfolio",
+    description:
+      "Ayodeji Atanda - Software Engineer Portfolio: Creating professional, scalable, and SEO-friendly websites that establish a robust online presence for small businesses through innovative web and blockchain solutions.",
+    creator: "@dejiXice",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -41,10 +104,6 @@ export default function RootLayout({
       className={`${programme.variable} ${montecatiniPro.variable} font-sans scroll-smooth`}
     >
       <head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, viewport-fit=cover"
-        />
         <meta name="theme-color" content="#FAF9F6" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
       </head>
