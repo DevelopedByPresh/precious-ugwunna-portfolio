@@ -1,14 +1,11 @@
-/* eslint-disable react/no-unescaped-entities */
 "use client";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import BgCircles from "./BgCircles";
 import { motion } from "framer-motion";
 import Button from "./Button";
+import { memo } from 'react';
 
-type Props = {};
-
-const Hero = ({}: Props) => {
-  const [text, count] = useTypewriter({
+const Hero = memo(() => {
+  const [text] = useTypewriter({
     words: [
       "Fullstack Web Developer.",
       "Frontend Developer.",
@@ -18,36 +15,51 @@ const Hero = ({}: Props) => {
     loop: true,
     delaySpeed: 2000,
   });
+
   return (
     <motion.div
-      className="flex flex-col m-5 xl:ml-[10rem] lg:pb-[18rem] items-start mt-[8rem] md:mt-[15rem]
-    lg:mt-[20rem] xl:mt-[8rem] md:max-w-2xl md:p-20 lg:max-w-[1500px] lg:m-0 xl:pt-0 h-screen overflow-hidden"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="relative flex flex-col px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24
+        min-h-[calc(100vh-6rem)] justify-center max-w-7xl mx-auto
+        pt-24 md:pt-28 lg:pt-32"
     >
-      <h4 className="text-[14px] lg:text-xl ml-1 mb-3 font-medium">
-        Hi, the name is
-      </h4>
-      <h1 className="font-programme font-bold opacity-95 text-4xl md:text-7xl lg:text-6xl pb-1 md:pb-5">
-        Ayodeji Atanda.
-      </h1>
-      <div className="font-bold mt-1 text-4xl md:text-7xl text-gray-500 md:pb-7 lg:text-6xl">
-        <h2>
-          {text}
-          <Cursor cursorColor="#0077b5" />
-        </h2>
-      </div>
+      <div className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
+        <h4 className="text-sm sm:text-base md:text-lg lg:text-xl 
+          font-medium text-gray-600">
+          Hi, the name is
+        </h4>
 
-      <p className="text-lg text-left mt-5 lg:mt-0 md:max-w-[43rem] lg:mb-10 xl:mb-5 font-medium md:text-xl lg:text-2xl xl:text-xl ml-1">
-        I am a versatile developer skilled in both Web2 and Web3 technologies,
-        focusing on creating innovative and accessible digital experiences. My
-        expertise spans developing intuitive full-stack applications, smart
-        contracts, and decentralized applications (dApps). I thrive on bringing
-        seamless, high-quality solutions to life, combining creativity with
-        technical precision, and am deeply passionate about transforming designs
-        into reality.
-      </p>
-      <Button title="Get In Touch" />
+        <h1 className="font-programme font-bold text-4xl sm:text-5xl md:text-6xl 
+          lg:text-7xl xl:text-8xl tracking-tight">
+          Ayodeji Atanda.
+        </h1>
+
+        <div className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
+          text-gray-500 h-[60px] sm:h-[72px] md:h-[84px]">
+          <h2 className="inline-flex items-center">
+            {text}
+            <Cursor cursorColor="#0077b5" />
+          </h2>
+        </div>
+
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl 
+          text-gray-600 leading-relaxed">
+          I am a versatile developer skilled in both Web2 and Web3 technologies,
+          focusing on creating innovative and accessible digital experiences. My
+          expertise spans developing intuitive full-stack applications, smart
+          contracts, and decentralized applications (dApps).
+        </p>
+
+        <div className="pt-6 sm:pt-8 md:pt-10">
+          <Button title="Get In Touch" />
+        </div>
+      </div>
     </motion.div>
   );
-};
+});
+
+Hero.displayName = 'Hero';
 
 export default Hero;
