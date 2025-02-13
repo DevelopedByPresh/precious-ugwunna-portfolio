@@ -11,7 +11,6 @@ const programme = localFont({
     {
       path: "../public/fonts/Programme-Regular.woff2",
       weight: "400",
-      display: "swap", // Add font-display swap
     },
   ],
   variable: "--font-programme",
@@ -43,11 +42,14 @@ export default function RootLayout({
       className={`${programme.variable} ${montecatiniPro.variable} font-sans scroll-smooth`}
     >
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
         <meta name="theme-color" content="#FAF9F6" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
       </head>
-      
+
       <Script
         strategy="lazyOnload"
         src="https://www.googletagmanager.com/gtag/js?id=G-2PKP3NR2VS"
@@ -66,9 +68,7 @@ export default function RootLayout({
           <NowPlaying />
         </Suspense>
         <NavBar />
-        <main className="relative">
-          {children}
-        </main>
+        <main className="relative">{children}</main>
       </body>
     </html>
   );
