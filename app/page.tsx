@@ -1,5 +1,4 @@
 import "./globals.css";
-import bg from "../Assets/stacked-peaks-haikei (3).png";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import WorkExperience from "@/components/WorkExperience";
@@ -16,7 +15,6 @@ export default function Home() {
       className="font-programme antialiased text-slate-900 snap-mandatory snap-y z-0  text-4xl
      overflow-x-hidden
      bg-[#FAF9F6] "
-      style={{ backgroundImage: `url(${bg})` }}
     >
       
       <section id="hero" className="snap-start">

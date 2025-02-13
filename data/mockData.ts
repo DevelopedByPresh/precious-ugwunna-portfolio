@@ -2,18 +2,11 @@ import africash from "Assets/Screenshot (392).png";
 import chatgpt from "../Assets/Screenshot (409).png";
 import blog from "../Assets/Screenshot (407).png";
 import multiselect from "../Assets/Screenshot (431).png";
-import NextJs from "../Assets/Next.js Logo Vector.png";
-import Framer from "../Assets/framer-motion-seeklogo.com.svg";
-import react from "../Assets/react-seeklogo.com.svg";
-import sanity from "../Assets/exghybvcvdmerns27fff.png";
-import html5 from "../Assets/kisspng-computer-icons-html5-scalable-vector-graphics-port-socialpack-chocolate-icon-5c4b3bbd2275a7.4033632815484343651412.png";
-import css from "../Assets/pngegg (19).png";
-import sass from "../Assets/pngfind.com-sass-logo-png-4521456.png";
-import nextAuth from "../Assets/logo-sm.png";
-import MongoDb from "../Assets/1_ty8m8Y3dzgD6P5Xc17gbYw.jpg";
+;
 import { StaticImageData } from "next/image";
+import { DockerLogo, ExpressLogo, JavascriptLogo, MongoDbLogo, NextJsLogo, PostmanLogo, ReactLogo, SassLogo, TailwindLogo, VercelLogo, ViteLogo } from "@/Assets";
 
-interface ImageData {
+interface LogoData {
   alt: string;
   src: string | StaticImageData;
   progress: string;
@@ -206,7 +199,7 @@ export const projectss: Project[] = [
   },
 ];
 
-export const images: ImageData[] = [
+export const logos: LogoData[] = [
   {
     alt: "Solidity",
     src: `https://res.cloudinary.com/dhvwthnzq/image/upload/v1733995420/Solidity_Programming_Language_os73lb.svg`,
@@ -214,7 +207,7 @@ export const images: ImageData[] = [
   },
   {
     alt: "React",
-    src: react,
+    src: ReactLogo,
     progress: "85%",
   },
   {
@@ -224,38 +217,27 @@ export const images: ImageData[] = [
   },
   {
     alt: "nextjs",
-    src: NextJs,
+    src: NextJsLogo,
     progress: "85%",
   },
   {
     alt: "javascript",
-    src: "https://abrudz.github.io/logos/JS.svg",
+    src: JavascriptLogo,
     progress: "85%",
   },
   {
     alt: "tailwind-css",
-    src: "https://asset.brandfetch.io/idKJ12s-EY/idI9erPtdw.jpeg",
+    src: TailwindLogo,
     progress: "85%",
   },
   {
     alt: "mongodb",
-    src: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1733995569/mongodb-icon-2_xom3wu.svg",
-    progress: "85%",
-  },
-  {
-    alt: "framer",
-    src: Framer,
+    src: MongoDbLogo,
     progress: "85%",
   },
   {
     alt: "SASS",
-    src: sass,
-    progress: "85%",
-  },
-
-  {
-    alt: "sanity",
-    src: sanity,
+    src: SassLogo,
     progress: "85%",
   },
 
@@ -264,12 +246,31 @@ export const images: ImageData[] = [
     src: "https://pbs.twimg.com/profile_images/1713633504431394816/h28jJ1qM_400x400.jpg",
     progress: "85%",
   },
-
   {
-    alt: "nextAuth",
-    src: nextAuth,
+    alt: "Docker",
+    src: DockerLogo,
     progress: "85%",
   },
+  {
+    alt: "ExpressJS",
+    src: ExpressLogo,
+    progress: "85%",
+  },
+  {
+    alt: "Vercel",
+    src: VercelLogo,
+    progress: "85%",
+  },
+  {
+    alt: "Vite",
+    src: ViteLogo,
+    progress: "85%",
+  },
+  {
+    alt: "Postman",
+    src: PostmanLogo,
+    progress: "85%",
+  }
 ];
 
 export const experiences: JobExperience[] = [
