@@ -18,7 +18,7 @@ const Skills = (props: Props) => {
       </h3>
       <div className="grid grid-cols-3 sm:grid-cols-4 gap-5 justify-center place-content-center place-items-center w-full max-w-5xl px-4 absolute top-[35%] xl:top-[25%] mx-auto">
         {logos.map((logo, index) => (
-          <Skill key={index} Logo={logo.src} />
+          <Skill key={index} Logo={logo.src} alt={logo.alt} />
         ))}
       </div>
     </motion.div>
