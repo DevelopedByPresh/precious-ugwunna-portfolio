@@ -26,7 +26,7 @@ const Cards = memo(() => {
           <button
             key={experience.companyName}
             onClick={() => setSelectedCompany(experience.companyName)}
-            className={`px-4 py-2 text-sm md:text-base whitespace-nowrap 
+            className={`px-4 py-2 text-sm text-start md:text-base whitespace-nowrap 
               transition-all duration-300 hover:bg-gray-100 
               ${
                 selectedCompany === experience.companyName
