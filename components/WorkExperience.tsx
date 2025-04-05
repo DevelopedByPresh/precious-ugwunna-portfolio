@@ -16,7 +16,7 @@ const WorkExperience = memo(() => {
     >
       <h3
         className="absolute top-20 sm:top-16 md:top-14 text-2xl sm:text-3xl 
-        md:text-4xl lg:text-5xl font-programme text-gray-500 font-semibold 
+        md:text-4xl lg:text-5xl font-outfit text-gray-500 font-semibold 
         uppercase tracking-wider text-center w-full"
       >
         Experience

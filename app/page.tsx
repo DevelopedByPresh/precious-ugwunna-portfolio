@@ -19,14 +19,14 @@ const LoadingFallback = () => (
 export default function Home() {
   return (
     <div
-      className="font-programme text-slate-900 snap-mandatory snap-y z-0
-     overflow-x-hidden bg-[#FAF9F6] scroll-smooth"
+      className="font-outfit text-slate-900 snap-mandatory snap-y z-0
+     overflow-x-hidden bg-[#ebebf3] scroll-smooth"
     >
       {[
         { id: "hero", Component: Hero, snap: "start" }, // Keep start for hero section
         { id: "about", Component: About, snap: "start" }, // Changed from center
         { id: "experience", Component: WorkExperience, snap: "start" }, // Changed from center
-        { id: "skills", Component: Skills, snap: "start" }, // Already start
+        // { id: "skills", Component: Skills, snap: "start" }, // Already start
         { id: "projects", Component: Projects, snap: "start" }, // Already start
         { id: "contact", Component: ContactMe, snap: "start" }, // Already start
       ].map(({ id, Component, snap }) => (

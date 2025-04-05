@@ -4,6 +4,7 @@ import localFont from "@next/font/local";
 import NowPlaying from "@/components/NowPlaying";
 import Script from "next/script";
 import { Suspense } from "react";
+import { Outfit } from "next/font/google";
 
 // Optimize font loading
 const programme = localFont({
@@ -13,8 +14,12 @@ const programme = localFont({
       weight: "400",
     },
   ],
-  variable: "--font-programme",
+  variable: "--font-outfit",
   preload: true,
+});
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
 });
 
 const montecatiniPro = localFont({
@@ -99,10 +104,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${programme.variable} ${montecatiniPro.variable} font-sans scroll-smooth`}
-    >
+    <html lang="en" className={` ${outfit.variable}  font-sans scroll-smooth`}>
       <head>
         <meta name="theme-color" content="#FAF9F6" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -121,7 +123,7 @@ export default function RootLayout({
         `}
       </Script>
 
-      <body className="antialiased bg-[#FAF9F6] overflow-x-hidden">
+      <body className="antialiased overflow-x-hidden">
         <Suspense fallback={<div className="h-6 bg-slate-900" />}>
           <NowPlaying />
         </Suspense>

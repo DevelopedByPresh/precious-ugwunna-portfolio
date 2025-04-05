@@ -17,7 +17,7 @@ const ContactMe = (props: Props) => {
     >
       <h3
         className="absolute top-40 lg:top-[10rem] xl:top-20 text-3xl mb-5 xl:text-3xl md:text-4xl md:mb-[6rem]  lg:mb-[0] font-semibold
-       uppercase font-programme text-gray-500"
+       uppercase font-outfit text-gray-500"
       >
         Get In Touch
       </h3>

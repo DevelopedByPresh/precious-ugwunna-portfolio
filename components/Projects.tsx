@@ -29,13 +29,13 @@ const Projects = () => {
       className="relative flex flex-col items-center justify-center min-h-screen 
       w-full px-4 md:px-8 lg:px-16 xl:px-24 py-24 md:py-28 overflow-hidden"
     >
-     <h3
-  className="absolute top-16 md:top-20 text-2xl md:text-3xl lg:text-4xl 
-  xl:text-5xl font-programme text-gray-500 font-semibold uppercase 
+      <h3
+        className="absolute top-16 md:top-20 text-2xl md:text-3xl lg:text-4xl 
+  xl:text-5xl font-outfit text-gray-500 font-semibold uppercase 
   tracking-wider mb-24 sm:mb-28 md:mb-32"
->
-  Projects
-</h3>
+      >
+        Projects
+      </h3>
 
       {/* Navigation Buttons */}
       <div

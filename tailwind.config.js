@@ -10,18 +10,16 @@ module.exports = {
   ],
   theme: {
     extend: {
-    
-        // backgroundImage: {
-        //   'hero': "url('/Assets/stacked-peaks-haikei(3).png')",
-        // },
-    
+      // backgroundImage: {
+      //   'hero': "url('/Assets/stacked-peaks-haikei(3).png')",
+      // },
+
       fontFamily: {
         clash: ["Clash Display", "sans-serif"],
-         programme: ['var(--font-programme)'],
-         montecatiniPro:['var(--font-montecatiniPro)'],
+        programme: ["var(--font-programme)"],
+        montecatiniPro: ["var(--font-montecatiniPro)"],
+        outfit: ["var(--font-outfit)"],
       },
     },
   },
-
-
 };
