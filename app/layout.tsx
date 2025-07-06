@@ -1,36 +1,41 @@
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import localFont from "@next/font/local";
-import NowPlaying from "@/components/NowPlaying";
+
 import Script from "next/script";
-import { Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { Outfit } from "next/font/google";
+import dynamic from "next/dynamic";
 
 // Optimize font loading
-const programme = localFont({
-  src: [
-    {
-      path: "../public/fonts/Programme-Regular.woff2",
-      weight: "400",
-    },
-  ],
-  variable: "--font-outfit",
-  preload: true,
-});
+// const programme = localFont({
+//   src: [
+//     {
+//       path: "../public/fonts/Programme-Regular.woff2",
+//       weight: "400",
+//     },
+//   ],
+//   variable: "--font-outfit",
+//   preload: true,
+// });
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
 });
 
-const montecatiniPro = localFont({
-  src: [
-    {
-      path: "../public/fonts/MontecatiniPro-StrettoUltra.woff2",
-      weight: "700",
-    },
-  ],
-  variable: "--font-montecatiniPro",
-  preload: true,
+// const montecatiniPro = localFont({
+//   src: [
+//     {
+//       path: "../public/fonts/MontecatiniPro-StrettoUltra.woff2",
+//       weight: "700",
+//     },
+//   ],
+//   variable: "--font-montecatiniPro",
+//   preload: true,
+// });
+
+const NowPlaying = dynamic(() => import("@/components/NowPlaying"), {
+  loading: () => <div className="h-6 bg-slate-900" />,
 });
 
 export const metadata = {
@@ -124,9 +129,8 @@ export default function RootLayout({
       </Script>
 
       <body className="antialiased overflow-x-hidden">
-        <Suspense fallback={<div className="h-6 bg-slate-900" />}>
-          <NowPlaying />
-        </Suspense>
+        <NowPlaying />
+
         <NavBar />
         <main className="relative">{children}</main>
       </body>

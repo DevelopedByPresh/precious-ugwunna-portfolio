@@ -74,9 +74,9 @@ export default function NavBar() {
   const navItems = [
     { href: "#about", label: "About" },
     { href: "#experience", label: "Experience" },
-    { href: "#skills", label: "Tech Stack" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
+    // { href: "#skills", label: "Tech Stack" },
+    { href: "/projects", label: "Projects" },
+    // { href: "#contact", label: "Contact" },
     {
       href: "https://drive.google.com/file/d/1BdC1Gfx36WZhsoyv1JvtFHDpNJJjfJsw/view?usp=sharing",
       label: "Resume",

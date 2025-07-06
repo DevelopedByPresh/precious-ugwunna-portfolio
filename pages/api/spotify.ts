@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
-import querystring from 'querystring';
 
 const {
   SPOTIFY_CLIENT_ID: client_id,
@@ -17,7 +16,7 @@ const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-pla
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
 interface SpotifyData {
-  is_playing: boolean ;
+  is_playing: boolean;
   item: {
     name: string;
     album: {
@@ -35,10 +34,10 @@ interface SpotifyData {
 const getAccessToken = async () => {
   const res = await axios.post<{ access_token: string }>(
     TOKEN_ENDPOINT,
-    querystring.stringify({
+    new URLSearchParams({
       grant_type: 'refresh_token',
       refresh_token,
-    }),
+    }).toString(),
     {
       headers: {
         Authorization: `Basic ${token}`,
