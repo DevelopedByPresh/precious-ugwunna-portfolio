@@ -5,8 +5,7 @@ import { Suspense } from "react";
 const Hero = dynamic(() => import("@/components/Hero"));
 const About = dynamic(() => import("@/components/About"));
 const WorkExperience = dynamic(() => import("@/components/WorkExperience"));
-const Skills = dynamic(() => import("@/components/Skills"));
-const Projects = dynamic(() => import("@/components/Projectss"));
+
 const ContactMe = dynamic(() => import("@/components/ContactMe"));
 
 // Custom loading component
@@ -26,8 +25,6 @@ export default function Home() {
         { id: "hero", Component: Hero, snap: "start" }, // Keep start for hero section
         { id: "about", Component: About, snap: "start" }, // Changed from center
         { id: "experience", Component: WorkExperience, snap: "start" }, // Changed from center
-        // { id: "skills", Component: Skills, snap: "start" }, // Already start
-        { id: "projects", Component: Projects, snap: "start" }, // Already start
         { id: "contact", Component: ContactMe, snap: "start" }, // Already start
       ].map(({ id, Component, snap }) => (
         <Suspense key={id} fallback={<LoadingFallback />}>

@@ -25,7 +25,7 @@ const Hero = memo(() => {
         min-h-[calc(100vh-6rem)] justify-center max-w-7xl mx-auto
         pt-24 md:pt-28 lg:pt-32"
     >
-      <div className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
+      <div className="space-y-4 sm:space-y-5 md:space-y-6">
         <h4
           className="text-sm sm:text-base md:text-lg lg:text-xl 
           font-medium text-gray-600"
@@ -60,7 +60,7 @@ const Hero = memo(() => {
           contracts, and decentralized applications (dApps).
         </p>
 
-        <div className="pt-6 sm:pt-8 md:pt-10">
+        <div className="pt-6 lg:pt-0">
           <Button title="Get In Touch" />
         </div>
       </div>
