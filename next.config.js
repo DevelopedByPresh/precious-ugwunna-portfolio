@@ -1,11 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
   images: {
-    domains: ["asset.brandfetch.io", "greensock.com", "res.cloudinary.com", "pbs.twimg.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "asset.brandfetch.io",
+      },
+      {
+        protocol: "https",
+        hostname: "greensock.com",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+      {
+        protocol: "https",
+        hostname: "pbs.twimg.com",
+      },
+    ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

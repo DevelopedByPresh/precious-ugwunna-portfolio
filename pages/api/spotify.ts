@@ -63,38 +63,54 @@ export default async function spotify(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method === 'GET') {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  try {
     const response = await getNowPlaying();
 
-    if (
-      response.status === 204 ||
-      response.status > 400 ||
-      response.data.currently_playing_type !== 'track'
-    ) {
-      //? s-maxage=180 because song usually lasts 3 minutes
-      res.setHeader(
-        'Cache-Control',
-        'public, s-maxage=180, stale-while-revalidate=90'
-      );
-      return res.status(200).json({ isPlaying: false });
-    }
-
-    const data = {
-      isPlaying: response.data.is_playing,
-      title: response.data.item.name,
-      album: response.data.item.album.name,
-      artist: response.data.item.album.artists
-        .map((artist) => artist.name)
-        .join(', '),
-      albumImageUrl: response.data.item.album.images[0].url,
-      songUrl: response.data.item.external_urls.spotify,
-    };
-
+    // Set cache headers once
     res.setHeader(
       'Cache-Control',
       'public, s-maxage=180, stale-while-revalidate=90'
     );
 
+    if (
+      response.status === 204 ||
+      response.status > 400 ||
+      !response.data ||
+      response.data.currently_playing_type !== 'track'
+    ) {
+      return res.status(200).json({ isPlaying: false });
+    }
+
+    const { item } = response.data;
+    if (!item || !item.album || !item.album.images?.[0]) {
+      return res.status(200).json({ isPlaying: false });
+    }
+
+    const data = {
+      isPlaying: response.data.is_playing,
+      title: item.name,
+      album: item.album.name,
+      artist: item.album.artists
+        .map((artist) => artist.name)
+        .join(', '),
+      albumImageUrl: item.album.images[0].url,
+      songUrl: item.external_urls.spotify,
+    };
+
     return res.status(200).json(data);
+  } catch (error) {
+    console.error('Spotify API error:', error);
+    res.setHeader(
+      'Cache-Control',
+      'public, s-maxage=60, stale-while-revalidate=30'
+    );
+    return res.status(500).json({
+      isPlaying: false,
+      error: 'Failed to fetch now playing data'
+    });
   }
 }
