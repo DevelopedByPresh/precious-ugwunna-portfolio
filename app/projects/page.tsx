@@ -1,45 +1,27 @@
 import React from "react";
 import { projects } from "@/data/data";
-import Image from "next/image";
+import Projects from "@/components/Projects";
 
-const Projects = () => {
+const ProjectsPage = () => {
   return (
-    <main className=" pt-24 px-10 min-h-screen">
-      <header>
-        <h1 className="text-slate-800 text-5xl">Projects</h1>
+    <main className="py-24 px-4 sm:px-6 lg:px-8 min-h-screen">
+      <header className="text-center">
+        <h1 className="text-slate-800 text-4xl md:text-5xl font-bold">
+          Projects
+        </h1>
+        <p className="mt-3 text-lg text-slate-600 max-w-2xl mx-auto">
+          Here are some of the projects I'm proud to have worked on.
+        </p>
       </header>
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-16">
-        {projects.map((project) => (
-          <div
-            key={project.projectName}
-            className="flex flex-col  items-center gap-5"
-          >
-            <div className="relative w-full aspect-video max-w-2xl lg:max-w-xl">
-              <Image
-                src={project.projectImage}
-                alt={project.projectName}
-                fill
-                priority
-                className="object-contain rounded-xl border h-fit shadow-lg"
-              />
-            </div>
-            {/* Tools Stack */}
-            <div className="flex flex-wrap justify-center gap-2 md:gap-3 px-4">
-              {project.tools.map((tool, i) => (
-                <span
-                  key={i}
-                  className="px-4 py-1 text-sm bg-gray-100 
-                rounded-xl "
-                >
-                  {tool}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
-      </section>
+      <div className="max-w-6xl mx-auto">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+          {projects.map((project) => (
+            <Projects key={project.id} project={project} />
+          ))}
+        </section>
+      </div>
     </main>
   );
 };
 
-export default Projects;
+export default ProjectsPage;
