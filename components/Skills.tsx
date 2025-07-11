@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
-import { logos } from "@/data/mockData";
+import { logos } from "@/data/data";
 
 const Skills = () => {
   return (

@@ -1,9 +1,6 @@
 import "./globals.css";
 import NavBar from "@/components/NavBar";
-import localFont from "@next/font/local";
-
 import Script from "next/script";
-import { lazy, Suspense } from "react";
 import { Outfit } from "next/font/google";
 import dynamic from "next/dynamic";
 
@@ -111,7 +108,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={` ${outfit.variable}  font-sans scroll-smooth`}>
       <head>
-        <meta name="theme-color" content="#FAF9F6" />
+        {/* <meta name="theme-color" content="#FAF9F6" /> */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
       </head>
 

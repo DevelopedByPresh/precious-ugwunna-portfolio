@@ -7,13 +7,13 @@ import { memo } from "react";
 const Hero = memo(() => {
   const [text] = useTypewriter({
     words: [
-      "Fullstack Web Developer.",
-      "Frontend Developer.",
-      "Smart Contract Developer.",
-      "Graphic Designer.",
+      "Frontend Engineer.",
+      "Solidity Developer.",
+      // "Fullstack Web Developer.",
+      // "Graphic Designer.",
     ],
     loop: true,
-    delaySpeed: 2000,
+    delaySpeed: 3000,
   });
 
   return (

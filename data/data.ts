@@ -24,7 +24,23 @@ type Project = {
   tools: string[];
 };
 
-export const projectss: Project[] = [
+
+
+export const projects: Project[] = [
+  {
+    id: 11,
+    projectName: "Furnisphere",
+    projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1752245211/furnisphere_hlgcjb.png",
+    projectDescription: "Furnisphere is a modern furniture e-commerce platform that showcases a wide range of furniture products. Built with Next.js, TypeScript, and Tailwind CSS, it features a responsive design, smooth animations using Framer Motion, and a user-friendly interface for browsing and purchasing furniture online.",
+    demoLink: "https://furnisphere-alpha.vercel.app/",
+    githubLink: "https://github.com/deji-ice/furnisphere",
+    tools: [
+      "NextJS",
+      "TypeScript",
+      "TailwindCSS",
+      "Framer Motion",
+    ]
+  },
   {
     id: 10,
     projectName: "Transparent Governance Foundation",
@@ -38,7 +54,6 @@ export const projectss: Project[] = [
       "TailwindCSS",
       "Framer Motion",
       "Cloudinary",
-      "Vercel",
       "Paystack"
     ]
   },
@@ -50,14 +65,12 @@ export const projectss: Project[] = [
     demoLink: "https://meta-secure-web3-0.vercel.app/",
     githubLink: "https://github.com/deji-ice/MetaSecure-web3.0",
     tools: [
-      "Axios",
-      "Solidity",
       "React",
       "JavaScript",
+      "Solidity",
+      "Axios",
       "tailwindCSS",
       "Ethers.js",
-      "Blockchain",
-      "Vercel"
     ]
   },
   {
@@ -68,14 +81,13 @@ export const projectss: Project[] = [
     demoLink: "https://harvestgrove.vercel.app",
     githubLink: "https://github.com/deji-ice/HarvestGrovee",
     tools: [
-      "GSAP",
-      "Framer Motion",
+
       "React",
       "Javascript",
       "TailwindCSS",
-      "SEO",
+      "GSAP",
+      "Framer Motion",
       "Cloudinary",
-      "Vercel",
     ],
   },
   {
@@ -86,16 +98,14 @@ export const projectss: Project[] = [
     demoLink: "https://cartizn.vercel.app/",
     githubLink: "https://github.com/deji-ice/cartizn",
     tools: [
-      "GSAP",
-      "Framer Motion",
       "React",
       "React-Router",
+      "GSAP",
+      "Framer Motion",
       "Javascript",
       "TailwindCSS",
       "SEO",
-      "EmailJs",
       "Cloudinary",
-      "Vercel",
     ],
   },
   {
@@ -112,27 +122,26 @@ export const projectss: Project[] = [
       "DaisyUI",
       "Unsplash",
       "Cloudinary",
-      "Vercel",
     ],
   },
-  {
-    id: 5,
-    projectName: "Software Developer Portfolio Showcase",
-    projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1691494937/cartizn/Screenshot_2023-08-08_124122_hssdkd.png",
-    projectDescription: "Crafted an SEO-optimized Developer Portfolio using Framer Motion, Next.js, TypeScript, and Tailwind CSS. Seamlessly integrated Spotify API and Cloudinary for enhanced user experience and image optimization. Explore my journey, tech expertise, and standout projects through this interactive showcase designed to leave a lasting digital impression.",
-    demoLink: "https://ayodejiatanda.vercel.app/",
-    githubLink: "https://github.com/deji-ice/Mainportfoli0",
-    tools: [
-      "Framer Motion",
-      "NextJS",
-      "Typescript",
-      "TailwindCSS",
-      "Spoitfy API",
-      "SEO",
-      "Cloudinary",
-      "Vercel",
-    ],
-  },
+  // {
+  //   id: 5,
+  //   projectName: "Software Developer Portfolio Showcase",
+  //   projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1691494937/cartizn/Screenshot_2023-08-08_124122_hssdkd.png",
+  //   projectDescription: "Crafted an SEO-optimized Developer Portfolio using Framer Motion, Next.js, TypeScript, and Tailwind CSS. Seamlessly integrated Spotify API and Cloudinary for enhanced user experience and image optimization. Explore my journey, tech expertise, and standout projects through this interactive showcase designed to leave a lasting digital impression.",
+  //   demoLink: "https://ayodejiatanda.vercel.app/",
+  //   githubLink: "https://github.com/deji-ice/Mainportfoli0",
+  //   tools: [
+  //     "Framer Motion",
+  //     "NextJS",
+  //     "Typescript",
+  //     "TailwindCSS",
+  //     "Spoitfy API",
+  //     "SEO",
+  //     "Cloudinary",
+  //     "Vercel",
+  //   ],
+  // },
   {
     id: 4,
     projectName: "Blog with Embedded Sanity CMS",
@@ -141,12 +150,10 @@ export const projectss: Project[] = [
     demoLink: "https://thecodechronicles.vercel.app/",
     githubLink: "https://github.com/deji-ice/nextjs-blog",
     tools: [
-      "Sanity",
       "Typescript",
       "NextJS",
+      "Sanity",
       "TailwindCSS",
-      "Heroicons",
-      "Vercel",
     ],
   },
   {
@@ -156,26 +163,26 @@ export const projectss: Project[] = [
     projectDescription: "Africash is a fintech landing page built with React, Tailwind CSS, and Framer Motion. The landing page is designed to promote the Africash financial platform with a modern and responsive user interface. Features include easy navigation, smooth animations, and informative sections highlighting the platform's key benefits.",
     demoLink: "https://africash.netlify.app/",
     githubLink: "https://github.com/deji-ice/Africash",
-    tools: ["TailwindCSS", "React", "Framer Motion", "Netlify"],
+    tools: ["React", "TailwindCSS", "Framer Motion",]
   },
-  {
-    id: 2,
-    projectName: "ChatGPT Clone",
-    projectImage: `https://res.cloudinary.com/dhvwthnzq/image/upload/v1700045704/mines/Screenshot_409_zbvnnw.png`,
-    projectDescription: "A web application built with TypeScript, Next.js 13, and Tailwind CSS that allows users to chat with an AI language model. Implemented Next.js server-side rendering and utilized Firebase for real-time communication. Implemented NextAuth for user authentication. Developed form validation with Yup. This project showcases my skills in building modern, scalable web applications using the latest technologies.",
-    demoLink: "https://chat-gpt-vlone.vercel.app/",
-    githubLink: "https://github.com/deji-ice/chat-gpt",
-    tools: ["Typescript", "NextJS", "Tailwind CSS", "Next Auth", "Open AI"],
-  },
-  {
-    id: 1,
-    projectName: "Custom Multiselect Component",
-    projectImage: `https://res.cloudinary.com/dhvwthnzq/image/upload/v1700045704/mines/Screenshot_431_kqphgz.png`,
-    projectDescription: "A React and TypeScript-based multiselect component created from scratch with CSS modules. Allows users to select multiple options from a dropdown list. Highly customizable, performant, and integrates seamlessly with React applications. Demonstrates expertise in building reusable UI components with a focus on flexibility and maintainability",
-    demoLink: "https://multi-select-typescipt.netlify.app/",
-    githubLink: "https://github.com/deji-ice/multi-select-typescript",
-    tools: ["Typescript", "React", "CSS", "Netlify"],
-  },
+  // {
+  //   id: 2,
+  //   projectName: "ChatGPT Clone",
+  //   projectImage: `https://res.cloudinary.com/dhvwthnzq/image/upload/v1700045704/mines/Screenshot_409_zbvnnw.png`,
+  //   projectDescription: "A web application built with TypeScript, Next.js 13, and Tailwind CSS that allows users to chat with an AI language model. Implemented Next.js server-side rendering and utilized Firebase for real-time communication. Implemented NextAuth for user authentication. Developed form validation with Yup. This project showcases my skills in building modern, scalable web applications using the latest technologies.",
+  //   demoLink: "https://chat-gpt-vlone.vercel.app/",
+  //   githubLink: "https://github.com/deji-ice/chat-gpt",
+  //   tools: ["Typescript", "NextJS", "Tailwind CSS", "Next Auth", "Open AI"],
+  // },
+  // {
+  //   id: 1,
+  //   projectName: "Custom Multiselect Component",
+  //   projectImage: `https://res.cloudinary.com/dhvwthnzq/image/upload/v1700045704/mines/Screenshot_431_kqphgz.png`,
+  //   projectDescription: "A React and TypeScript-based multiselect component created from scratch with CSS modules. Allows users to select multiple options from a dropdown list. Highly customizable, performant, and integrates seamlessly with React applications. Demonstrates expertise in building reusable UI components with a focus on flexibility and maintainability",
+  //   demoLink: "https://multi-select-typescipt.netlify.app/",
+  //   githubLink: "https://github.com/deji-ice/multi-select-typescript",
+  //   tools: ["Typescript", "React", "CSS", "Netlify"],
+  // },
 ];
 
 export const logos: LogoData[] = [

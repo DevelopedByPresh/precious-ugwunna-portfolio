@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 type Props = {};
 const Header = ({}: Props) => {
   return (
-    <header className="flex items-start bg-white  justify-between sticky top-0 max-w-5xl  z-20 lg:items-center p-4">
+    <header className="flex items-start bg-black  justify-between sticky top-0 max-w-5xl  z-20 lg:items-center p-4">
       <motion.div
         initial={{
           x: -500,

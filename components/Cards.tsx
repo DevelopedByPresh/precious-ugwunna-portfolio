@@ -1,7 +1,7 @@
 "use client";
 import { useState, memo } from "react";
 import { motion } from "framer-motion";
-import { experiences } from "@/data/mockData";
+import { experiences } from "@/data/data";
 
 const Cards = memo(() => {
   const [selectedCompany, setSelectedCompany] = useState<string>(

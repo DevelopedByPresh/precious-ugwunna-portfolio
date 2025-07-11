@@ -1,6 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import { projectss } from "@/data/mockData";
+import { projects } from "@/data/data";
 import Link from "next/link";
 import Image from "next/image";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
@@ -8,7 +8,7 @@ import { useState, useCallback } from "react";
 
 const Projects = () => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
-  const currentProject = projectss[currentProjectIndex];
+  const currentProject = projects[currentProjectIndex];
 
   const handlePrevious = useCallback(() => {
     setCurrentProjectIndex((prevIndex) => Math.max(prevIndex - 1, 0));
@@ -16,7 +16,7 @@ const Projects = () => {
 
   const handleNext = useCallback(() => {
     setCurrentProjectIndex((prevIndex) =>
-      Math.min(prevIndex + 1, projectss.length - 1)
+      Math.min(prevIndex + 1, projects.length - 1)
     );
   }, []);
 
@@ -53,7 +53,7 @@ const Projects = () => {
         </button>
         <button
           onClick={handleNext}
-          disabled={currentProjectIndex === projectss.length - 1}
+          disabled={currentProjectIndex === projects.length - 1}
           className="p-2 md:p-3 rounded-full bg-slate-900/80 text-white 
           hover:bg-slate-800 disabled:opacity-50 disabled:cursor-not-allowed
           transition-all duration-200 ease-in-out backdrop-blur-sm"
@@ -88,7 +88,7 @@ const Projects = () => {
           <div className="space-y-4 text-center max-w-4xl px-4">
             <h4 className="text-xl md:text-2xl font-semibold">
               <span className="underline decoration-slate-500 underline-offset-4">
-                Project {currentProjectIndex + 1} of {projectss.length}
+                Project {currentProjectIndex + 1} of {projects.length}
               </span>
               <span className="block mt-2">{currentProject.projectName}</span>
             </h4>
