@@ -19,6 +19,6 @@ export type Project = {
   projectImage: string | StaticImageData;
   projectDescription: string;
   demoLink: string;
-  githubLink: string;
+  githubLink?: string;
   tools: string[];
 };

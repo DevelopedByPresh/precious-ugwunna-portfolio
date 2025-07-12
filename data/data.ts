@@ -5,6 +5,25 @@ import { JobExperience, Project } from "@/types/types";
 export const projects: Project[] = [
   {
     id: crypto.randomUUID(),
+    projectName: "Afren.ai",
+    projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1752309935/afren_mnsv72.png",
+    projectDescription: `I contributed to developing the user-facing platform for Afren.ai, an AI-first hiring solution designed to remove guesswork from the freelance marketplace. By building a responsive, optimized frontend with React, TypeScript, Redux, Tailwind CSS, and Framer Motion, I helped create a seamless system where businesses connect with verified African talent through AI-powered interviews and real skills assessments. My work on the AI matchmaking flow and performance optimization ensured smooth, accurate connections between freelancers and employers.`,
+    demoLink: "https://www.afren.ai/",
+    tools: [
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Framer Motion",
+      "Redux",
+      "shadcnUi",
+      "Chakraui",
+      "Axios",
+      "postman"
+
+    ]
+  },
+  {
+    id: crypto.randomUUID(),
     projectName: "StreamScapeX",
     projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1752306905/Steamscapex_pnoltc.png",
     projectDescription: `
