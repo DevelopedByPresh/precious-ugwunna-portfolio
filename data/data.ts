@@ -1,9 +1,26 @@
-import { StaticImageData } from "next/image";
-import { DockerLogo, ExpressLogo, JavascriptLogo, MongoDbLogo, NextJsLogo, PostmanLogo, ReactLogo, SassLogo, TailwindLogo, VercelLogo, ViteLogo } from "@/Assets";
-import { JobExperience, LogoData, Project } from "@/types/types";
+// import { DockerLogo, ExpressLogo, JavascriptLogo, MongoDbLogo, NextJsLogo, PostmanLogo, ReactLogo, SassLogo, TailwindLogo, VercelLogo, ViteLogo } from "@/Assets";
+import { JobExperience, Project } from "@/types/types";
 
 
 export const projects: Project[] = [
+  {
+    id: crypto.randomUUID(),
+    projectName: "StreamScapeX",
+    projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1752306905/Steamscapex_pnoltc.png",
+    projectDescription: `
+  StreamScapeX is a fully functional streaming platform built for educational purposes using Next.js, TypeScript, Tailwind CSS, Framer Motion, shadcn/ui, and TMDB to deliver a smooth, responsive movie and TV experience. This project is strictly for learning and demonstration only and is not for commercial use, as it does not hold any rights to distribute copyrighted content.
+      `,
+    demoLink: "https://www.streamscapex.live/",
+    githubLink: "https://github.com/deji-ice/streaming-app-next",
+    tools: [
+      "NextJS",
+      "TypeScript",
+      "TailwindCSS",
+      "Framer Motion",
+      "TMDB",
+      "shadcnUi",
+    ]
+  },
   {
     id: crypto.randomUUID(),
     projectName: "Furnisphere",
@@ -126,64 +143,64 @@ export const projects: Project[] = [
   },
 ];
 
-export const logos: LogoData[] = [
-  {
-    alt: "Solidity",
-    src: `https://res.cloudinary.com/dhvwthnzq/image/upload/v1733995420/Solidity_Programming_Language_os73lb.svg`,
-  },
-  {
-    alt: "React",
-    src: ReactLogo,
-  },
-  {
-    alt: "typescript",
-    src: "https://abrudz.github.io/logos/TypeScript.svg",
-  },
-  {
-    alt: "nextjs",
-    src: NextJsLogo,
-  },
-  {
-    alt: "javascript",
-    src: JavascriptLogo,
-  },
-  {
-    alt: "tailwindcss",
-    src: TailwindLogo,
-  },
-  {
-    alt: "mongodb",
-    src: MongoDbLogo,
-  },
-  {
-    alt: "SASS",
-    src: SassLogo,
-  },
-  {
-    alt: "gsap",
-    src: "https://pbs.twimg.com/profile_images/1713633504431394816/h28jJ1qM_400x400.jpg",
-  },
-  {
-    alt: "Docker",
-    src: DockerLogo,
-  },
-  {
-    alt: "ExpressJS",
-    src: ExpressLogo,
-  },
-  {
-    alt: "Vercel",
-    src: VercelLogo,
-  },
-  {
-    alt: "Vite",
-    src: ViteLogo,
-  },
-  {
-    alt: "Postman",
-    src: PostmanLogo,
-  }
-];
+// export const logos: LogoData[] = [
+//   {
+//     alt: "Solidity",
+//     src: `https://res.cloudinary.com/dhvwthnzq/image/upload/v1733995420/Solidity_Programming_Language_os73lb.svg`,
+//   },
+//   {
+//     alt: "React",
+//     src: ReactLogo,
+//   },
+//   {
+//     alt: "typescript",
+//     src: "https://abrudz.github.io/logos/TypeScript.svg",
+//   },
+//   {
+//     alt: "nextjs",
+//     src: NextJsLogo,
+//   },
+//   {
+//     alt: "javascript",
+//     src: JavascriptLogo,
+//   },
+//   {
+//     alt: "tailwindcss",
+//     src: TailwindLogo,
+//   },
+//   {
+//     alt: "mongodb",
+//     src: MongoDbLogo,
+//   },
+//   {
+//     alt: "SASS",
+//     src: SassLogo,
+//   },
+//   {
+//     alt: "gsap",
+//     src: "https://pbs.twimg.com/profile_images/1713633504431394816/h28jJ1qM_400x400.jpg",
+//   },
+//   {
+//     alt: "Docker",
+//     src: DockerLogo,
+//   },
+//   {
+//     alt: "ExpressJS",
+//     src: ExpressLogo,
+//   },
+//   {
+//     alt: "Vercel",
+//     src: VercelLogo,
+//   },
+//   {
+//     alt: "Vite",
+//     src: ViteLogo,
+//   },
+//   {
+//     alt: "Postman",
+//     src: PostmanLogo,
+//   }
+// ];
 
 export const experiences: JobExperience[] = [
   {
@@ -200,14 +217,14 @@ export const experiences: JobExperience[] = [
   },
   {
     occupation: "Fullstack Javascript Instructor",
-    companyName: "GOMYCODE",
+    companyName: "GoMyCode",
     dateStart: "09/2023",
     dateEnd: "07/2025",
     responsibilities: [
-      `Mentored and facilitated collaborative learning through group discussions, peer code reviews, and team projects, resulting in a 30% improvement in students' problem-solving abilities and teamwork skills.`,
-      `Designed and delivered hands-on coding exercises, real-world projects, and scenarios in React, ES6, Node.js, Redux Toolkit, REST APIs, and database management, boosting engagement and practical understanding by 40%.`,
-      `Organized impactful workshops, coding bootcamps, and guest speaker sessions, increasing participation rates by 25% and enhancing the overall learning experience.`,
-      `Kept the curriculum dynamic by integrating the latest industry trends, tools, and best practices, which improved students' market-ready skills by 35%, reflected in their successful project completions and job readiness.`,
+      `Developed engaging coding exercises using React, TypeScript, Node.js, and REST APIs that helped students improve their full-stack skills and boosted performance by 30%.`,
+      `Implemented industry best practices including Agile methodology and peer code reviews, creating a collaborative learning environment that increased project success rates by 40%.`,
+      `Integrated practical industry standards such as Git version control and test-driven development, producing graduates with demonstrable skills in modern development workflows.`,
+      `Led workshops on responsive design with CSS Grid, Flexbox, and Tailwind CSS, driving a 50% improvement in frontend competency and enabling students to deploy professional interfaces in 4 weeks.`,
     ],
   },
   {
