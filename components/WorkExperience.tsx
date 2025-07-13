@@ -34,7 +34,7 @@ const WorkExperience = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.8 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
             onClick={() => toggleCompany(experience.companyName)}
             className="group cursor-pointer"
           >

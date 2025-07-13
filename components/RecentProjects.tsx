@@ -30,11 +30,11 @@ const RecentProjects = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.8 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
             className="group cursor-pointer"
             onClick={() => toggleProject(project.id)}
           >
-            <div className="flex items-center justify-between py-4 border-b rounded-md border-gray-400 group-hover:border-gray-700 transition-colors duration-300">
+            <div className="flex items-center justify-between py-4 border-b border-gray-400 group-hover:border-gray-700 transition-colors duration-300">
               <div className="flex items-center gap-4">
                 <span className="text-gray-400 font-mono text-sm">
                   0{index + 1}
@@ -77,7 +77,6 @@ const RecentProjects = () => {
                         alt={project.projectName}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                       />
-                     
                     </div>
 
                     <p className="text-gray-600 text-sm leading-relaxed">

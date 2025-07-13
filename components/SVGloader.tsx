@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useRef } from "react";
 
 const SVGLoader = () => {
@@ -37,7 +37,7 @@ const SVGLoader = () => {
     end: number,
     duration: number
   ) => {
-    return -end * (time = duration) * (time - 2) + start;
+    return -end * (time /= duration) * (time - 2) + start;
   };
   const loaderHeight = () => {
     const loaderBounds = (
@@ -64,18 +64,13 @@ const SVGLoader = () => {
   };
 
   return (
-    <div className="flex justify-center bg-white items-center ">
-      {/* <div className="w-[80%] text-[2vw] text-center">
-        <h1 className="text-6xl font-bold text-gray-900 mt-4 mb-6">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout.
-        </h1>
-      </div> */}
-      <div ref={loader} className={`w-full z-50 fixed h-[calc(100vh+200px)]`}>
-        <svg className="h-full w-full">
-          <path className="stroke-[1px] stroke-black fill-slate-800 " ref={path}></path>
-        </svg>
-      </div>
+    <div ref={loader} className={`w-full z-50 fixed h-[calc(100vh+200px)]`}>
+      <svg className="h-full w-full">
+        <path
+          className="stroke-[1px] stroke-black fill-slate-800 "
+          ref={path}
+        ></path>
+      </svg>
     </div>
   );
 };

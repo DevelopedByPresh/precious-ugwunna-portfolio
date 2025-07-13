@@ -4,7 +4,7 @@ import Script from "next/script";
 import { Outfit } from "next/font/google";
 import dynamic from "next/dynamic";
 import SmoothScrolling from "@/components/SmoothScrolling";
-import SVGLoader from "@/components/SVGloading";
+import SVGLoader from "@/components/SVGloader";
 
 // Optimize font loading
 // const programme = localFont({
