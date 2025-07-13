@@ -30,7 +30,7 @@ const About = memo(() => {
       max-w-7xl mx-auto w-full"
     >
       <h2
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center 
+        className="text-3xl  xl:text-3xl md:text-4xl  text-center 
         mb-8 sm:mb-12 md:mb-16 font-semibold uppercase text-gray-500 
         font-outfit tracking-wider"
       >
@@ -62,31 +62,26 @@ const About = memo(() => {
         <div className="space-y-6 text-base sm:text-lg lg:text-xl">
           <div className="space-y-4">
             <p className="leading-relaxed">
-              Hey there! I'm{" "}
-              <strong className="underline decoration-2">Ayodeji</strong>, a
-              passionate software developer with expertise in both traditional
-              front-end development and blockchain technologies. Whether it's
-              building visually stunning and user-friendly websites or crafting
-              decentralized applications (dApps) and smart contracts, I love
-              creating solutions that make a lasting impact.
+              Before diving into tech, I started with graphics design, which
+              sparked my love for clean, beautiful UIs. Now, I blend that design
+              sense with frontend and blockchain development to build digital
+              products people enjoy using.
             </p>
             <p className="leading-relaxed">
-              With over 3 years of experience, I specialize in React, Next.js,
-              Tailwind CSS, and TypeScript, delivering responsive, intuitive
-              interfaces. My journey into blockchain and Web3 has added skills
-              like Solidity to my toolkit, allowing me to contribute to the
-              decentralized future while continuing to excel in regular
-              front-end development projects.
+              I’m always curious and growing — currently adding Go to my stack
+              while staying active in the Web3 space with Solidity and dApps.
+              Teaching and mentoring new developers keeps me sharp and grounded
+              too.
             </p>
             <p className="leading-relaxed">
-              Beyond work, I find inspiration in music, which keeps my
-              creativity flowing. When I'm not coding, you might catch me
-              swimming, my go-to activity for relaxation and recharging.
+              When I’m not coding, you’ll find me swimming, vibing to music, or
+              watching movies that spark new ideas. They help me unwind and feed
+              my creativity in unexpected ways.
             </p>
           </div>
 
-          <div className="pt-6">
-            <h3 className="text-lg sm:text-xl font-semibold mb-4">
+          <div className="pt-4 ">
+            <h3 className="text-base mb-3 font-semibold text-gray-800">
               Technologies I work with:
             </h3>
             <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">

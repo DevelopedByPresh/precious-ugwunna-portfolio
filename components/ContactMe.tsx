@@ -11,20 +11,20 @@ const ContactMe = (props: Props) => {
     window.location.href = "mailto:ayodejiatanda1@gmail.com";
   };
   return (
-    <div
-      className="relative flex text-center flex-col md:text-left md:flex-row max-w-7xl
-       px-10 h-screen justify-evenly overflow-hidden   mx-auto items-center space-y-10 "
+    <footer
+      className=" flex text-center flex-col md:text-left  mt-28 mb-5 max-w-7xl
+       px-10  justify-evenly overflow-hidden   mx-auto items-center space-y-10 "
     >
       <h3
-        className="absolute top-40 lg:top-[10rem] xl:top-20 text-3xl mb-5 xl:text-3xl md:text-4xl md:mb-[6rem]  lg:mb-[0] font-semibold
+        className=" text-3xl mb-5 xl:text-3xl md:text-4xl md:mb-[6rem]  lg:mb-[0] font-semibold
        uppercase font-outfit text-gray-500"
       >
         Get In Touch
       </h3>
       <div
         className="md:space-y-20 xl:space-y-1 flex flex-col items-center justify-center md:max-w-2xl lg:max-w-3xl max-w-3xl tracking-wide text-center 
-      absolute md:top-[40%] md:bottom-[50%] xl:top-[40%] xl:bottom-[40%]
-       font-normal xl:text m"
+
+       font-normal xl:text "
       >
         <p className="text-sm xl:mb-16 xl:text-xl  p-5 text-start md:text-center md:text-xl lg:text-3xl ">
           Ready to take your web projects to the next{" "}
@@ -79,11 +79,11 @@ const ContactMe = (props: Props) => {
           className="h-2 w-2 filter grayscale  hover:filter-none hover:animate-pulse transition duration-200 ease-in-out"
         />
       </div>
-      <p className="text-xs absolute bottom-5 tracking-wide font-normal">
+      <p className="text-xs tracking-wide font-normal">
         Created by X user
         <span className="font-semibold"> @dejixice</span> @2023
       </p>
-    </div>
+    </footer>
   );
 };
 

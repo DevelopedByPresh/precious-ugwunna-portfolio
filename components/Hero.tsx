@@ -21,8 +21,8 @@ const Hero = memo(() => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative flex flex-col px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24
-        min-h-[calc(100vh-6rem)] justify-center max-w-7xl mx-auto
+      className="relative flex flex-col px-6 md:px-12 lg:px-16 xl:px-24
+        min-h-[calc(100vh-6rem)] xl:min-h-full justify-center max-w-7xl mx-auto
         pt-24 md:pt-28 lg:pt-32"
     >
       <div className="space-y-4 sm:space-y-5 md:space-y-6">
@@ -50,14 +50,12 @@ const Hero = memo(() => {
           </h2>
         </div>
 
-        <p
-          className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl 
-          text-gray-600 leading-relaxed"
-        >
-          I am a versatile developer skilled in both Web2 and Web3 technologies,
-          focusing on creating innovative and accessible digital experiences. My
-          expertise spans developing intuitive full-stack applications, smart
-          contracts, and decentralized applications (dApps).
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl text-gray-600 leading-relaxed">
+          I’m a software engineer creating clean, responsive, and accessible web
+          experiences with React, Next.js, Tailwind CSS, and Web3. I build smart
+          contracts with Solidity, contribute to decentralized projects, and
+          enjoy mentoring new developers to make technology more usable and
+          inclusive for everyone.
         </p>
 
         <div className="pt-6 lg:pt-0">
