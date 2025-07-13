@@ -1,10 +1,15 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import ToolIcon from "./ToolIcon";
 import { Project } from "@/types/types";
 
 const ProjectCard = ({ project }: { project: Project }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isLongDescription = project.projectDescription.length > 150;
+
   return (
     <div
       key={project.projectName}
@@ -19,15 +24,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
           loading={"lazy"}
           className="object-contain rounded-t-2xl border-b  transition-all duration-300 group-hover:brightness-50"
         />
-
-        {/* Overlay Links - Hidden by default, animate in on hover */}
         <div className="absolute inset-x-0  bottom-10 flex items-center text-sm justify-center gap-4 z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
           <Link
             href={project.demoLink}
             target="_blank"
             aria-label="Live Demo"
             rel="noopener noreferrer"
-            className="border-white border-2 hover:bg-white text-white hover:text-slate-800 px-3 py-1 rounded-xl font-semibold transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 ease-out shadow-lg"
+            className="border-white border-[2px] hover:bg-white text-white hover:text-slate-800 px-3 py-1 rounded-xl font-semibold transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 ease-out shadow-lg"
           >
             Live Demo
           </Link>
@@ -50,14 +53,32 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <h3 className="text-2xl font-bold text-slate-800 mb-2">
           {project.projectName}
         </h3>
-        <p className="text-slate-600 text-base mb-4 line-clamp-3">
-          {project.projectDescription}
-        </p>
+
+        <div className="mb-4">
+          <motion.p
+            className={`text-slate-600 text-sm ${
+              !isExpanded && isLongDescription ? "line-clamp-3" : ""
+            }`}
+            animate={{ height: "auto" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            {project.projectDescription}
+          </motion.p>
+
+          {isLongDescription && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-slate-500 hover:text-slate-700 text-xs mt-2 font-medium transition-colors duration-200"
+            >
+              {isExpanded ? "Show less" : "Show more"}
+            </button>
+          )}
+        </div>
 
         {/* Tools Stack */}
         <div className="mt-4">
           <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
-            Tech Stack
+            Under the Hood
           </h4>
           <div className="flex flex-wrap items-center gap-3">
             {project.tools.map((tool: string, i: number) => (
