@@ -4,11 +4,10 @@ import { Suspense } from "react";
 // Dynamic imports for better code splitting
 const Hero = dynamic(() => import("@/components/Hero"));
 const About = dynamic(() => import("@/components/About"));
-const WorkExperience = dynamic(() => import("@/components/WorkExperience"));
+const WorkSection = dynamic(() => import("@/components/WorkSection"));
 
 const ContactMe = dynamic(() => import("@/components/ContactMe"));
 
-// Custom loading component
 const LoadingFallback = () => (
   <div className="flex items-center justify-center min-h-screen">
     <div className="w-8 h-8 border-4 border-slate-900/20 border-t-slate-900 rounded-full animate-spin" />
@@ -19,16 +18,16 @@ export default function Home() {
   return (
     <div
       className="font-outfit text-slate-900 snap-mandatory snap-y z-0
-     overflow-x-hidden bg-[#ebebf3] scroll-smooth"
+     overflow-x-hidden  scroll-smooth max-w-[1300px] mx-auto"
     >
       {[
-        { id: "hero", Component: Hero, snap: "start" }, // Keep start for hero section
-        { id: "about", Component: About, snap: "start" }, // Changed from center
-        { id: "experience", Component: WorkExperience, snap: "start" }, // Changed from center
-        { id: "contact", Component: ContactMe, snap: "start" }, // Already start
+        { id: "hero", Component: Hero, snap: "start" },
+        { id: "about", Component: About, snap: "start" },
+        { id: "works-section", Component: WorkSection, snap: "start" },
+        { id: "contact", Component: ContactMe, snap: "start" },
       ].map(({ id, Component, snap }) => (
         <Suspense key={id} fallback={<LoadingFallback />}>
-          <section id={id} className={`snap-${snap} min-h-screen relative`}>
+          <section id={id} className={`snap-${snap}  relative`}>
             <Component />
           </section>
         </Suspense>

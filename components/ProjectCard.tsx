@@ -4,19 +4,20 @@ import Link from "next/link";
 import ToolIcon from "./ToolIcon";
 import { Project } from "@/types/types";
 
-const Projects = ({ project }: { project: Project }) => {
+const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div
       key={project.projectName}
-      className="flex flex-col bg-white rounded-2xl border overflow-hidden transition-all duration-300"
+      className="flex flex-col bg-slate-100 rounded-2xl border overflow-hidden transition-all duration-300"
     >
-      <div className="relative w-full aspect-video group">
+      <div className="relative w-full h-full  group">
         <Image
           src={project.projectImage}
           alt={project.projectName}
-          fill
-          priority
-          className="object-contain rounded-t-2xl border-b transition-all duration-300 group-hover:brightness-50"
+          height={300}
+          width={600}
+          loading={"lazy"}
+          className="object-contain rounded-t-2xl border-b  transition-all duration-300 group-hover:brightness-50"
         />
 
         {/* Overlay Links - Hidden by default, animate in on hover */}
@@ -30,15 +31,17 @@ const Projects = ({ project }: { project: Project }) => {
           >
             Live Demo
           </Link>
-          <Link
-            href={project.githubLink}
-            target="_blank"
-            aria-label="GitHub Repository"
-            rel="noopener noreferrer"
-            className="border-white border-2 hover:bg-white text-white hover:text-slate-800 px-3 py-1 rounded-xl  font-semibold transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 ease-out delay-75 shadow-lg"
-          >
-            GitHub
-          </Link>
+          {project.githubLink && (
+            <Link
+              href={project.githubLink}
+              target="_blank"
+              aria-label="GitHub Repository"
+              rel="noopener noreferrer"
+              className="border-white border-2 hover:bg-white text-white hover:text-slate-800 px-3 py-1 rounded-xl font-semibold transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 ease-out shadow-lg"
+            >
+              GitHub Repo
+            </Link>
+          )}
         </div>
       </div>
 
@@ -69,4 +72,4 @@ const Projects = ({ project }: { project: Project }) => {
   );
 };
 
-export default Projects;
+export default ProjectCard;
