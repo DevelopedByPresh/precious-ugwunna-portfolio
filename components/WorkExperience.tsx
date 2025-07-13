@@ -38,9 +38,24 @@ const WorkExperience = () => {
             onClick={() => toggleCompany(experience.companyName)}
             className="group cursor-pointer"
           >
-            <div className="flex items-start justify-between pt-4 pb-3 border-b rounded-md border-gray-400 group-hover:border-gray-700 transition-colors duration-300">
+            <div
+              className="flex items-start justify-between pt-4 pb-3 border-b border-gray-400 group-hover:border-gray-700 transition-colors duration-300"
+              role="button"
+              tabIndex={0}
+              aria-expanded={expandedExperience === experience.companyName}
+              aria-controls={`exp-content-${experience.companyName}`}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  toggleCompany(experience.companyName);
+                }
+              }}
+            >
               <div>
-                <h3 className="text-lg  text-gray-900 group-hover:text-gray-600 transition-colors duration-300">
+                <h3
+                  className="text-lg  text-gray-900 group-hover:text-gray-600 transition-colors duration-300"
+                  id={`exp-title-${experience.companyName}`}
+                >
                   {experience.occupation} at{" "}
                   <span className="text-slate-900 font-medium">
                     {experience.companyName}
@@ -56,13 +71,19 @@ const WorkExperience = () => {
                     ? "rotate-90"
                     : ""
                 }`}
+                aria-hidden="true"
               >
                 →
               </div>
             </div>
             <AnimatePresence>
               {expandedExperience === experience.companyName && (
-                <ul className="space-y-4 text-sm mt-2 md:text-base text-gray-600">
+                <ul
+                  className="space-y-4 text-sm mt-2 md:text-base text-gray-600"
+                  id={`exp-content-${experience.companyName}`}
+                  role="region"
+                  aria-labelledby={`exp-title-${experience.companyName}`}
+                >
                   {experience.responsibilities.map((responsibility, idx) => (
                     <motion.li
                       key={idx}

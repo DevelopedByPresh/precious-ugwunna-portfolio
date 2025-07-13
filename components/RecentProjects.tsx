@@ -3,6 +3,7 @@ import ToolIcon from "./ToolIcon";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "@/data/data";
 import Link from "next/link";
+import Image from "next/image";
 const RecentProjects = () => {
   const latestProjects = projects.slice(0, 3);
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
@@ -34,12 +35,27 @@ const RecentProjects = () => {
             className="group cursor-pointer"
             onClick={() => toggleProject(project.id)}
           >
-            <div className="flex items-center justify-between py-4 border-b border-gray-400 group-hover:border-gray-700 transition-colors duration-300">
+            <div
+              className="flex items-center justify-between py-4 border-b border-gray-400 group-hover:border-gray-700 transition-colors duration-300"
+              role="button"
+              tabIndex={0}
+              aria-expanded={expandedProject === project.id}
+              aria-controls={`project-content-${project.id}`}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  toggleProject(project.id);
+                }
+              }}
+            >
               <div className="flex items-center gap-4">
                 <span className="text-gray-400 font-mono text-sm">
                   0{index + 1}
                 </span>
-                <h4 className="text-lg font-medium text-gray-900 group-hover:text-gray-600 transition-colors duration-300">
+                <h4
+                  className="text-lg font-medium text-gray-900 group-hover:text-gray-600 transition-colors duration-300"
+                  id={`project-title-${project.id}`}
+                >
                   {project.projectName}
                 </h4>
               </div>
@@ -47,12 +63,12 @@ const RecentProjects = () => {
                 className={`text-gray-400 group-hover:text-gray-600 transition-all duration-300 ${
                   expandedProject === project.id ? "rotate-90" : ""
                 }`}
+                aria-hidden="true"
               >
                 →
               </div>
             </div>
 
-            {/* Smooth Dropdown Content - Shows on click */}
             <AnimatePresence>
               {expandedProject === project.id && (
                 <motion.div
@@ -64,17 +80,23 @@ const RecentProjects = () => {
                     ease: [0.4, 0.0, 0.2, 1],
                   }}
                   className="overflow-hidden"
+                  id={`project-content-${project.id}`}
+                  role="region"
+                  aria-labelledby={`project-title-${project.id}`}
                 >
                   <div className="pt-6 pb-4 space-y-4">
                     {/* Project Image */}
                     <div className=" w-full h-48 rounded-lg overflow-hidden bg-gray-100">
-                      <img
+                      <Image
                         src={
                           typeof project.projectImage === "string"
                             ? project.projectImage
                             : project.projectImage.src
                         }
+                        width={500}
+                        height={300}
                         alt={project.projectName}
+                        loading="lazy"
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                       />
                     </div>

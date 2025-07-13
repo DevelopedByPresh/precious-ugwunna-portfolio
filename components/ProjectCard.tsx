@@ -56,6 +56,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
         <div className="mb-4">
           <motion.p
+            id={`project-desc-${project.projectName}`}
             className={`text-slate-600 text-sm ${
               !isExpanded && isLongDescription ? "line-clamp-3" : ""
             }`}
@@ -69,6 +70,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
             <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="text-slate-500 hover:text-slate-700 text-xs mt-2 font-medium transition-colors duration-200"
+              aria-expanded={isExpanded}
+              aria-controls={`project-desc-${project.projectName}`}
             >
               {isExpanded ? "Show less" : "Show more"}
             </button>
