@@ -6,7 +6,7 @@ const WorkSection = () => {
   // Get top 3 latest projects
 
   return (
-    <div className=" w-full flex flex-col lg:flex-row lg:justify-between gap-16 lg:gap-28  mt-36 max-w-7xl mx-auto px-6 md:px-16  lg:px-20 py-16">
+    <div className=" w-full flex flex-col lg:flex-row lg:justify-between gap-16 lg:gap-28  mt-36 max-w-7xl mx-auto px-3 md:px-16  lg:px-20 py-16">
 
       {/* Work Experience Section */}
       <div className="flex-1">

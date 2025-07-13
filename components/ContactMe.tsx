@@ -12,21 +12,21 @@ const ContactMe = (props: Props) => {
   };
   return (
     <footer
-      className=" flex text-center flex-col md:text-left  mt-28 mb-5 max-w-7xl
-       px-10  overflow-hidden   mx-auto items-center lg:space-y-10  "
+      className=" flex text-center flex-col md:text-left mt-10 lg:mt-28 mb-5 max-w-7xl
+       px-3 lg:px-10  overflow-hidden   mx-auto items-center lg:space-y-10  "
     >
       <h3
-        className=" text-3xl xl:text-3xl md:text-4xl md:mb-[6rem]  lg:mb-[0] font-semibold
-       uppercase font-outfit text-gray-500"
+        className="text-3xl md:mb-[6rem]  lg:mb-[0] font-semibold
+        font-outfit text-gray-500"
       >
         Get In Touch
       </h3>
       <div
-        className="lg:space-y-20 pb-24 lg:pb-10 xl:space-y-1 flex flex-col items-center justify-start md:max-w-2xl lg:max-w-3xl max-w-3xl tracking-wide text-center 
+        className="lg:space-y-20 pb-28 lg:pb-10 xl:space-y-1 flex flex-col items-center justify-start md:max-w-2xl lg:max-w-3xl max-w-3xl tracking-wide text-center 
 
        font-normal xl:text "
       >
-        <p className="text-sm xl:mb-16 xl:text-xl  p-5 text-start md:text-center md:text-xl lg:text-3xl ">
+        <p className="text-sm my-3 xl:mb-16 xl:text-xl  p-5 text-start md:text-center md:text-xl lg:text-3xl ">
           Ready to take your web projects to the next{" "}
           <span className="underline decoration-black decoration-2">level</span>
           ? <br /> Let's collaborate and create exceptional user experiences

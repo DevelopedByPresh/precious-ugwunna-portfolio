@@ -21,11 +21,11 @@ const Hero = memo(() => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative flex flex-col px-6 md:px-12 lg:px-16 xl:px-24
+      className="relative flex flex-col 
         min-h-[calc(100vh-6rem)] xl:min-h-full justify-center max-w-7xl mx-auto
         pt-24 md:pt-28 lg:pt-32"
     >
-      <div className="space-y-4 sm:space-y-5 md:space-y-6">
+      <div className="space-y-4 sm:space-y-5 md:space-y-6 px-6 md:px-16  lg:px-20">
         <h4
           className="text-sm sm:text-base md:text-lg lg:text-xl 
           font-medium text-gray-600"
@@ -50,7 +50,7 @@ const Hero = memo(() => {
           </h2>
         </div>
 
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl text-gray-600 leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl text-gray-600  leading-relaxed">
           I’m a software engineer creating clean, responsive, and accessible web
           experiences with React, Next.js, Tailwind CSS, and Web3. I build smart
           contracts with Solidity, contribute to decentralized projects, and

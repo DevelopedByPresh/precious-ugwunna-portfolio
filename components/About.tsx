@@ -26,7 +26,7 @@ const About = memo(() => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col px-4 sm:px-8 md:px-16 lg:px-20 pt-16 sm:pt-20 
+      className="flex flex-col px-3md:px-16 lg:px-20 pt-16 sm:pt-20 
       max-w-7xl mx-auto w-full"
     >
       <h2
@@ -60,7 +60,7 @@ const About = memo(() => {
           />
         </motion.div>
 
-        <div className="space-y-6 text-base sm:text-lg lg:text-xl">
+        <div className="space-y-6 text-base sm:text-lg lg:text-xl px-6 md:px-16  lg:px-20">
           <div className="space-y-4">
             <p className="leading-relaxed">
               Before diving into tech, I started with graphics design, which
