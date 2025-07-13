@@ -10,7 +10,7 @@ const Button = ({title}: Props) => {
   };
   return (
     <> 
-      <button className="mt-12 lg:mt-5 " onClick={handleClick}>
+      <button className="lg:mt-5 " onClick={handleClick}>
         <a href="#_" className="relative inline-block text-lg group">
           <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
             <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>

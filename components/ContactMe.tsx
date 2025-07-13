@@ -13,16 +13,16 @@ const ContactMe = (props: Props) => {
   return (
     <footer
       className=" flex text-center flex-col md:text-left  mt-28 mb-5 max-w-7xl
-       px-10  justify-evenly overflow-hidden   mx-auto items-center space-y-10 "
+       px-10  overflow-hidden   mx-auto items-center lg:space-y-10  "
     >
       <h3
-        className=" text-3xl mb-5 xl:text-3xl md:text-4xl md:mb-[6rem]  lg:mb-[0] font-semibold
+        className=" text-3xl xl:text-3xl md:text-4xl md:mb-[6rem]  lg:mb-[0] font-semibold
        uppercase font-outfit text-gray-500"
       >
         Get In Touch
       </h3>
       <div
-        className="md:space-y-20 xl:space-y-1 flex flex-col items-center justify-center md:max-w-2xl lg:max-w-3xl max-w-3xl tracking-wide text-center 
+        className="lg:space-y-20 pb-24 lg:pb-10 xl:space-y-1 flex flex-col items-center justify-start md:max-w-2xl lg:max-w-3xl max-w-3xl tracking-wide text-center 
 
        font-normal xl:text "
       >
@@ -35,9 +35,9 @@ const ContactMe = (props: Props) => {
           frontend development needs. Reach out and let's build something
           amazing!
         </p>
-        <Button title="Say Hello" />
+        <Button title="Say Hello"  />
       </div>
-      <div className=" absolute bottom-16 space-x-4 xl:space-y-5 xl:bottom-[11rem] xl:left-5 xl:space-x-0 xl:flex xl:flex-col xl:z-20 xl:fixed xl:items-center xl:justify-center xl:text-center">
+      <div className=" absolute bottom-10 space-x-4 xl:space-y-5 xl:bottom-[11rem] xl:left-5 xl:space-x-0 xl:flex xl:flex-col xl:z-20 xl:fixed xl:items-center xl:justify-center xl:text-center">
         <SocialIcon
           network="email"
           bgColor="transparent"
