@@ -31,7 +31,7 @@ const About = memo(() => {
     >
       <h2
         className="text-3xl  xl:text-3xl md:text-4xl  text-center 
-        mb-8 sm:mb-12 md:mb-16 font-semibold uppercase text-gray-500 
+        mb-8 sm:mb-12 md:mb-16 mt-5 font-semibold text-gray-500 
         font-outfit tracking-wider"
       >
         Persona Blurb
@@ -44,7 +44,8 @@ const About = memo(() => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="flex-shrink-0"
         >
           <Image
@@ -85,12 +86,13 @@ const About = memo(() => {
               Technologies I work with:
             </h3>
             <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-              {technologies.map((tech) => (
+              {technologies.map((tech, index) => (
                 <motion.li
                   key={tech}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
                   className="flex items-center space-x-2 text-gray-700"
                 >
                   <span className="h-1.5 w-1.5 bg-gray-500 rounded-full" />

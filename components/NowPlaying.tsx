@@ -1,3 +1,4 @@
+//@ts-nocheck
 "use client";
 import { useEffect, useState } from "react";
 import useSWR, { mutate } from "swr";
@@ -52,7 +53,7 @@ const NowPlaying = () => {
             >
               {currentlyPlaying.trackName}
             </a>
-            <span className="">by {currentlyPlaying?.artistName} 🔥 </span>
+            <span className="">by {currentlyPlaying?.artistName} 🔥</span>
           </>
         ) : (
           <span>nothing 😴</span>
