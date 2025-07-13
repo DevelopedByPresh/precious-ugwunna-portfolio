@@ -3,6 +3,7 @@ import NavBar from "@/components/NavBar";
 import Script from "next/script";
 import { Outfit } from "next/font/google";
 import dynamic from "next/dynamic";
+import SmoothScrolling from "@/components/SmoothScrolling";
 
 // Optimize font loading
 // const programme = localFont({
@@ -125,11 +126,12 @@ export default function RootLayout({
         `}
       </Script>
 
-      <body className="antialiased overflow-x-hidden">
+      <body className="antialiased overflow-x-hidden bg-[#ebebf3]">
         <NowPlaying />
-
         <NavBar />
-        <main className="relative">{children}</main>
+        <SmoothScrolling>
+          <main className="relative">{children}</main>
+        </SmoothScrolling>
       </body>
     </html>
   );
