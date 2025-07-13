@@ -92,7 +92,7 @@ const About = memo(() => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
                   className="flex items-center space-x-2 text-gray-700"
                 >
                   <span className="h-1.5 w-1.5 bg-gray-500 rounded-full" />
