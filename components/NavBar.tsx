@@ -72,13 +72,14 @@ export default function NavBar() {
   }, [navbar]);
 
   const navItems = [
-    { href: "#about", label: "About" },
-    { href: "#experience", label: "Experience" },
+    { href: "/", label: "Home" },
+    // { href: "#about", label: "About" },
+    // { href: "#experience", label: "Experience" },
     // { href: "#skills", label: "Tech Stack" },
     { href: "/projects", label: "Projects" },
     // { href: "#contact", label: "Contact" },
     {
-      href: "https://drive.google.com/file/d/1BdC1Gfx36WZhsoyv1JvtFHDpNJJjfJsw/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1bI0FEt7JVKQcfUBECfZ_l6TaMTXQqTgr/view?usp=sharing",
       label: "Resume",
       external: true,
     },
@@ -179,6 +180,7 @@ export default function NavBar() {
                 </Link>
               </motion.div>
             ))}
+            <button className="bg-white rounded-lg px-3 py-2 font-semibold">Get In Touch</button>
           </div>
         </div>
 
