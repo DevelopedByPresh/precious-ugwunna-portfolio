@@ -1,28 +1,89 @@
 "use client";
-import { memo } from "react";
-import { motion } from "framer-motion";
-import Cards from "./Cards";
-
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { experiences } from "@/data/data";
 const WorkExperience = () => {
+  const [expandedExperience, setExpandedExperience] = useState<string | null>(
+    null
+  );
+  const toggleCompany = (companyName: string) => {
+    setExpandedExperience(
+      expandedExperience === companyName ? null : companyName
+    );
+  };
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="relative flex flex-col items-center  justify-center 
- w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 
-       overflow-hidden gap-16"
+      className="space-y-8"
     >
       <h3
-        className=" text-3xl  xl:text-3xl md:text-4xl font-outfit text-gray-500 font-semibold 
-        uppercase tracking-wider text-center w-full"
+        className="text-3xl font-outfit text-gray-500 font-semibold 
+         tracking-wider px-5  text-center lg:text-start w-full"
       >
-       Working Experience
+        Working Experience
       </h3>
 
-      <div className="w-full mt-1">
-        <Cards />
+      {/* Experience details */}
+      <div className=" space-y-4 px-5">
+        {experiences.map((experience, index) => (
+          <motion.div
+            key={experience.companyName}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.8 }}
+            onClick={() => toggleCompany(experience.companyName)}
+            className="group cursor-pointer"
+          >
+            <div className="flex items-start justify-between pt-4 pb-3 border-b rounded-md border-gray-400 group-hover:border-gray-700 transition-colors duration-300">
+              <div>
+                <h3 className="text-lg  text-gray-900 group-hover:text-gray-600 transition-colors duration-300">
+                  {experience.occupation} at{" "}
+                  <span className="text-slate-900 font-medium">
+                    {experience.companyName}
+                  </span>
+                </h3>
+                <p className="text-xs text-gray-500 mt-1">
+                  {experience.dateStart} - {experience.dateEnd}
+                </p>
+              </div>
+              <div
+                className={`text-gray-400 group-hover:text-gray-600 transition-all duration-300 ${
+                  expandedExperience === experience.companyName
+                    ? "rotate-90"
+                    : ""
+                }`}
+              >
+                →
+              </div>
+            </div>
+            <AnimatePresence>
+              {expandedExperience === experience.companyName && (
+                <ul className="space-y-4 text-sm mt-2 md:text-base text-gray-600">
+                  {experience.responsibilities.map((responsibility, idx) => (
+                    <motion.li
+                      key={idx}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
+                      className="flex items-start space-x-2"
+                    >
+                      <span
+                        className="mt-2 h-1.5 w-1.5 flex-shrink-0 
+                      rounded-full bg-slate-500"
+                      />
+                      <span>{responsibility}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        ))}
       </div>
     </motion.div>
   );
