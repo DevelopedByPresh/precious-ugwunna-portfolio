@@ -44,7 +44,7 @@ export const projects: Project[] = [
     id: crypto.randomUUID(),
     projectName: "Furnisphere",
     projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1752245211/furnisphere_hlgcjb.png",
-    projectDescription: "Furnisphere is a modern furniture e-commerce platform that showcases a wide range of furniture products. Built with Next.js, TypeScript, and Tailwind CSS, it features a responsive design, smooth animations using Framer Motion, and a user-friendly interface for browsing and purchasing furniture online.",
+    projectDescription: "Furnisphere is a modern furniture-themed web project built to showcase my Figma-to-code implementation, frontend development, and web accessibility skills. Developed with Next.js, TypeScript, and Tailwind CSS, it features a fully responsive design, smooth animations with Framer Motion, seamless smooth scrolling using Lenis, and a clean, user-friendly interface that follows accessibility best practices. Furnisphere isn’t a live store but a demonstration of high-quality, accessible UI and UX design in code.",
     demoLink: "https://furnisphere-alpha.vercel.app/",
     githubLink: "https://github.com/deji-ice/furnisphere",
     tools: [
