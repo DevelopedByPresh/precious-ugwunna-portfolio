@@ -55,7 +55,7 @@ export default async function spotify(
 
   try {
     const response = await getNowPlaying();
-
+    
     // Set cache headers once
     res.setHeader(
       'Cache-Control',

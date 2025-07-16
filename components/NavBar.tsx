@@ -35,31 +35,20 @@ export default function NavBar() {
   const [navbar, setNavbar] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
 
-  // Handle scroll effect with debounce
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-
     const handleScroll = () => {
-      if (timeoutId) clearTimeout(timeoutId);
-
-      timeoutId = setTimeout(() => {
-        setScrolled(window.scrollY > 20);
-      }, 100);
+      setScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      if (timeoutId) clearTimeout(timeoutId);
     };
   }, []);
 
-  // Memoized toggle function
-  const toggleNavbar = useCallback(() => {
+  const toggleNavbar = () => {
     setNavbar((prev) => !prev);
-  }, []);
+  };
 
-  // Close mobile menu when screen size changes
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024 && navbar) {
@@ -73,11 +62,7 @@ export default function NavBar() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    // { href: "#about", label: "About" },
-    // { href: "#experience", label: "Experience" },
-    // { href: "#skills", label: "Tech Stack" },
     { href: "/projects", label: "Projects" },
-    // { href: "#contact", label: "Contact" },
     {
       href: "https://drive.google.com/file/d/1bI0FEt7JVKQcfUBECfZ_l6TaMTXQqTgr/view?usp=sharing",
       label: "Resume",
@@ -180,7 +165,9 @@ export default function NavBar() {
                 </Link>
               </motion.div>
             ))}
-            <button className="bg-white rounded-lg px-3 py-2 font-semibold">Get In Touch</button>
+            <button className="bg-white rounded-lg px-3 py-2 font-semibold">
+              Get In Touch
+            </button>
           </div>
         </div>
 
