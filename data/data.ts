@@ -73,8 +73,8 @@ export const projects: Project[] = [
   {
     id: crypto.randomUUID(),
     projectName: "MetaSecure-web3.0",
-    projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1733925350/file_2024-12-11_13.55.28_zxavof.png",
-    projectDescription: "MetaSecure-web3.0 is a decentralized application (dApp) built using Solidity and React. This project leverages the power of blockchain technology to enhance web security and provide decentralized solutions.",
+    projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1753115194/Screenshot_2025-07-21_172341_zalzo8.png",
+    projectDescription: "MetaSecure Web3.0 is a decentralized application (dApp) built using Solidity and React. This project leverages the power of blockchain technology to enhance web security and provide decentralized solutions.",
     demoLink: "https://meta-secure-web3-0.vercel.app/",
     githubLink: "https://github.com/deji-ice/MetaSecure-web3.0",
     tools: [
