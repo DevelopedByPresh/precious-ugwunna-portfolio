@@ -34,7 +34,7 @@ const About = memo(() => {
         mb-8 sm:mb-12 md:mb-16 mt-5 font-semibold text-gray-500 
         font-outfit tracking-wider"
       >
-        Persona Blurb
+       About Me
       </h2>
 
       <div
@@ -49,8 +49,8 @@ const About = memo(() => {
           className="flex-shrink-0"
         >
           <Image
-            src="https://res.cloudinary.com/dhvwthnzq/image/upload/v1733997009/IMG_0540_1_s_xycclv.jpg"
-            alt="Ayodeji Atanda's mirror selfie"
+            src="https://res.cloudinary.com/dhvwthnzq/image/upload/v1756303349/me_o5apj6.jpg"
+            alt="Ayodeji Atanda's"
             height={300}
             width={300}
             priority
