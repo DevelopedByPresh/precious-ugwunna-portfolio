@@ -5,6 +5,22 @@ import { JobExperience, Project } from "@/types/types";
 export const projects: Project[] = [
   {
     id: crypto.randomUUID(),
+    projectName: "HypurScope",
+    projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1755956439/hyperscope/e244d187-992a-422c-adfb-1907049a0634.png",
+    projectDescription: `HypurScope is a real-time blockchain explorer for HyperEVM, HyperLiquid L1, and HyperCore, turning raw blockchain data into user-friendly analytics, visualizations, and actionable notifications. It aggregates data from multiple APIs, delivering clear insights, real-time tracking, and alerts to developers, traders, and analysts.`,
+    demoLink: "https://hypurscope.xyz/",
+    githubLink: "https://github.com/hypurscope/hypurscope-fe",
+    tools: [
+      "NextJS",
+      "TypeScript",
+      "TailwindCSS",
+      "Framer Motion",
+      "ReChart",
+      "shadcnUi",
+    ]
+  },
+  {
+    id: crypto.randomUUID(),
     projectName: "Afren.ai",
     projectImage: "https://res.cloudinary.com/dhvwthnzq/image/upload/v1752309935/afren_mnsv72.png",
     projectDescription: `I contributed to developing the user-facing platform for Afren.ai, an AI-first hiring solution designed to remove guesswork from the freelance marketplace. By building a responsive, optimized frontend with React, TypeScript, Redux, Tailwind CSS, and Framer Motion, I helped create a seamless system where businesses connect with verified African talent through AI-powered interviews and real skills assessments. My work on the AI matchmaking flow and performance optimization ensured smooth, accurate connections between freelancers and employers.`,
