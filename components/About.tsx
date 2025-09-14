@@ -71,7 +71,7 @@ const About = memo(() => {
               Mentoring new developers also keeps me sharp while giving back to the community.
             </p>
             <p className="leading-relaxed">
-             Outside of coding, you’ll often find me swimming, Playing or Watching Footbal,  listening to music, or watching movies — activities that help me relax and spark fresh ideas.
+             Outside of coding, you’ll often find me swimming, Playing or Watching Football,  listening to music, or watching movies — activities that help me relax and spark fresh ideas.
             </p>
           </div>
 
