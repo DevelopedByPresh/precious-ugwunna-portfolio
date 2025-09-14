@@ -20,7 +20,7 @@ const NowPlaying = () => {
   return (
     <div className="w-full bg-slate-900 overflow-hidden z-50 flex fixed h-6 pb-1 justify-center items-center">
       <h4 className="text-white flex w-full text-xs space-x-1 text-center items-center marquee md:text-xs ">
-        <SiSpotify size={12} color={"#26a551"} className="mr-1" />
+        {/* <SiSpotify size={12} color={"#26a551"} className="mr-1" />
         Currently Listening to:{" "}
         {data?.isPlaying ? (
           <>
@@ -35,7 +35,7 @@ const NowPlaying = () => {
           </>
         ) : (
           <span>nothing 😴</span>
-        )}
+        )} */}
       </h4>
     </div>
   );

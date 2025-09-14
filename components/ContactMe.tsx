@@ -8,7 +8,7 @@ type Props = {};
 
 const ContactMe = (props: Props) => {
   const handleClick = () => {
-    window.location.href = "mailto:ayodejiatanda1@gmail.com";
+    window.location.href = "mailto:chineduprecious47@gmail.com";
   };
   return (
     <footer
@@ -27,7 +27,7 @@ const ContactMe = (props: Props) => {
        font-normal xl:text "
       >
         <p className="text-sm my-3 xl:mb-16 xl:text-xl  p-5 text-start md:text-center md:text-xl lg:text-3xl ">
-          Ready to take your web projects to the next{" "}
+          Ready to take your web and Mobile App projects to the next{" "}
           <span className="underline decoration-black decoration-2">level</span>
           ? <br /> Let's collaborate and create exceptional user experiences
           together.
@@ -50,15 +50,7 @@ const ContactMe = (props: Props) => {
           network="github"
           bgColor="transparent"
           fgColor="#464646"
-          url="https://github.com/deji-ice"
-          target="_blank"
-          className="h-2 w-2 filter grayscale  hover:filter-none hover:animate-pulse transition duration-200 ease-in-out"
-        />
-        <SocialIcon
-          network="twitter"
-          bgColor="transparent"
-          fgColor="#1DA1F2"
-          url="https://twitter.com/DEJIxICE"
+          url="https://github.com/DevelopedByPresh"
           target="_blank"
           className="h-2 w-2 filter grayscale  hover:filter-none hover:animate-pulse transition duration-200 ease-in-out"
         />
@@ -66,23 +58,14 @@ const ContactMe = (props: Props) => {
           network="linkedin"
           bgColor="transparent"
           fgColor="#0077b5"
-          url="https://www.linkedin.com/in/ayodeji-atanda/"
-          target="_blank"
-          className="h-2 w-2 filter grayscale  hover:filter-none hover:animate-pulse transition duration-200 ease-in-out"
-        />
-        <SocialIcon
-          network="instagram"
-          bgColor="transparent"
-          fgColor="#e91578"
-          url="https://www.instagram.com/deji_ice/"
+          url="https://www.linkedin.com/in/precious-ugwunna-0829b9212/"
           target="_blank"
           className="h-2 w-2 filter grayscale  hover:filter-none hover:animate-pulse transition duration-200 ease-in-out"
         />
       </div>
-      <p className="text-xs tracking-wide font-normal">
-        Created by X user
-        <span className="font-semibold"> @dejixice</span> @2023
-      </p>
+      {/* <p className="text-xs tracking-wide font-normal">
+        <span className="font-semibold"> @dejixice</span> @2022
+      </p> */}
     </footer>
   );
 };

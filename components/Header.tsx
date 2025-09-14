@@ -41,27 +41,27 @@ const Header = ({}: Props) => {
         }}
         className="flex  flex-row items-center"
       >
-        <SocialIcon
+        {/* <SocialIcon
           network="x"
           bgColor="transparent"
           fgColor="#1DA1F2"
           url="https://twitter.com/DEJIxICE"
           className="h-2 w-2"
-        />
+        /> */}
         <SocialIcon
           network="linkedin"
           bgColor="transparent"
           fgColor="#0077b5"
-          url="https://www.linkedin.com/in/ayodeji-atanda/"
+          url="https://www.linkedin.com/in/precious-ugwunna-0829b9212/"
           className="h-2 w-2"
         />
-        <SocialIcon
+        {/* <SocialIcon
           network="instagram"
           bgColor="transparent"
           fgColor=" #FFC0CB"
           url="https://instagram.com/deji_ice?igshid=NTc4MTIwNjQ2YQ=="
           className="h-2 w-2"
-        />
+        /> */}
       </motion.div>
       
     </header>

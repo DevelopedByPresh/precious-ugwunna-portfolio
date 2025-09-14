@@ -5,18 +5,18 @@ import Image from "next/image";
 import { memo } from "react";
 
 const technologies = [
-  "Solidity",
-  "Ethers.js",
-  "Hardhat",
+  "HTML",
+  "CSS",
   "Javascript",
   "Typescript",
   "React",
+  "Redux",
+  "React Native",
+   "NextJS",
+   "Vuejs",
   "Tailwind CSS",
-  "NextJS",
-  "GSAP",
-  "Express.js",
-  "Node.js",
-  "MongoDb",
+   "Material UI",
+
 ];
 
 const About = memo(() => {
@@ -49,8 +49,8 @@ const About = memo(() => {
           className="flex-shrink-0"
         >
           <Image
-            src="https://res.cloudinary.com/dhvwthnzq/image/upload/v1756303349/me_o5apj6.jpg"
-            alt="Ayodeji Atanda's"
+            src="/profile.jpg"
+            alt="Precious Ugwunna"
             height={300}
             width={300}
             priority
@@ -63,21 +63,15 @@ const About = memo(() => {
         <div className="space-y-6 text-base sm:text-lg lg:text-xl px-6 md:px-16  lg:px-20">
           <div className="space-y-4">
             <p className="leading-relaxed">
-              Before diving into tech, I started with graphics design, which
-              sparked my love for clean, beautiful UIs. Now, I blend that design
-              sense with frontend and blockchain development to build digital
-              products people enjoy using.
+             I’m a Frontend and Mobile Developer passionate about building clean, responsive, and accessible digital products. 
+             I specialize in React, React Native, Redux, Next.js, and Tailwind CSS, creating seamless experiences across web and mobile platforms.
             </p>
             <p className="leading-relaxed">
-              I’m always curious and growing — currently adding Go to my stack
-              while staying active in the Web3 space with Solidity and dApps.
-              Teaching and mentoring new developers keeps me sharp and grounded
-              too.
+             I enjoy solving problems through code, collaborating with teams, and writing maintainable, scalable solutions.
+              Mentoring new developers also keeps me sharp while giving back to the community.
             </p>
             <p className="leading-relaxed">
-              When I’m not coding, you’ll find me swimming, vibing to music, or
-              watching movies that spark new ideas. They help me unwind and feed
-              my creativity in unexpected ways.
+             Outside of coding, you’ll often find me swimming, Playing or Watching Footbal,  listening to music, or watching movies — activities that help me relax and spark fresh ideas.
             </p>
           </div>
 

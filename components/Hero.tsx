@@ -7,10 +7,9 @@ import { memo } from "react";
 const Hero = memo(() => {
   const [text] = useTypewriter({
     words: [
-      "Frontend Engineer.",
-      "Solidity Developer.",
-      // "Fullstack Web Developer.",
-      // "Graphic Designer.",
+      "Front-End Developer.",
+      "Mobile App Developer.",
+  
     ],
     loop: true,
     delaySpeed: 3000,
@@ -30,14 +29,14 @@ const Hero = memo(() => {
           className="text-sm sm:text-base md:text-lg lg:text-xl 
           font-medium text-gray-600"
         >
-          Hi, the name is
+         Hi, my name is
         </h4>
 
         <h1
           className="font-outfit font-bold text-4xl sm:text-5xl md:text-6xl 
           lg:text-7xl xl:text-8xl tracking-tight"
         >
-          Ayodeji Atanda.
+          Ugwunna Precious Chinedu.
         </h1>
 
         <div
@@ -51,11 +50,10 @@ const Hero = memo(() => {
         </div>
 
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl text-gray-600  leading-relaxed">
-          I’m a software engineer creating clean, responsive, and accessible web
-          experiences with React, Next.js, Tailwind CSS, and Web3. I build smart
-          contracts with Solidity, contribute to decentralized projects, and
-          enjoy mentoring new developers to make technology more usable and
-          inclusive for everyone.
+         I’m a Front-end and Mobile Developer passionate about building clean, responsive, and user-friendly applications.
+    Skilled in React, React Native, Redux, Next.js, Vuejs, Tailwind CSS, HTML, and CSS, I focus on creating smooth digital experiences across web and mobile.
+       I enjoy solving problems through code, collaborating with teams, and writing maintainable, scalable solutions.
+         Mentoring new developers also keeps me sharp while giving back to the community.
         </p>
 
         <div className="pt-6 lg:pt-0">

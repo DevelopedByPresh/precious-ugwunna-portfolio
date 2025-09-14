@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ayodejiatanda.vercel.app
+Host: https://ugwunnaprecious.vercel.app
 
 # Sitemaps
-Sitemap: https://ayodejiatanda.vercel.app/sitemap.xml
+Sitemap: https://ugwunnaprecious.vercel.app/sitemap.xml

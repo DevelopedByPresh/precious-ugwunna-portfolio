@@ -6,7 +6,7 @@ type Props = {
 
 const Button = ({title}: Props) => {
   const handleClick = () => {
-    window.location.href = "mailto:ayodejiatanda1@gmail.com";
+    window.location.href = "mailto:chineduprecious47@gmail.com";
   };
   return (
     <> 
