@@ -72,6 +72,7 @@ export const metadata = {
     "Mobile App Developer",
     "React Native Developer",
     "Software developer",
+     'Typescript',
     "Freelance",
     "Portfolio website",
     "HTML/CSS",

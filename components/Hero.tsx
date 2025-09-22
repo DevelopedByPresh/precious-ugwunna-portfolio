@@ -51,7 +51,7 @@ const Hero = memo(() => {
 
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl text-gray-600  leading-relaxed">
          I’m a Front-end and Mobile Developer passionate about building clean, responsive, and user-friendly applications.
-    Skilled in React, React Native, Redux, Next.js, Vuejs, Tailwind CSS, HTML, and CSS, I focus on creating smooth digital experiences across web and mobile.
+    Skilled in Javascript,TypeScript, React, React Native, Redux, Next.js, Vuejs, Tailwind CSS, HTML, and CSS, I focus on creating smooth digital experiences across web and mobile.
        I enjoy solving problems through code, collaborating with teams, and writing maintainable, scalable solutions.
          Mentoring new developers also keeps me sharp while giving back to the community.
         </p>
