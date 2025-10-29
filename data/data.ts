@@ -3,39 +3,26 @@ import { JobExperience, Project } from "@/types/types";
 
 
 export const projects: Project[] = [
-  {
+
+
+
+    {
     id: crypto.randomUUID(),
-    projectName: "Mobile Mechanic",
-    projectImage: "/mm.png",
-    projectDescription: `Mobile Mechanic is an App that provides services for car owner and Mechanics...it also bridges the gap between car owners and mechanics`,
-    demoLink: "/",
-    githubLink: "https://github.com/DevelopedByPresh/mobile-mechanic",
+    projectName: "Worsship Admin Dashboard",
+    projectImage: "/worsh.png",
+    projectDescription: `Worsship is Church Mobile App where users are allowed to worship, join a live stream, donate and follow a preferred church and its activities...this is the admin dashboard`,
+    demoLink: "https://worsship.vercel.app/",
+    githubLink: "https://github.com/DevelopedByPresh/worsship/tree/latest",
     tools: [
-      "React Native",
+      "React",
+      "Material UI",
+      "React",
       "Javascript",
       "Redux",
       'Axios',
       'Postman'
     ]
   },
-  
-  {
-    id: crypto.randomUUID(),
-    projectName: "Worsship",
-    projectImage: "/photos.png",
-    projectDescription: `Worsship is Church Mobile App where users are allowed to worship, join a live stream, donate and follow a preferred church and its activities`,
-    demoLink: "/",
-      githubLink: "https://github.com/DevelopedByPresh/worship-app",
-     tools: [
-      "React Native",
-      "Javascript",
-      "Redux",
-      'Axios',
-      'Postman'
-    ]
-  },
-
-
 
     {
     id: crypto.randomUUID(),
@@ -96,6 +83,66 @@ export const projects: Project[] = [
       "Redux",
     ]
   },
+
+
+
+
+     {
+    id: crypto.randomUUID(),
+    projectName: "Road Watch",
+    projectImage: "/road.png",
+    projectDescription: `a mobile app that helps users see what’s happening on the road — in real time!
+ 🔹 Features:
+1. Detects the user’s current location automatically
+2. Displays live traffic status (blocked, moderate, or free)
+3. Integrates TomTom Traffic API for real incident updates (accidents, road closures, events)
+4. Uses OpenRouteService for speed-based traffic estimation
+5. Sleek dark map interface built with React Native + Expo`,
+    demoLink: "/",
+    githubLink: "https://github.com/DevelopedByPresh/road-watch",
+    tools: [
+      "React Native",
+      "Javascript",
+      "Redux",
+      'Expo'
+    ]
+  },
+
+
+
+
+   {
+    id: crypto.randomUUID(),
+    projectName: "Mobile Mechanic",
+    projectImage: "/mm.png",
+    projectDescription: `Mobile Mechanic is an App that provides services for car owner and Mechanics...it also bridges the gap between car owners and mechanics`,
+    demoLink: "/",
+    githubLink: "https://github.com/DevelopedByPresh/mobile-mechanic",
+    tools: [
+      "React Native",
+      "Javascript",
+      "Redux",
+      'Axios',
+      'Postman'
+    ]
+  },
+  
+  {
+    id: crypto.randomUUID(),
+    projectName: "Worsship",
+    projectImage: "/photos.png",
+    projectDescription: `Worsship is Church Mobile App where users are allowed to worship, join a live stream, donate and follow a preferred church and its activities`,
+    demoLink: "/",
+      githubLink: "https://github.com/DevelopedByPresh/worship-app",
+     tools: [
+      "React Native",
+      "Javascript",
+      "Redux",
+      'Axios',
+      'Postman'
+    ]
+  },
+
 
 ];
 
@@ -168,7 +215,9 @@ export const experiences: JobExperience[] = [
       `Utilized React Native for cross-platform mobile application development, enabling a single codebase for both iOS and Android platforms.`,
       `Implemented Redux for state management, ensuring consistent data flow and easier debugging within the application, and also employed Git for version control, facilitating collaborative development, tracking changes, and managing different versions of the application's codebase.`,
       `collaboration with backend developers was essential to ensure seamless integration between the user interface and the server-side logic.`,
-      `Collaborated with designers to transform concepts into fully realized projects`
+      `Collaborated with designers to transform concepts into fully realized projects`,
+      `Developed a responsive admin dashboard using React and Vite for high performance and fast builds.`,
+      `Utilized Material UI to design a clean, consistent, and modern user interface.`
     ],
   },
   {
@@ -181,6 +230,8 @@ export const experiences: JobExperience[] = [
       `Implemented Redux for state management, ensuring consistent data flow and easier debugging within the application, and also employed Git for version control, facilitating collaborative development, tracking changes, and managing different versions of the application's codebase.`,
       `collaboration with backend developers was essential to ensure seamless integration between the user interface and the server-side logic.`,
       `Partnered with designers to translate creative concepts into high-quality, real-world deliverables`,
+      `Built an interactive analytics dashboard using React and Vite for optimized performance and rapid development`,
+      `Delivered a fast, intuitive, and maintainable admin interface adaptable to multiple data sources`,
     ],
   },
   {
