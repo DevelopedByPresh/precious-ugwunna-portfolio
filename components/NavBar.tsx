@@ -70,6 +70,9 @@ export default function NavBar() {
     },
   ];
 
+
+
+  
   return (
     <motion.nav
       initial={false}
