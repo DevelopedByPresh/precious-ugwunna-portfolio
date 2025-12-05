@@ -11,7 +11,7 @@ export const projects: Project[] = [
     projectName: "Worsship Admin Dashboard",
     projectImage: "/worsh.png",
     projectDescription: `Worsship is Church Mobile App where users are allowed to worship, join a live stream, donate and follow a preferred church and its activities...this is the admin dashboard`,
-    demoLink: "https://worsship.vercel.app/",
+    demoLink: "http://worsship-frontend.s3-website-us-east-1.amazonaws.com/",
     githubLink: "https://github.com/DevelopedByPresh/worsship/tree/latest",
     tools: [
       "React",
@@ -23,6 +23,29 @@ export const projects: Project[] = [
       'Postman'
     ]
   },
+
+
+
+      {
+    id: crypto.randomUUID(),
+    projectName: "Worsship Landing Page for Church and Users",
+    projectImage: "/landing-page.png",
+    projectDescription: `Worsship is Church Mobile App where users are allowed to worship, join a live stream, donate and follow a preferred church and its activities...this is the Landing Page`,
+    demoLink: "http://worsship.s3-website-us-east-1.amazonaws.com/",
+    githubLink: "https://github.com/DevelopedByPresh/worsship-landing-page",
+    tools: [
+      "React",
+      "Tailwind",
+      "Framer Motion",
+      "Javascript",
+      'Axios',
+      'Postman'
+    ]
+  },
+
+
+
+  
 
     {
     id: crypto.randomUUID(),
