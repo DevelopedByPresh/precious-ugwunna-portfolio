@@ -6,6 +6,21 @@ export const projects: Project[] = [
 
 
 
+  
+
+    {
+    id: crypto.randomUUID(),
+    projectName: "BuildPadi",
+    projectImage: "/buildpadi.png",
+    projectDescription: `BuildPadi is an E-commerce online store that enables people to order any kind of building material, make payment and get them delivered to thier doorstep`,
+    demoLink: "https://buildpadi.com/",
+    tools: [
+      "WordPress",
+    ]
+  },
+
+
+
     {
     id: crypto.randomUUID(),
     projectName: "Worsship Admin Dashboard",
@@ -133,40 +148,6 @@ export const projects: Project[] = [
 
 
 
-
-   {
-    id: crypto.randomUUID(),
-    projectName: "Mobile Mechanic",
-    projectImage: "/mm.png",
-    projectDescription: `Mobile Mechanic is an App that provides services for car owner and Mechanics...it also bridges the gap between car owners and mechanics`,
-    demoLink: "/",
-    githubLink: "https://github.com/DevelopedByPresh/mobile-mechanic",
-    tools: [
-      "React Native",
-      "Javascript",
-      "Redux",
-      'Axios',
-      'Postman'
-    ]
-  },
-  
-  {
-    id: crypto.randomUUID(),
-    projectName: "Worsship",
-    projectImage: "/photos.png",
-    projectDescription: `Worsship is Church Mobile App where users are allowed to worship, join a live stream, donate and follow a preferred church and its activities`,
-    demoLink: "/",
-      githubLink: "https://github.com/DevelopedByPresh/worship-app",
-     tools: [
-      "React Native",
-      "Javascript",
-      "Redux",
-      'Axios',
-      'Postman'
-    ]
-  },
-
-
 ];
 
 // export const logos: LogoData[] = [
@@ -229,11 +210,31 @@ export const projects: Project[] = [
 // ];
 
 export const experiences: JobExperience[] = [
+
+
+
+    {
+    occupation: "I.T Personnel/Frontend Developer",
+    companyName: "BuildPadi",
+    dateStart: "12/2025",
+    dateEnd: "Till Date",
+    responsibilities: [
+      `Integrated a WhatsApp plugin into a WordPress website to enable real-time customer communication`,
+      `End-to-end order flow digitally designed and documented on Miro`,
+      `Designed and deployed an automated WhatsApp bot to handle inquiries and responses`,
+      `Improved customer response time through automated WhatsApp interactions and also Enabled 24/7 customer engagement via WhatsApp automation`,
+      `Integrated WhatsApp automation into the sales funnel to support order confirmation and completion`,
+    ],
+  },
+
+
+
+
   {
     occupation: "Frontend/Mobile Developer",
     companyName: "Worsship",
-    dateStart: "03/2025",
-    dateEnd: "Till Date",
+    dateStart: "11/2024",
+    dateEnd: "10/2025",
     responsibilities: [
       `Utilized React Native for cross-platform mobile application development, enabling a single codebase for both iOS and Android platforms.`,
       `Implemented Redux for state management, ensuring consistent data flow and easier debugging within the application, and also employed Git for version control, facilitating collaborative development, tracking changes, and managing different versions of the application's codebase.`,
@@ -243,20 +244,7 @@ export const experiences: JobExperience[] = [
       `Utilized Material UI to design a clean, consistent, and modern user interface.`
     ],
   },
-  {
-     occupation: "Frontend/Mobile Developer",
-    companyName: "Mobile Mechanic",
-    dateStart: "02/2024",
-    dateEnd: "11/2024",
-    responsibilities: [
-      `Utilized React Native for cross-platform mobile application development, enabling a single codebase for both iOS and Android platforms.`,
-      `Implemented Redux for state management, ensuring consistent data flow and easier debugging within the application, and also employed Git for version control, facilitating collaborative development, tracking changes, and managing different versions of the application's codebase.`,
-      `collaboration with backend developers was essential to ensure seamless integration between the user interface and the server-side logic.`,
-      `Partnered with designers to translate creative concepts into high-quality, real-world deliverables`,
-      `Built an interactive analytics dashboard using React and Vite for optimized performance and rapid development`,
-      `Delivered a fast, intuitive, and maintainable admin interface adaptable to multiple data sources`,
-    ],
-  },
+
   {
     occupation: "Frontend Developer",
     companyName: "Breics",
